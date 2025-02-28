@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>전체과목</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header search">
+          <div class="inner">
+            <button onclick="history.back();" class="back_btn"></button>
+            <p class="input_box search">
+              <input
+                type="text"
+                class="search"
+                placeholder="검색어를 입력하세요."
+              />
+            </p>
+          </div>
+        </header>
+        <!-- header -->
+        <div class="container_wrap h_06 search">
+          <div class="global_inner search">
+            <span class="icon">
+              <img src="./assets/image/icon/i_round_alaram.svg" />
+            </span>
+            <p class="txt_center txt">검색어를 입력해 주세요.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

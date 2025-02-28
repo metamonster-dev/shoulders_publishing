@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>커뮤니티 글 작성</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header border">
+          <div class="inner">
+            <button
+              onclick="open_modal('#edit_alret')"
+              class="back_btn"
+            ></button>
+            <h1>커뮤니티 글 작성</h1>
+          </div>
+        </header>
+        <!-- header -->
+        <div class="container_wrap h_01 community_edit ques">
+          <h3 class="global_inner">카테고리</h3>
+          <div class="swiper edit_type_sec swiper_menu round">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide"
+                onclick="location.href='/user/community_edit_review.html'"
+              >
+                후기
+              </div>
+              <div
+                class="swiper-slide active"
+                onclick="location.href='/user/community_edit_question.html'"
+              >
+                질문
+              </div>
+              <div
+                class="swiper-slide"
+                onclick="location.href='/user/community_edit_request.html'"
+              >
+                수업 요청
+              </div>
+            </div>
+          </div>
+          <div class="global_inner">
+            <div class="form_wrap">
+              <div class="input_box">
+                <div class="textarea_wrap">
+                  <textarea
+                    placeholder="개인 정보 노출에 유의하세요. 내용이 부적절하다고 판단될 경우에는 게시글이 삭제될 수 있어요. 글은 20자 이상 작성해 주세요."
+                  ></textarea>
+                  <span class="txt_counter">
+                    <span class="error">19</span>/300
+                  </span>
+                </div>
+                <p class="notice">
+                  게시글이 커뮤니티에 위반하는 경우 삭제 및 이용 제한 조치가
+                  있을 수 있으며, 게시판 이용을 준수해 주세요.
+                </p>
+              </div>
+              <div class="input_box">
+                <label class="label">
+                  사진 첨부 <span class="desc">(선택)</span>
+                </label>
+                <div class="fileupload_wrap">
+                  <div class="priview_box">
+                    <img src="./assets/image/dummy/preview01.png" alt="" />
+                    <i class="icon_del_circle"></i>
+                  </div>
+                  <div class="priview_box">
+                    <img src="./assets/image/dummy/preview02.png" alt="" />
+                    <i class="icon_del_circle"></i>
+                  </div>
+                  <div class="input_box">
+                    <input type="file" />
+                    <label for="profileUpload" class="image_file_box">
+                      <i class="icon_add_circle"></i>
+                      <span class="count">0/3</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bottom_btn">
+            <!-- 유효성 통과 못했을시 버튼 -->
+            <button type="button" disabled>작성하기</button>
+            <!-- <button type="button">
+              작성하기
+            </button> -->
+          </div>
+        </div>
+
+        <!-- 수업 선택 bottom sheet-->
+        <div class="bottom_sheet_overlay"></div>
+        <div id="class_bottom_sheet" class="bottom_sheet sort">
+          <div class="bottom_sheet_header">
+            <h3>수업 선택</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="option_list">
+              <li>수업명</li>
+              <li>수업명</li>
+              <li>수업명</li>
+              <li>수업명</li>
+              <li>수업명</li>
+            </ul>
+          </div>
+        </div>
+        <!-- 선생님 정렬 순서 bottom sheet-->
+
+        <!-- 모달 -->
+
+        <!-- 수정하다가 그만 둘때 알럿 -->
+        <article id="edit_alret" class="modal_wrap">
+          <div class="modal">
+            <p class="text">작성중인 게시글을 닫을까요?</p>
+            <p class="desc">지금 닫으면 내용이 사라져요.</p>
+            <div class="btn_area">
+              <button class="gray" onclick="close_modal()">취소</button>
+              <button class="black" onclick="close_modal()">닫기</button>
+            </div>
+          </div>
+        </article>
+        <!-- 모달 -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- swiper -->
+<script>
+  var swiper = new Swiper(".edit_type_sec", {
+    slidesPerView: "auto",
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+  });
+</script>
+<!-- swiper -->
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

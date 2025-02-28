@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>댓글창</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header">
+          <div class="inner">
+            <button onclick="history.back();" class="back_btn"></button>
+            <h1 class="left">댓글 <span class="color">3</span></h1>
+          </div>
+        </header>
+        <!-- header -->
+        <div class="container_wrap h_07 comment">
+          <div class="global_inner">
+            <ul class="comment_list">
+              <li class="comment_item">
+                <div class="community_profile_box">
+                  <div class="inner">
+                    <figure class="profile">
+                      <img src="./assets/image/dummy/dummy_profile.png" />
+                    </figure>
+                    <p class="nickname">
+                      <span>하영맘</span>
+                      <span>3시간</span>
+                    </p>
+                  </div>
+                  <i
+                    class="icon_dot_btn open_bottom_sheet"
+                    data-target="edit_bottom_sheet"
+                  ></i>
+                </div>
+                <div class="comment_box">
+                  <p class="desc">한줄만 작성할때는 이렇게 보입니다.</p>
+                  <p class="like_button on">
+                    <i class="icon"></i>
+                    <span class="count">10</span>
+                  </p>
+                </div>
+              </li>
+              <li class="comment_item">
+                <div class="community_profile_box">
+                  <div class="inner">
+                    <figure class="profile">
+                      <img src="./assets/image/dummy/dummy_profile.png" />
+                    </figure>
+                    <p class="nickname">
+                      <span>하영맘</span>
+                      <span>3시간</span>
+                    </p>
+                  </div>
+                  <i
+                    class="icon_dot_btn open_bottom_sheet"
+                    data-target="edit_bottom_sheet"
+                  ></i>
+                </div>
+                <div class="comment_box">
+                  <p class="desc">
+                    두줄만 작성할때는 이렇게 보입니다. 두줄만 작성할때는 이렇게
+                    보입니다.
+                  </p>
+                  <p class="like_button">
+                    <i class="icon"></i>
+                  </p>
+                </div>
+              </li>
+              <li class="comment_item">
+                <div class="community_profile_box">
+                  <div class="inner">
+                    <figure class="profile">
+                      <img src="./assets/image/dummy/dummy_profile.png" />
+                    </figure>
+                    <p class="nickname">
+                      <span>하영맘</span>
+                      <span>3시간</span>
+                    </p>
+                  </div>
+                  <i
+                    class="icon_dot_btn open_bottom_sheet"
+                    data-target="edit_bottom_sheet"
+                  ></i>
+                </div>
+                <div class="comment_box">
+                  <p class="desc">
+                    세줄 네줄 쭉쭉 내려갑니다. 세줄 네줄 쭉쭉 내려갑니다.세줄
+                    네줄 쭉쭉 내려갑니다.세줄 네줄 쭉쭉 내려갑니다.세줄 네줄
+                    쭉쭉 내려갑니다.세줄 네줄 쭉쭉 내려갑니다.
+                  </p>
+                  <p class="like_button on">
+                    <i class="icon"></i>
+                    <span class="count">11</span>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer_input_box">
+          <div class="comment_input_box">
+            <figure class="profile">
+              <img src="./assets/image/dummy/dummy_profile.png" alt="" />
+            </figure>
+            <p class="inner">
+              <input type="text" placeholder="내용을 입력하세요.(0/150자)" />
+              <i class="icon_enter_d icon"></i>
+              <!-- 인풋 입력시 버튼 스타일 -->
+              <!-- <i class="icon_enter_on icon"></i> -->
+            </p>
+          </div>
+        </div>
+        <!--common bottom sheet -->
+        <div class="bottom_sheet_overlay"></div>
+        <div id="edit_bottom_sheet" class="bottom_sheet edit">
+          <div class="bottom_sheet_content">
+            <ul class="edit_menu_list">
+              <li>
+                <span><img src="./assets/image/icon/i_pen.svg" /></span>
+                <span>댓글 수정하기</span>
+              </li>
+              <li class="close_bottom_sheet" onclick="open_modal('#del_alret')">
+                <span><img src="./assets/image/icon/i_trush.svg" /></span>
+                <span>댓글 삭제하기</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--common bottom sheet -->
+        <!-- 모달 -->
+        <!-- 댓글 삭제 확인 alret -->
+        <article id="del_alret" class="modal_wrap">
+          <div class="modal">
+            <p class="text">수정사항을 삭제할까요?</p>
+            <div class="btn_area">
+              <button class="gray" onclick="close_modal()">취소</button>
+              <button class="black" onclick="close_modal()">삭제</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 수정하다가 그만 둘때 알럿 / -->
+        <article id="edit_alret" class="modal_wrap">
+          <div class="modal">
+            <p class="text">댓글 삭제</p>
+            <p class="desc">댓글을 완전히 삭제할까요?</p>
+            <div class="btn_area">
+              <button class="gray" onclick="close_modal()">취소</button>
+              <button class="black" onclick="close_modal()">삭제</button>
+            </div>
+          </div>
+        </article>
+        <!-- 모달 -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

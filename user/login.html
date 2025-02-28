@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <div class="container_wrap global_inner login">
+          <h1 class="logo">
+            <img src="./assets/image/shoulders_logo.svg" alt="shoulders" />
+          </h1>
+          <div>
+            <ul class="tab_menu">
+              <li class="on" data-tab="tab1">로그인</li>
+              <li data-tab="tab2">선생님으로 로그인</li>
+            </ul>
+            <div id="tab1" class="tab_content active">
+              <section>
+                <div class="form_wrap">
+                  <div class="input_box">
+                    <input type="text" placeholder="아이디를 입력해 주세요." />
+                    <span class="input_btn close"></span>
+                    <!-- 유효성 문구-->
+                    <!-- <div class="vail_box">
+                  <span class="complete">영문</span>
+                  <span class="reject">이메일 주소</span>
+                </div> -->
+                  </div>
+                  <div class="input_box">
+                    <input
+                      type="password"
+                      placeholder="비밀번호를 입력해 주세요."
+                    />
+                    <!-- 비밀번호 안보일때 아이콘 -->
+                    <span class="input_btn eyes"></span>
+                    <!-- 비밀번호 보일때 아이콘 -->
+                    <!-- <span class="input_btn uneyes"></span> -->
+                    <!-- 유효성 문구 -->
+                    <!-- <div class="vail_box">
+                  <span class="complete">영문</span>
+                  <span class="complete">숫자</span>
+                  <span class="complete">특수문자</span>
+                  <span class="reject">10-24자리</span>
+                </div> -->
+                  </div>
+                </div>
+                <button disabled>숄더스 계정으로 로그인</button>
+                <!-- 필드 모두 입력시 버튼 활성화 -->
+                <!-- <button onclick="open_modal('#alret01')">
+              숄더스 계정으로 로그인
+            </button> -->
+                <div class="option_link">
+                  <label for="login_state01" class="icon_checkbox">
+                    <input id="login_state01" type="checkbox" />
+                    <span>로그인 상태 유지</span>
+                  </label>
+                  <ul class="find">
+                    <li><a href="#none">아이디 찾기</a></li>
+                    <li><a href="#none">비밀번호 찾기</a></li>
+                  </ul>
+                </div>
+
+                <button class="line">이메일로 회원가입</button>
+                <ul class="social_wrap">
+                  <li>
+                    <a href="#none"
+                      ><img src="./assets/image/icon/icon_naver.svg"
+                    /></a>
+                    <!-- <p class="ballon">최근에 로그인했어요!</p> -->
+                  </li>
+                  <li>
+                    <a href="#none"
+                      ><img src="./assets/image/icon/icon_kakao.svg"
+                    /></a>
+                    <!-- <p class="ballon">최근에 로그인했어요!</p> -->
+                  </li>
+                  <li>
+                    <a href="#none"
+                      ><img src="./assets/image/icon/icon_apple.svg"
+                    /></a>
+                    <p class="ballon">최근에 로그인했어요!</p>
+                  </li>
+                </ul>
+                <p class="login_desc">
+                  최근 로그인한 계정은 <b>이메일</b> 입니다.
+                </p>
+              </section>
+            </div>
+            <div id="tab2" class="tab_content">
+              <section>
+                <div class="form_wrap">
+                  <div class="input_box">
+                    <input type="text" placeholder="아이디를 입력해 주세요." />
+                    <span class="input_btn close"></span>
+                    <!-- 유효성 문구-->
+                    <div class="vail_box">
+                      <span class="complete">영문</span>
+                      <span class="reject">이메일 주소</span>
+                    </div>
+                  </div>
+                  <div class="input_box">
+                    <input
+                      type="password"
+                      placeholder="비밀번호를 입력해 주세요."
+                    />
+                    <!-- 비밀번호 안보일때 아이콘 -->
+                    <span class="input_btn eyes"></span>
+                    <!-- 비밀번호 보일때 아이콘 -->
+                    <!-- <span class="input_btn uneyes"></span> -->
+                    <!-- 유효성 문구 -->
+                    <div class="vail_box">
+                      <span class="complete">영문</span>
+                      <span class="complete">숫자</span>
+                      <span class="complete">특수문자</span>
+                      <span class="reject">10-24자리</span>
+                    </div>
+                  </div>
+                </div>
+                <button onclick="open_modal('#alret01')">
+                  선생님으로 로그인
+                </button>
+                <div class="option_link">
+                  <label for="login_state02" class="icon_checkbox">
+                    <input id="login_state02" type="checkbox" />
+                    <span>로그인 상태 유지</span>
+                  </label>
+                  <ul class="find">
+                    <li><a href="#none">아이디 찾기</a></li>
+                    <li><a href="#none">비밀번호 찾기</a></li>
+                  </ul>
+                </div>
+
+                <button class="line">이메일로 회원가입</button>
+              </section>
+            </div>
+          </div>
+        </div>
+        <!-- 모달 -->
+        <article id="alret01" class="modal_wrap">
+          <div class="modal">
+            <p class="text">계정 정보가 올바르지 않습니다.</p>
+            <p class="desc">
+              이메일 혹은 비밀번호를 올바르게 입력 후<br />다시 로그인을 시도해
+              주세요.
+            </p>
+            <div class="btn_area">
+              <button class="black" onclick="close_modal()">확인</button>
+            </div>
+          </div>
+        </article>
+        <!-- 모달 -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

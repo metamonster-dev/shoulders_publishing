@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>추가 정보 입력</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header">
+          <div class="inner">
+            <button class="back_btn"></button>
+            <h1>추가 정보 입력</h1>
+          </div>
+        </header>
+        <!-- header -->
+        <div class="container_wrap h_01 join step05">
+          <p class="progress_bar bar02"></p>
+          <div class="global_inner">
+            <h3 class="page_title">
+              닉네임과 수강 정보를<br />
+              설정해 주세요.
+            </h3>
+            <section>
+              <div class="form_wrap">
+                <div class="input_box pb_20">
+                  <input type="file" id="profileUpload" />
+                  <label for="profileUpload" class="preview_box">
+                    <figure>
+                      <img
+                        id="profilePreview"
+                        src="./assets/image/dummy/profile.svg"
+                      />
+                    </figure>
+                  </label>
+                </div>
+                <div class="input_box">
+                  <label class="label required">닉네임</label>
+                  <input type="text" placeholder="한글 혹은 영문 4-12자" />
+                  <!-- 유효성 문구-->
+                  <div class="vail_box">
+                    <span class="basic">한글/영문</span>
+                    <span class="basic">4-12자 이내</span>
+                  </div>
+                </div>
+                <div class="input_box">
+                  <label class="label required">거주 지역</label>
+                  <div class="search_box">
+                    <input type="text" placeholder="도/시를 검색해주세요." />
+                  </div>
+                  <ul class="select_list">
+                    <li>
+                      <span>서울시 서초구</span>
+                      <span class="del_btn"></span>
+                    </li>
+                  </ul>
+                  <ul class="drop_down scroll_bar">
+                    <li>서울시 서초구</li>
+                    <li>서울시 송파구</li>
+                    <li>서울시 강남구</li>
+                    <li>서울시 강동구</li>
+                  </ul>
+                </div>
+                <div class="input_box">
+                  <label class="label">관심 지역(선택)</label>
+                  <div class="search_box">
+                    <input type="text" placeholder="도/시를 검색해주세요." />
+                  </div>
+
+                  <ul class="select_list">
+                    <li>
+                      <span>서울시 서초구</span>
+                      <span class="del_btn"></span>
+                    </li>
+                    <li>
+                      <span>서울시 송파구</span>
+                      <span class="del_btn"></span>
+                    </li>
+                    <li>
+                      <span>서울시 강남구</span>
+                      <span class="del_btn"></span>
+                    </li>
+                    <li>
+                      <span>서울시 강동구</span>
+                      <span class="del_btn"></span>
+                    </li>
+                  </ul>
+                  <ul class="drop_down scroll_bar">
+                    <li>서울시 서초구</li>
+                    <li>서울시 송파구</li>
+                    <li>서울시 강남구</li>
+                    <li>서울시 강동구</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+            <div class="bottom_btn">
+              <button class="black" disabled>다음</button>
+              <!-- 유효성 검사 통과시 버튼 스타일 -->
+              <!-- <button class="black">다음</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

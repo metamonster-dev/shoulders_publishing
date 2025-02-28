@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선생님 상세 정보</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!--main header -->
+        <header class="header">
+          <div class="inner">
+            <button class="back_btn" onclick="history.back();"></button>
+            <h1>선생님 상세 정보</h1>
+          </div>
+        </header>
+        <div class="container_wrap h_03 teacher_detail">
+          <section class="profile_info_sec">
+            <div class="global_inner">
+              <div class="profile_wrap">
+                <div class="profile_card">
+                  <figure>
+                    <i class="icon_bookmark"></i>
+                    <img src="./assets/image/dummy/profile01_wbg.png" alt="" />
+                  </figure>
+                  <div class="text_box">
+                    <p class="name">이재푼 선생님</p>
+                    <div class="text_list">
+                      <p class="item">
+                        <span class="type">소속</span>
+                        <span class="desc">메가스터디 노원점</span>
+                      </p>
+                      <p class="item">
+                        <span class="type">지역</span>
+                        <span class="desc">노원, 성북</span>
+                      </p>
+                      <p class="item">
+                        <span class="type">과목</span>
+                        <span class="desc">영어</span>
+                      </p>
+                      <p class="item">
+                        <span class="type">대상</span>
+                        <span class="desc">미취학, 초등</span>
+                      </p>
+                      <p class="item">
+                        <span class="type">찜</span>
+                        <span class="desc">327개</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <button>
+                  <i class="icon_chat"></i>
+                  <span>문의하기</span>
+                </button>
+              </div>
+              <p class="total_class">수업 리스트 <span>3개</span></p>
+            </div>
+          </section>
+          <section class="class_list_sec">
+            <div class="global_inner">
+              <ul class="subject_list">
+                <li
+                  class="subject_item"
+                  onclick="location.href='/user/class_detail.html'"
+                >
+                  <figure class="thumb">
+                    <img src="./assets/image/thumbnail/math_80x102.png" />
+                  </figure>
+                  <div class="text_box">
+                    <div class="title_box">
+                      <span class="tit"
+                        >[초등 저학년] 주간 단순 연산 주간 단순 연산</span
+                      >
+                      <i class="icon_bookmark"></i>
+                    </div>
+                    <div class="infomation">
+                      <span class="item">허꽃별 선생님</span>
+                      <span class="item">서울 강남</span>
+                    </div>
+                    <div class="price_box">
+                      <span class="percent">34%</span>
+                      <span class="sale_price">365,000원</span>
+                      <span class="price">400,000</span>
+                    </div>
+                    <div class="type">
+                      <p class="badge_list">
+                        <span class="item red">일간</span>
+                        <span class="item blue">온라인</span>
+                      </p>
+                      <p class="rating">4.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="subject_item"
+                  onclick="location.href='/user/class_detail.html'"
+                >
+                  <figure class="thumb">
+                    <img src="./assets/image/thumbnail/eng_80x102.png" />
+                  </figure>
+                  <div class="text_box">
+                    <div class="title_box">
+                      <span class="tit"
+                        >[초등 저학년] 쉽게 배우는 스쉽게 배우는 스쉽게 배우는
+                        스</span
+                      >
+                      <i class="icon_bookmark"></i>
+                    </div>
+                    <div class="infomation">
+                      <span class="item">김남길 선생님</span>
+                      <span class="item">서울 강남</span>
+                    </div>
+                    <div class="price_box">
+                      <span class="percent">20%</span>
+                      <span class="sale_price">192,000원</span>
+                      <span class="price">320,000</span>
+                    </div>
+                    <div class="type">
+                      <p class="badge_list">
+                        <span class="item red">주간</span>
+                        <span class="item blue">오프라인</span>
+                      </p>
+                      <p class="rating">4.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="subject_item"
+                  onclick="location.href='/user/class_detail.html'"
+                >
+                  <figure class="thumb">
+                    <img src="./assets/image/thumbnail/essay_80x102.png" />
+                  </figure>
+                  <div class="text_box">
+                    <div class="title_box">
+                      <span class="tit">
+                        [초등 고학년] 논리적인 생각을 논리적인 생각을 논리적인
+                        생각을
+                      </span>
+                      <i class="icon_bookmark"></i>
+                    </div>
+                    <div class="infomation">
+                      <span class="item">김남길 선생님</span>
+                      <span class="item">서울 강남</span>
+                    </div>
+                    <div class="price_box">
+                      <span class="percent">20%</span>
+                      <span class="sale_price">192,000원</span>
+                      <span class="price">320,000</span>
+                    </div>
+                    <div class="type">
+                      <p class="badge_list">
+                        <span class="item red">주간</span>
+                        <span class="item blue">오프라인</span>
+                      </p>
+                      <p class="rating">4.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="subject_item"
+                  onclick="location.href='/user/class_detail.html'"
+                >
+                  <figure class="thumb">
+                    <img src="./assets/image/thumbnail/math_80x102.png" />
+                  </figure>
+                  <div class="text_box">
+                    <div class="title_box">
+                      <span class="tit"
+                        >[초등 저학년] 주간 단순 연산 주간 단순 연산</span
+                      >
+                      <i class="icon_bookmark"></i>
+                    </div>
+                    <div class="infomation">
+                      <span class="item">허꽃별 선생님</span>
+                      <span class="item">서울 강남</span>
+                    </div>
+                    <div class="price_box">
+                      <span class="percent">34%</span>
+                      <span class="sale_price">365,000원</span>
+                      <span class="price">400,000</span>
+                    </div>
+                    <div class="type">
+                      <p class="badge_list">
+                        <span class="item red">일간</span>
+                        <span class="item blue">온라인</span>
+                      </p>
+                      <p class="rating">4.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="subject_item"
+                  onclick="location.href='/user/class_detail.html'"
+                >
+                  <figure class="thumb">
+                    <img src="./assets/image/thumbnail/eng_80x102.png" />
+                  </figure>
+                  <div class="text_box">
+                    <div class="title_box">
+                      <span class="tit"
+                        >[초등 저학년] 쉽게 배우는 스쉽게 배우는 스쉽게 배우는
+                        스</span
+                      >
+                      <i class="icon_bookmark"></i>
+                    </div>
+                    <div class="infomation">
+                      <span class="item">김남길 선생님</span>
+                      <span class="item">서울 강남</span>
+                    </div>
+                    <div class="price_box">
+                      <span class="percent">20%</span>
+                      <span class="sale_price">192,000원</span>
+                      <span class="price">320,000</span>
+                    </div>
+                    <div class="type">
+                      <p class="badge_list">
+                        <span class="item red">주간</span>
+                        <span class="item blue">오프라인</span>
+                      </p>
+                      <p class="rating">4.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="subject_item"
+                  onclick="location.href='/user/class_detail.html'"
+                >
+                  <figure class="thumb">
+                    <img src="./assets/image/thumbnail/essay_80x102.png" />
+                  </figure>
+                  <div class="text_box">
+                    <div class="title_box">
+                      <span class="tit">
+                        [초등 고학년] 논리적인 생각을 논리적인 생각을 논리적인
+                        생각을
+                      </span>
+                      <i class="icon_bookmark"></i>
+                    </div>
+                    <div class="infomation">
+                      <span class="item">김남길 선생님</span>
+                      <span class="item">서울 강남</span>
+                    </div>
+                    <div class="price_box">
+                      <span class="percent">20%</span>
+                      <span class="sale_price">192,000원</span>
+                      <span class="price">320,000</span>
+                    </div>
+                    <div class="type">
+                      <p class="badge_list">
+                        <span class="item red">주간</span>
+                        <span class="item blue">오프라인</span>
+                      </p>
+                      <p class="rating">4.0</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!-- floating -->
+          <div class="floating_area no_footer">
+            <div class="inner">
+              <p
+                class="item icon_inquiry open_bottom_sheet"
+                data-target="inquery_bottom_sheet"
+              ></p>
+            </div>
+          </div>
+          <!-- floating -->
+        </div>
+
+        <!-- bottom sheet -->
+        <div class="bottom_sheet_overlay"></div>
+        <div
+          id="option_select_bottom_sheet"
+          class="bottom_sheet class_payments"
+        >
+          <div class="bottom_sheet_header">
+            <h3>옵션 선택</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <p class="desc">수업 옵션 개수를 선택해 주세요.</p>
+            <div class="info_wrap">
+              <div class="text_box">
+                <p class="tit">[얼리버드] 1인 수강권</p>
+                <p class="price_box">
+                  <span class="percent">34%</span>
+                  <span class="sale_price">192,000원</span>
+                  <span class="price">300,000</span>
+                </p>
+              </div>
+              <div class="count_box">
+                <button type="button" class="minus"></button>
+                <p class="num">0</p>
+                <button type="button" class="plus"></button>
+              </div>
+            </div>
+            <div class="bottom_btn flex">
+              <p class="bookmark_btn">
+                <i class="icon_bookmark"></i>
+                <span>찜</span>
+              </p>
+              <button
+                class="open_bottom_sheet"
+                data-target="option_select_bottom_sheet"
+              >
+                15,000원 결제하기
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="inquery_bottom_sheet" class="bottom_sheet">
+          <div class="bottom_sheet_header">
+            <h3>어깨 톡톡</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="inquery_menu_list">
+              <li>
+                <span>
+                  <img src="./assets/image/icon/i_inquery_chat.svg" />
+                </span>
+                <span>실시간 질문 입장</span>
+                <i class="icon_right_arrow"></i>
+              </li>
+              <li>
+                <span>
+                  <img src="./assets/image/icon/i_kakao_chat.svg" />
+                </span>
+                <span>카카오톡 채널 문의</span>
+                <i class="icon_right_arrow"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- bottom sheet -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    let $container = $(".container_wrap");
+
+    // 탭 버튼 클릭 시 해당 섹션으로 스크롤 이동
+    $(".tab_bar li").on("click", function () {
+      let targetId = $(this).data("target");
+      let target = $(targetId);
+
+      if (target.length) {
+        $container.animate(
+          { scrollTop: target.position().top + $container.scrollTop() - 100 },
+          500
+        );
+      } else {
+        console.error("해당 섹션을 찾을 수 없습니다:", targetId);
+      }
+    });
+
+    // .container_wrap 내부에서 스크롤 감지하여 'on' 클래스 추가
+    $container.on("scroll", function () {
+      let scrollPos = $container.scrollTop();
+
+      $(".section").each(function () {
+        let top = $(this).position().top + $container.scrollTop() - 60;
+        let bottom = top + $(this).outerHeight();
+        let id = $(this).attr("id");
+
+        if (scrollPos >= top && scrollPos < bottom) {
+          $(".tab_bar li").removeClass("on");
+          $('.tab_bar li[data-target="#' + id + '"]').addClass("on");
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

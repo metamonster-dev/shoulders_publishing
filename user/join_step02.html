@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이메일로 회원가입</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header">
+          <div class="inner">
+            <button class="back_btn"></button>
+            <!-- <h1>이메일로 회원가입</h1> -->
+          </div>
+        </header>
+        <!-- header -->
+        <div class="container_wrap global_inner h_01 join step02">
+          <h3 class="page_title no_h1">
+            안녕하세요, 숄더스 입니다.<br />
+            회원가입 시 약관 동의가 필요합니다.
+          </h3>
+          <section>
+            <div class="agree_wrap">
+              <div class="form_wrap all">
+                <label for="allChk" class="icon_checkbox size24">
+                  <input id="allChk" type="checkbox" />
+                  <span>약관 모두 동의하기</span>
+                </label>
+              </div>
+              <div class="form_wrap agree_list">
+                <div class="input_box">
+                  <label for="agree01" class="icon_checkbox size24">
+                    <input id="agree01" type="checkbox" />
+                    <span>숄더스 이용 약관 필수 동의</span>
+                  </label>
+                  <a href="#none">
+                    <img src="./assets/image/icon/arrow_right.svg" />
+                  </a>
+                </div>
+                <div class="input_box">
+                  <label for="agree02" class="icon_checkbox size24">
+                    <input id="agree02" type="checkbox" />
+                    <span>개인 정보 수집 및 이용 필수 동의</span>
+                  </label>
+                  <a href="#none">
+                    <img src="./assets/image/icon/arrow_right.svg" />
+                  </a>
+                </div>
+                <div class="input_box">
+                  <label for="agree03" class="icon_checkbox size24">
+                    <input id="agree03" type="checkbox" />
+                    <span>마케팅 수신 동의 (선택)</span>
+                  </label>
+                  <span class="slide_btn">
+                    <img src="./assets/image/icon/arrow_top.svg" />
+                  </span>
+                </div>
+                <div class="marketing_agree_box slide_content">
+                  <label for="marketing01" class="icon_checkbox no_round">
+                    <input id="marketing01" type="checkbox" />
+                    <span>문자 메세지 발송</span>
+                  </label>
+                  <label for="marketing02" class="icon_checkbox no_round">
+                    <input id="marketing02" type="checkbox" />
+                    <span>이메일</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="bottom_btn">
+            <button type="button" class="black" disabled>
+              동의하고 진행하기
+            </button>
+            <!-- 약관 동의 시 버튼 스타일 -->
+            <!-- <button type="button" class="black">동의하고 진행하기</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

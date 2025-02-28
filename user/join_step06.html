@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>추가 정보 입력</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header">
+          <div class="inner">
+            <button class="back_btn"></button>
+            <h1>추가 정보 입력</h1>
+          </div>
+        </header>
+        <!-- header -->
+        <div class="container_wrap h_01 join step06">
+          <p class="progress_bar bar03"></p>
+          <div class="global_inner">
+            <h3 class="page_title">수강생 정보를 설정해 주세요.</h3>
+            <p class="page_sub_title">
+              수강생 정보는 가입 후 마이 메뉴에서도 추가<br />혹은 수정
+              가능합니다.
+            </p>
+            <section>
+              <ul class="student_list">
+                <li class="item">
+                  <p
+                    class="menu_btn open_bottom_sheet"
+                    data-target="edit_bottom_sheet"
+                  >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </p>
+                  <p class="name">수강생 1</p>
+                  <div class="option">
+                    <span class="tit">수강생 연령대</span>
+                    <ul class="sel_list">
+                      <li>미취학(5-7세)</li>
+                    </ul>
+                  </div>
+                  <div class="option">
+                    <span class="tit">수학 희망 과목 및 레벨 (다중 선택)</span>
+                    <ul class="sel_list">
+                      <li>수학-초급</li>
+                      <li>영어-미경험</li>
+                      <li>논술-심화</li>
+                      <li>영어-다지기</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item">
+                  <p
+                    class="menu_btn open_bottom_sheet"
+                    data-target="edit_bottom_sheet"
+                  >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </p>
+                  <p class="name">수강생 2</p>
+                  <div class="option">
+                    <span class="tit">수강생 연령대</span>
+                    <ul class="sel_list">
+                      <li>초등 저학년(8-10세)</li>
+                    </ul>
+                  </div>
+                  <div class="option">
+                    <span class="tit">수학 희망 과목 및 레벨 (다중 선택)</span>
+                    <ul class="sel_list">
+                      <li>수학-중급</li>
+                      <li>영어-다지기</li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- 수강생 5명 이상 추가 불가 alret -->
+                <!-- <li onclick="open_modal('#notAdd')" class="item add_item"> -->
+                <!-- 수강생 5명 이상 추가 불가 alret -->
+                <li
+                  data-target="bottom_sheet_1"
+                  class="item add_item open_bottom_sheet"
+                >
+                  <span>
+                    <img src="./assets/image/icon/i_plus.svg" />
+                  </span>
+                  <span>수강생 정보 추가</span>
+                </li>
+              </ul>
+            </section>
+            <div class="bottom_btn">
+              <button class="black" disabled>다음</button>
+              <!-- 유효성 검사 통과시 버튼 스타일 -->
+              <!-- <button class="black">다음</button> -->
+            </div>
+          </div>
+        </div>
+        <!-- bottom sheet -->
+        <div class="bottom_sheet_overlay"></div>
+        <div id="bottom_sheet_1" class="bottom_sheet edit">
+          <p class="tab_bar"></p>
+          <div class="bottom_sheet_header">
+            <h3>수강생 정보 추가</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <p class="name">수강생 1</p>
+            <p class="legend_title">수강생 연령대</p>
+            <div class="age_legend">
+              <div class="input_box">
+                <label for="age01" class="text_radio">
+                  <input id="age01" name="age" type="radio" />
+                  <span>미취학(5~7세)</span>
+                </label>
+              </div>
+              <div class="input_box">
+                <label for="age02" class="text_radio">
+                  <input id="age02" name="age" type="radio" />
+                  <span>초등 저학년(8~10세)</span>
+                </label>
+              </div>
+              <div class="input_box">
+                <label for="age03" class="text_radio">
+                  <input id="age03" name="age" type="radio" />
+                  <span>초등 고학년(11~13세)</span>
+                </label>
+              </div>
+              <div class="input_box">
+                <label for="age04" class="text_radio">
+                  <input id="age04" name="age" type="radio" />
+                  <span>중/고등학생(14~19세)</span>
+                </label>
+              </div>
+            </div>
+            <p class="legend_title pt_28">수강 희망 과목 및 레벨 (다중 선택)</p>
+            <div class="legend_level scroll_bar">
+              <div class="check_slide">
+                <div class="input_box">
+                  <label for="subject01" class="icon_checkbox color">
+                    <input id="subject01" type="checkbox" />
+                    <span>수학</span>
+                  </label>
+                </div>
+                <div class="check_slide_content">
+                  <div class="input_box">
+                    <label for="level01" class="text_radio small">
+                      <input id="level01" name="level" type="radio" />
+                      <span>미경험</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level02" class="text_radio small">
+                      <input id="level02" name="level" type="radio" />
+                      <span>초급</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level03" class="text_radio small">
+                      <input id="level03" name="level" type="radio" />
+                      <span>다지기</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level04" class="text_radio small">
+                      <input id="level04" name="level" type="radio" />
+                      <span>중급</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level05" class="text_radio small">
+                      <input id="level05" name="level" type="radio" />
+                      <span>도약</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level06" class="text_radio small">
+                      <input id="level06" name="level" type="radio" />
+                      <span>심화</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level07" class="text_radio small">
+                      <input id="level07" name="level" type="radio" />
+                      <span>상급</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="check_slide">
+                <div class="input_box">
+                  <label for="subject02" class="icon_checkbox color">
+                    <input id="subject02" type="checkbox" />
+                    <span>영어</span>
+                  </label>
+                </div>
+                <div class="check_slide_content">
+                  <div class="input_box">
+                    <label for="level08" class="text_radio small">
+                      <input id="level08" name="level_type01" type="radio" />
+                      <span>미경험</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level09" class="text_radio small">
+                      <input id="level09" name="level_type01" type="radio" />
+                      <span>초급</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level10" class="text_radio small">
+                      <input id="level10" name="level_type01" type="radio" />
+                      <span>다지기</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level11" class="text_radio small">
+                      <input id="level11" name="level_type01" type="radio" />
+                      <span>중급</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level12" class="text_radio small">
+                      <input id="level12" name="level_type01" type="radio" />
+                      <span>도약</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level13" class="text_radio small">
+                      <input id="level13" name="level_type01" type="radio" />
+                      <span>심화</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level14" class="text_radio small">
+                      <input id="level14" name="level_type01" type="radio" />
+                      <span>상급</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="check_slide">
+                <div class="input_box">
+                  <label for="subject03" class="icon_checkbox color">
+                    <input id="subject03" type="checkbox" />
+                    <span>논술</span>
+                  </label>
+                </div>
+                <div class="check_slide_content">
+                  <div class="input_box">
+                    <label for="level16" class="text_radio small">
+                      <input id="level16" name="level_type04" type="radio" />
+                      <span>미경험</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level17" class="text_radio small">
+                      <input id="level17" name="level_type04" type="radio" />
+                      <span>초급</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level18" class="text_radio small">
+                      <input id="level18" name="level_type04" type="radio" />
+                      <span>다지기</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level19" class="text_radio small">
+                      <input id="level19" name="level_type04" type="radio" />
+                      <span>중급</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level20" class="text_radio small">
+                      <input id="level20" name="level_type04" type="radio" />
+                      <span>도약</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level21" class="text_radio small">
+                      <input id="level21" name="level_type04" type="radio" />
+                      <span>심화</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level22" class="text_radio small">
+                      <input id="level22" name="level_type04" type="radio" />
+                      <span>상급</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="check_slide">
+                <div class="input_box">
+                  <label for="subject04" class="icon_checkbox color">
+                    <input id="subject04" type="checkbox" />
+                    <span>음악</span>
+                  </label>
+                </div>
+                <div class="check_slide_content">
+                  <div class="input_box">
+                    <label for="level23" class="text_radio small">
+                      <input id="level23" name="level_type02" type="radio" />
+                      <span>미경험</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level24" class="text_radio small">
+                      <input id="level24" name="level_type02" type="radio" />
+                      <span>초급</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level25" class="text_radio small">
+                      <input id="level25" name="level_type02" type="radio" />
+                      <span>다지기</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level26" class="text_radio small">
+                      <input id="level26" name="level_type02" type="radio" />
+                      <span>중급</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level27" class="text_radio small">
+                      <input id="level27" name="level_type02" type="radio" />
+                      <span>도약</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level28" class="text_radio small">
+                      <input id="level28" named="level_type02" type="radio" />
+                      <span>심화</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level29" class="text_radio small">
+                      <input id="level29" name="level_type02" type="radio" />
+                      <span>상급</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="check_slide">
+                <div class="input_box">
+                  <label for="subject05" class="icon_checkbox color">
+                    <input id="subject05" type="checkbox" />
+                    <span>영어</span>
+                  </label>
+                </div>
+                <div class="check_slide_content">
+                  <div class="input_box">
+                    <label for="level30" class="text_radio small">
+                      <input id="level30" name="level_type03" type="radio" />
+                      <span>미경험</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level31" class="text_radio small">
+                      <input id="level31" name="level_type03" type="radio" />
+                      <span>초급</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level32" class="text_radio small">
+                      <input id="level32" name="level_type03" type="radio" />
+                      <span>다지기</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level33" class="text_radio small">
+                      <input id="level33" name="level_type03" type="radio" />
+                      <span>중급</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level34" class="text_radio small">
+                      <input id="level34" name="level_type03" type="radio" />
+                      <span>도약</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level35" class="text_radio small">
+                      <input id="level35" name="level_type03" type="radio" />
+                      <span>심화</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="level36" class="text_radio small">
+                      <input id="level36" name="level_type03" type="radio" />
+                      <span>상급</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom_btn">
+              <button disabled>추가</button>
+              <!-- 유효성 검사 통과시 버튼 스타일 -->
+              <!-- <button>추가</button> -->
+            </div>
+          </div>
+        </div>
+
+        <div id="edit_bottom_sheet" class="bottom_sheet edit">
+          <div class="bottom_sheet_content">
+            <ul class="edit_menu_list">
+              <li>
+                <span><img src="./assets/image/icon/i_pen.svg" /></span>
+                <span>수강생 정보 수정하기</span>
+              </li>
+              <li class="close_bottom_sheet" onclick="open_modal('#delAlret')">
+                <span><img src="./assets/image/icon/i_trush.svg" /></span>
+                <span>수강생 정보 삭제하기</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- bottom sheet -->
+        <!-- 모달 -->
+        <!-- 수강색 삭제 확인 alret -->
+        <article id="delAlret" class="modal_wrap">
+          <div class="modal">
+            <p class="text">선택한 수강생 정보를<br />삭제하시겠어요?</p>
+            <p class="desc">
+              수강생 정보를 삭제하면 되돌릴 수 없어요.<br />정말 삭제하시겠어요?
+            </p>
+            <div class="btn_area">
+              <button class="black" onclick="close_modal()">확인</button>
+            </div>
+          </div>
+        </article>
+        <!-- 수강생 5명 이상 추가 불가 alret -->
+        <article id="notAdd" class="modal_wrap">
+          <div class="modal">
+            <p class="text">수강생 등록은 5개까지 가능해요.</p>
+            <p class="desc">
+              기존 수강생 정보를 수정하거나<br />삭제 후 새로 등록해 주세요.
+            </p>
+            <div class="btn_area">
+              <button class="black" onclick="close_modal()">확인</button>
+            </div>
+          </div>
+        </article>
+        <!-- 모달 -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

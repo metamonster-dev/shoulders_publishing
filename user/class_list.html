@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클래스 메뉴</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- fullcalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!--main header -->
+        <header class="header main">
+          <div class="inner">
+            <h1 class="page_name">클래스</h1>
+            <ul class="header_menu">
+              <li
+                class="search"
+                onclick="location.href='/user/search.html'"
+              ></li>
+              <li class="alram" onclick="location.href='/user/alarm.html'">
+                <i class="icon_read"></i>
+              </li>
+              <li
+                onclick="location.href='/user/category.html'"
+                class="gnb_menu"
+              ></li>
+            </ul>
+          </div>
+        </header>
+        <!--main header -->
+        <div class="container_wrap h_04 class">
+          <ul class="tab_menu his sub_p">
+            <li data-tab="class_menu01" class="on">수업</li>
+            <li data-tab="teacher_menu02">선생님</li>
+          </ul>
+          <!-- 수업 메뉴 content -->
+          <div id="class_menu01" class="tab_content his active">
+            <section class="option_sec">
+              <div class="global_inner">
+                <p
+                  class="subject_btn"
+                  onclick="location.href='/user/class_category.html'"
+                >
+                  <span>전체 과목</span>
+                  <i class="icon_bottom_arrow"></i>
+                </p>
+              </div>
+              <div class="swiper option_list_sec swiper_menu">
+                <div class="swiper-wrapper">
+                  <div
+                    data-target="date_bottom_sheet"
+                    class="swiper-slide open_bottom_sheet"
+                  >
+                    날짜
+                  </div>
+                  <div
+                    class="swiper-slide"
+                    onclick="location.href='/user/location_category.html'"
+                  >
+                    지역
+                  </div>
+                  <div
+                    data-target="target_bottom_sheet"
+                    class="swiper-slide open_bottom_sheet"
+                  >
+                    대상
+                  </div>
+                  <div
+                    data-target="level_bottom_sheet"
+                    class="swiper-slide open_bottom_sheet"
+                  >
+                    레벨
+                  </div>
+                  <div
+                    data-target="price_bottom_sheet"
+                    class="swiper-slide open_bottom_sheet"
+                  >
+                    가격
+                  </div>
+                  <div class="swiper-slide blue">2025-01-15 ~ 2025-01-20</div>
+                  <div class="swiper-slide blue">서울 강남, 서울 서초</div>
+                  <div class="swiper-slide blue">미취학</div>
+                  <div class="swiper-slide blue">서울 강남, 서울 서초</div>
+                </div>
+              </div>
+            </section>
+
+            <section class="list_sec">
+              <div class="global_inner">
+                <div class="search_result">
+                  <p class="desc">‘영어’ 검색 160개</p>
+                  <p
+                    class="select_box_style open_bottom_sheet"
+                    data-target="class_sort_bottom_sheet"
+                  >
+                    <span>인기순</span>
+                    <i class="icon_bottom_arrow_g"></i>
+                  </p>
+                </div>
+                <ul class="subject_list">
+                  <li
+                    class="subject_item"
+                    onclick="location.href='/user/class_detail.html'"
+                  >
+                    <figure class="thumb">
+                      <img src="./assets/image/thumbnail/math_80x102.png" />
+                    </figure>
+                    <div class="text_box">
+                      <div class="title_box">
+                        <span class="tit"
+                          >[초등 저학년] 주간 단순 연산 주간 단순 연산</span
+                        >
+                        <i class="icon_bookmark"></i>
+                      </div>
+                      <div class="infomation">
+                        <span class="item">허꽃별 선생님</span>
+                        <span class="item">서울 강남</span>
+                      </div>
+                      <div class="price_box">
+                        <span class="percent">34%</span>
+                        <span class="sale_price">365,000원</span>
+                        <span class="price">400,000</span>
+                      </div>
+                      <div class="type">
+                        <p class="badge_list">
+                          <span class="item red">일간</span>
+                          <span class="item blue">온라인</span>
+                        </p>
+                        <p class="rating">4.0</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="subject_item"
+                    onclick="location.href='/user/class_detail.html'"
+                  >
+                    <figure class="thumb">
+                      <img src="./assets/image/thumbnail/eng_80x102.png" />
+                    </figure>
+                    <div class="text_box">
+                      <div class="title_box">
+                        <span class="tit"
+                          >[초등 저학년] 쉽게 배우는 스쉽게 배우는 스쉽게 배우는
+                          스</span
+                        >
+                        <i class="icon_bookmark"></i>
+                      </div>
+                      <div class="infomation">
+                        <span class="item">김남길 선생님</span>
+                        <span class="item">서울 강남</span>
+                      </div>
+                      <div class="price_box">
+                        <span class="percent">20%</span>
+                        <span class="sale_price">192,000원</span>
+                        <span class="price">320,000</span>
+                      </div>
+                      <div class="type">
+                        <p class="badge_list">
+                          <span class="item red">주간</span>
+                          <span class="item blue">오프라인</span>
+                        </p>
+                        <p class="rating">4.0</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="subject_item"
+                    onclick="location.href='/user/class_detail.html'"
+                  >
+                    <figure class="thumb">
+                      <img src="./assets/image/thumbnail/essay_80x102.png" />
+                    </figure>
+                    <div class="text_box">
+                      <div class="title_box">
+                        <span class="tit">
+                          [초등 고학년] 논리적인 생각을 논리적인 생각을 논리적인
+                          생각을
+                        </span>
+                        <i class="icon_bookmark"></i>
+                      </div>
+                      <div class="infomation">
+                        <span class="item">김남길 선생님</span>
+                        <span class="item">서울 강남</span>
+                      </div>
+                      <div class="price_box">
+                        <span class="percent">20%</span>
+                        <span class="sale_price">192,000원</span>
+                        <span class="price">320,000</span>
+                      </div>
+                      <div class="type">
+                        <p class="badge_list">
+                          <span class="item red">주간</span>
+                          <span class="item blue">오프라인</span>
+                        </p>
+                        <p class="rating">4.0</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+          <!-- 선생님 메뉴 content -->
+          <div id="teacher_menu02" class="tab_content his">
+            <section class="option_sec">
+              <div class="global_inner">
+                <p
+                  class="subject_btn"
+                  onclick="location.href='/user/class_category.html'"
+                >
+                  <span>전체 과목</span>
+                  <i class="icon_bottom_arrow"></i>
+                </p>
+              </div>
+              <div class="swiper option_list_sec swiper_menu">
+                <div class="swiper-wrapper">
+                  <div
+                    class="swiper-slide"
+                    onclick="location.href='/user/location_category.html'"
+                  >
+                    지역
+                  </div>
+                  <div
+                    data-target="target_bottom_sheet"
+                    class="swiper-slide open_bottom_sheet"
+                  >
+                    대상
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="list_sec">
+              <div class="global_inner">
+                <div class="search_result">
+                  <p class="desc">전체 160개</p>
+                  <p
+                    class="select_box_style open_bottom_sheet"
+                    data-target="tc_sort_bottom_sheet"
+                  >
+                    <span>인기순</span>
+                    <i class="icon_bottom_arrow_g"></i>
+                  </p>
+                </div>
+                <ul class="teacher_list">
+                  <li
+                    class="teacher_item"
+                    onclick="location.href='/user/teacher_detail.html'"
+                  >
+                    <figure class="profile_box">
+                      <i class="icon_bookmark"></i>
+                      <img src="./assets/image/dummy/profile01.png" alt="" />
+                    </figure>
+                    <div class="text_box">
+                      <p class="name">선생님명</p>
+                      <p class="badge_list">
+                        <span class="item orange">1~3학년</span>
+                        <span class="item">수학</span>
+                      </p>
+                      <p class="info dot_list">
+                        <span>서울 강남</span>
+                        <span>수업 52개</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    class="teacher_item"
+                    onclick="location.href='/user/teacher_detail.html'"
+                  >
+                    <figure class="profile_box">
+                      <i class="icon_bookmark"></i>
+                      <img src="./assets/image/dummy/profile02.png" alt="" />
+                    </figure>
+                    <div class="text_box">
+                      <p class="name">선생님명</p>
+                      <p class="badge_list">
+                        <span class="item green">4~6학년</span>
+                        <span class="item">수학</span>
+                      </p>
+                      <p class="info dot_list">
+                        <span>서울 강남</span>
+                        <span>수업 52개</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    class="teacher_item"
+                    onclick="location.href='/user/teacher_detail.html'"
+                  >
+                    <figure class="profile_box">
+                      <i class="icon_bookmark"></i>
+                      <img src="./assets/image/dummy/profile03.png" alt="" />
+                    </figure>
+                    <div class="text_box">
+                      <p class="name">선생님명</p>
+                      <p class="badge_list">
+                        <span class="item purple">중고생</span>
+                        <span class="item">수학</span>
+                      </p>
+                      <p class="info dot_list">
+                        <span>서울 강남</span>
+                        <span>수업 52개</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    class="teacher_item"
+                    onclick="location.href='/user/teacher_detail.html'"
+                  >
+                    <figure class="profile_box">
+                      <i class="icon_bookmark"></i>
+                      <img src="./assets/image/dummy/profile04.png" alt="" />
+                    </figure>
+                    <div class="text_box">
+                      <p class="name">선생님명</p>
+                      <p class="badge_list">
+                        <span class="item purple">중고생</span>
+                        <span class="item">수학</span>
+                      </p>
+                      <p class="info dot_list">
+                        <span>서울 강남</span>
+                        <span>수업 52개</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    class="teacher_item"
+                    onclick="location.href='/user/teacher_detail.html'"
+                  >
+                    <figure class="profile_box">
+                      <i class="icon_bookmark"></i>
+                      <img src="./assets/image/dummy/profile05.png" alt="" />
+                    </figure>
+                    <div class="text_box">
+                      <p class="name">선생님명</p>
+                      <p class="badge_list">
+                        <span class="item orange">1~3학년</span>
+                        <span class="item">수학</span>
+                      </p>
+                      <p class="info dot_list">
+                        <span>서울 강남</span>
+                        <span>수업 52개</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    class="teacher_item"
+                    onclick="location.href='/user/teacher_detail.html'"
+                  >
+                    <figure class="profile_box">
+                      <i class="icon_bookmark"></i>
+                      <img src="./assets/image/dummy/profile06.png" alt="" />
+                    </figure>
+                    <div class="text_box">
+                      <p class="name">선생님명</p>
+                      <p class="badge_list">
+                        <span class="item green">4~6학년</span>
+                        <span class="item">수학</span>
+                      </p>
+                      <p class="info dot_list">
+                        <span>서울 강남</span>
+                        <span>수업 52개</span>
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+
+          <!-- floating -->
+          <div class="floating_area">
+            <div class="inner">
+              <p
+                class="item icon_inquiry open_bottom_sheet"
+                data-target="inquery_bottom_sheet"
+              ></p>
+            </div>
+          </div>
+          <!-- floating -->
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+          <ul class="footer_menu">
+            <li onclick="location.href='/user/home.html'">
+              <i class="icon_home"></i>
+              <span class="tit">홈</span>
+            </li>
+            <li class="on" onclick="location.href='/user/class_list.html'">
+              <i class="icon_class"></i>
+              <span class="tit">클래스</span>
+            </li>
+            <li onclick="location.href='/user/bookmark_list.html'">
+              <i class="icon_like"></i>
+              <span class="tit">찜</span>
+            </li>
+            <li onclick="location.href='/user/community_list.html'">
+              <i class="icon_commu"></i>
+              <span class="tit">커뮤니티</span>
+            </li>
+            <li onclick="location.href='/user/mypage.html'">
+              <i class="icon_my"></i>
+              <span class="tit">마이</span>
+            </li>
+          </ul>
+        </footer>
+        <!-- footer -->
+
+        <div class="bottom_sheet_overlay"></div>
+        <!--page bottom sheet -->
+        <!-- 수업 정렬 순서 bottom sheet-->
+        <div id="class_sort_bottom_sheet" class="bottom_sheet sort">
+          <div class="bottom_sheet_header">
+            <h3>정렬 순서</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="option_list">
+              <li>인기순</li>
+              <li>날짜 최신순</li>
+              <li>가격 낮은순</li>
+              <li>가격 높은순</li>
+              <li>평점 높은순</li>
+              <li>마감 임박순</li>
+            </ul>
+          </div>
+        </div>
+        <!-- 선생님 정렬 순서 bottom sheet-->
+        <div id="tc_sort_bottom_sheet" class="bottom_sheet sort">
+          <div class="bottom_sheet_header">
+            <h3>정렬 순서</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="option_list">
+              <li>인기순</li>
+              <li>가나다순</li>
+              <li>평점 높은순</li>
+              <li>찜 많은순</li>
+              <li>수업 많은순</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 날짜 bottom sheet -->
+        <div id="date_bottom_sheet" class="bottom_sheet calendar">
+          <div class="bottom_sheet_header">
+            <h3>날짜 조회</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <div
+              id="calendar"
+              tabindex="0"
+              role="application"
+              aria-live="polite"
+              aria-label="월별 캘린더 테이블"
+            ></div>
+            <div class="bottom_btn">
+              <!-- 날짜 선택 안했을때 버튼 스타일-->
+              <!-- <button disabled="">적용하기</button> -->
+              <button onclick="open_modal('#date_alert')">적용하기</button>
+            </div>
+          </div>
+        </div>
+        <!-- 대상 bottom sheet -->
+        <div id="target_bottom_sheet" class="bottom_sheet class_target">
+          <div class="bottom_sheet_header">
+            <h3>대상</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="option_list">
+              <li class="input_box">
+                <label for="taget01" class="icon_radio">
+                  <input id="taget01" name="target" type="radio" />
+                  <span>전체</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="taget02" class="icon_radio">
+                  <input id="taget02" name="target" type="radio" />
+                  <span>미취학 아동</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="taget03" class="icon_radio">
+                  <input id="taget03" name="target" type="radio" />
+                  <span>초등학교 저학년</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="taget04" class="icon_radio">
+                  <input id="taget04" name="target" type="radio" />
+                  <span>초등학교 고학년</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="taget05" class="icon_radio">
+                  <input id="taget05" name="target" type="radio" />
+                  <span>중,고등학생</span>
+                </label>
+              </li>
+            </ul>
+            <div class="bottom_btn">
+              <button disabled="">적용하기</button>
+              <!-- 대상 선택시 버튼 스타일-->
+              <!-- <button>적용하기</button> -->
+            </div>
+          </div>
+        </div>
+        <!-- 레벨 bottom sheet -->
+        <div id="level_bottom_sheet" class="bottom_sheet class_level">
+          <div class="bottom_sheet_header">
+            <h3>레벨</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="option_list">
+              <li class="input_box">
+                <label for="all_level" class="icon_checkbox color size24">
+                  <input id="all_level" type="checkbox" />
+                  <span>전체</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="level01" class="icon_checkbox color size24">
+                  <input id="level01" type="checkbox" />
+                  <span>중급</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="level02" class="icon_checkbox color size24">
+                  <input id="level02" type="checkbox" />
+                  <span>미경험</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="level03" class="icon_checkbox color size24">
+                  <input id="level03" type="checkbox" />
+                  <span>미경험</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="level04" class="icon_checkbox color size24">
+                  <input id="level04" type="checkbox" />
+                  <span>도약</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="level05" class="icon_checkbox color size24">
+                  <input id="level05" type="checkbox" />
+                  <span>초급</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="level06" class="icon_checkbox color size24">
+                  <input id="level06" type="checkbox" />
+                  <span>심화</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="level07" class="icon_checkbox color size24">
+                  <input id="level07" type="checkbox" />
+                  <span>다지기</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="level08" class="icon_checkbox color size24">
+                  <input id="level08" type="checkbox" />
+                  <span>상급</span>
+                </label>
+              </li>
+            </ul>
+            <div class="bottom_btn">
+              <button disabled="">적용하기</button>
+              <!-- 레벨 체크시 버튼 스타일-->
+              <!-- <button>적용하기</button> -->
+            </div>
+          </div>
+        </div>
+        <!-- 가격 bottom sheet -->
+        <div id="price_bottom_sheet" class="bottom_sheet class_price">
+          <div class="bottom_sheet_header">
+            <h3>가격</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="option_list">
+              <li class="input_box">
+                <label for="price01" class="icon_radio">
+                  <input id="price01" name="price" type="radio" />
+                  <span>전체</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="price02" class="icon_radio">
+                  <input id="price02" name="price" type="radio" />
+                  <span>31~40만 원</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="price03" class="icon_radio">
+                  <input id="price03" name="price" type="radio" />
+                  <span>10~20만 원</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="price04" class="icon_radio">
+                  <input id="price04" name="price" type="radio" />
+                  <span>41~50만 원</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="price05" class="icon_radio">
+                  <input id="price05" name="price" type="radio" />
+                  <span>21~30만 원</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="price06" class="icon_radio">
+                  <input id="price06" name="price" type="radio" />
+                  <span>51~60만 원</span>
+                </label>
+              </li>
+            </ul>
+            <div class="bottom_btn">
+              <button disabled="">적용하기</button>
+              <!-- 가격 선택시 버튼 스타일-->
+              <!-- <button>적용하기</button> -->
+            </div>
+          </div>
+        </div>
+        <!--page bottom sheet -->
+        <!--common bottom sheet -->
+        <div id="inquery_bottom_sheet" class="bottom_sheet">
+          <div class="bottom_sheet_header">
+            <h3>어깨 톡톡</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="inquery_menu_list">
+              <li>
+                <span>
+                  <img src="./assets/image/icon/i_inquery_chat.svg" />
+                </span>
+                <span>실시간 질문 입장</span>
+                <i class="icon_right_arrow"></i>
+              </li>
+              <li>
+                <span>
+                  <img src="./assets/image/icon/i_kakao_chat.svg" />
+                </span>
+                <span>카카오톡 채널 문의</span>
+                <i class="icon_right_arrow"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--common bottom sheet -->
+        <!-- 모달 -->
+        <article id="date_alert" class="modal_wrap">
+          <div class="modal">
+            <p class="text">종료일 지정은 필수입니다.</p>
+            <p class="desc">
+              조회할 날짜의 시작일과 종료일을<br />모두 지정해 주세요.
+            </p>
+            <div class="btn_area">
+              <button class="black" onclick="close_modal()">확인</button>
+            </div>
+          </div>
+        </article>
+        <!-- 모달 -->
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let startDate = null; // 시작 날짜
+  let endDate = null; // 종료 날짜
+  let selectedDates = []; // 선택된 모든 날짜 저장
+  const calendarEl = document.getElementById("calendar");
+  const calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: "dayGridMonth",
+    locale: "ko",
+    headerToolbar: {
+      left: "prev",
+      center: "title",
+      right: "next",
+    },
+    titleFormat: function (date) {
+      return `${date.date.year}년 ${String(date.date.month + 1).padStart(
+        2,
+        "0"
+      )}월`;
+    },
+    dayCellContent: function (args) {
+      return args.date.getDate().toString();
+    },
+    height: "auto",
+    selectable: true,
+    unselectAuto: false,
+    dateClick: function (info) {
+      let clickedDate = info.dateStr;
+
+      if (!startDate) {
+        // ✅ 시작 날짜 선택
+        startDate = clickedDate;
+        // console.log("시작일:", startDate);
+      } else {
+        // ✅ 종료 날짜 선택
+        endDate = clickedDate;
+
+        // 시작일이 종료일보다 이후라면 서로 교체
+        if (new Date(startDate) > new Date(endDate)) {
+          [startDate, endDate] = [endDate, startDate];
+        }
+
+        // console.log("종료일:", endDate);
+
+        // ✅ 기존 선택 스타일 초기화 (이전 선택된 날짜 리셋)
+        $(".fc-daygrid-day").removeClass("start end selected");
+
+        // ✅ 종료일을 하루 줄여서 범위 보정
+        let start = new Date(startDate);
+        let end = new Date(endDate);
+
+        // ✅ 선택된 날짜를 저장할 배열 초기화
+        selectedDates = [];
+
+        let currentDate = new Date(start);
+        while (currentDate <= end) {
+          let formattedDate = currentDate.toISOString().split("T")[0];
+          selectedDates.push(formattedDate); // 배열에 저장
+
+          let cell = $(`.fc-day[data-date="${formattedDate}"]`).closest(
+            ".fc-daygrid-day"
+          );
+
+          if (formattedDate === startDate) {
+            cell.addClass("start"); // ✅ 시작일 스타일
+          } else if (formattedDate === end.toISOString().split("T")[0]) {
+            cell.addClass("end"); // ✅ 종료일 스타일
+          } else {
+            cell.addClass("selected"); // ✅ 중간 날짜 스타일
+          }
+
+          currentDate.setDate(currentDate.getDate() + 1);
+        }
+
+        // console.log("선택된 날짜:", selectedDates);
+
+        // ✅ 날짜 선택 후 초기화하여 다시 선택 가능하도록
+        startDate = null;
+        endDate = null;
+      }
+    },
+  });
+  calendar.render();
+</script>
+<!-- swiper -->
+<script>
+  var swiper = new Swiper(".option_list_sec", {
+    slidesPerView: "auto",
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+  });
+</script>
+<!-- swiper -->
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

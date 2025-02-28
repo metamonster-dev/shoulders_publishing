@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>필수 정보 입력</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header">
+          <div class="inner">
+            <button class="back_btn"></button>
+            <h1>필수 정보 입력</h1>
+          </div>
+        </header>
+        <!-- header -->
+
+        <div class="container_wrap h_01 join step04">
+          <p class="progress_bar bar01"></p>
+          <div class="global_inner">
+            <h3 class="page_title">
+              아이디와 비밀번호를<br />
+              설정해 주세요.
+            </h3>
+            <section>
+              <div class="form_wrap">
+                <div class="input_box">
+                  <label class="label required">이메일</label>
+                  <p class="focus_box">
+                    <input type="text" placeholder="아이디를 입력해 주세요." />
+                    <span class="input_btn close"></span>
+                  </p>
+                  <!-- 유효성 문구-->
+                  <div class="vail_box">
+                    <span class="basic">이메일 형태(@ 포함)</span>
+                  </div>
+                </div>
+                <div class="input_box">
+                  <label class="label required">비밀번호</label>
+                  <p class="focus_box">
+                    <input
+                      type="password"
+                      placeholder="비밀번호를 입력해 주세요."
+                    />
+                    <!-- 비밀번호 안보일때 아이콘 -->
+                    <span class="input_btn eyes"></span>
+                  </p>
+                  <!-- 비밀번호 보일때 아이콘 -->
+                  <!-- <span class="input_btn uneyes"></span> -->
+                  <!-- 유효성 문구 -->
+                  <div class="vail_box">
+                    <span class="complete">영문</span>
+                    <span class="complete">숫자</span>
+                    <span class="complete">특수문자</span>
+                    <span class="reject">10-24자리</span>
+                  </div>
+                </div>
+                <div class="input_box">
+                  <p class="focus_box">
+                    <input
+                      type="password"
+                      placeholder="비밀번호를 다시 입력해 주세요."
+                    />
+                    <!-- 비밀번호 안보일때 아이콘 -->
+                    <span class="input_btn eyes"></span>
+                  </p>
+                  <!-- 비밀번호 보일때 아이콘 -->
+                  <!-- <span class="input_btn uneyes"></span> -->
+                  <!-- 유효성 문구 -->
+                  <p class="err_msg">
+                    위에 입력하신 비밀번호와 똑같이 입력해 주세요.
+                  </p>
+                </div>
+                <div class="input_box">
+                  <label class="label required">이름</label>
+                  <input type="text" value="김숄더" disabled />
+                </div>
+                <div class="input_box">
+                  <label class="label required">생년월일</label>
+                  <input type="text" value="1999-09-09" disabled />
+                </div>
+                <div class="input_box">
+                  <label class="label required">핸드폰 번호</label>
+                  <input type="text" value="010-1234-5678" disabled />
+                </div>
+              </div>
+            </section>
+            <div class="bottom_btn">
+              <button class="black" disabled>다음</button>
+              <!-- 유효성 검사 통과시 버튼 스타일 -->
+              <!-- <button class="black">다음</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

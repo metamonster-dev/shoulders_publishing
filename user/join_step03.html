@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가입 계정 안내</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header">
+          <div class="inner">
+            <button class="back_btn"></button>
+            <h1>가입 계정 안내</h1>
+          </div>
+        </header>
+        <!-- header -->
+        <div class="container_wrap global_inner pb_20 h_03 join step03">
+          <h3 class="page_title txt_center">이미 가입한 계정이 있어요.</h3>
+          <div class="result_box">
+            <div class="inner">
+              <div class="info">
+                <span class="icon">
+                  <img src="./assets/image/icon/icon_kakao.svg" />
+                </span>
+                <span class="result">shou*****@gmail.com</span>
+              </div>
+              <a href="#none">
+                <img src="./assets/image/icon/arrow_right.svg" />
+              </a>
+            </div>
+          </div>
+          <p class="desc">위 계정으로 로그인을 진행해 주세요.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

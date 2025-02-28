@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>전체과목</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header border">
+          <div class="inner">
+            <button onclick="history.back();" class="back_btn"></button>
+            <h1>전체과목</h1>
+          </div>
+        </header>
+        <!-- header -->
+        <div class="container_wrap h_04 category">
+          <div class="global_inner">
+            <ul class="cate_list">
+              <li class="item math">
+                <p class="thumb_title">
+                  <span>수학</span>
+                </p>
+                <p class="title">수학 카테고리</p>
+                <ul class="sub_item">
+                  <li>연산</li>
+                  <li>공간지각</li>
+                  <li>문제해결</li>
+                  <li>기타</li>
+                </ul>
+              </li>
+              <li class="item eng">
+                <p class="thumb_title">
+                  <span>영어</span>
+                </p>
+                <p class="title">영어 카테고리</p>
+                <ul class="sub_item">
+                  <li>스피킹</li>
+                  <li>리딩</li>
+                  <li>라이팅</li>
+                  <li>기타</li>
+                </ul>
+              </li>
+              <li class="item essay">
+                <p class="thumb_title">
+                  <span>논술</span>
+                </p>
+                <p class="title">논술 카테고리</p>
+                <ul class="sub_item">
+                  <li>토론</li>
+                  <li>필기</li>
+                  <li>기타</li>
+                </ul>
+              </li>
+              <li class="item music">
+                <p class="thumb_title">
+                  <span>음악</span>
+                </p>
+                <p class="title">음악 카테고리</p>
+                <ul class="sub_item">
+                  <li>현악기</li>
+                  <li>건반악기</li>
+                  <li>관악기</li>
+                  <li>기타</li>
+                </ul>
+              </li>
+              <li class="item activity">
+                <p class="thumb_title">
+                  <span>활동</span>
+                </p>
+                <p class="title">활동 카테고리</p>
+                <ul class="sub_item">
+                  <li>구기</li>
+                  <li>라켓</li>
+                  <li>펜싱</li>
+                  <li>생활체육</li>
+                  <li>기타</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <footer class="footer">
+          <ul class="footer_menu">
+            <li class="on" onclick="location.href='/user/home.html'">
+              <i class="icon_home"></i>
+              <span class="tit">홈</span>
+            </li>
+            <li onclick="location.href='/user/class_list.html'">
+              <i class="icon_class"></i>
+              <span class="tit">클래스</span>
+            </li>
+            <li onclick="location.href='/user/bookmark_list.html'">
+              <i class="icon_like"></i>
+              <span class="tit">찜</span>
+            </li>
+            <li onclick="location.href='/user/community_list.html'">
+              <i class="icon_commu"></i>
+              <span class="tit">커뮤니티</span>
+            </li>
+            <li onclick="location.href='/user/mypage.html'">
+              <i class="icon_my"></i>
+              <span class="tit">마이</span>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

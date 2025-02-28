@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>과목 선택</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header border">
+          <div class="inner">
+            <h1>과목 선택</h1>
+            <button onclick="history.back();" class="close_btn"></button>
+          </div>
+        </header>
+        <!-- header -->
+        <div class="container_wrap sub_catecory h_03">
+          <p class="fixed_desc">1개 선택 가능</p>
+          <div class="side_tab has_desc">
+            <ul class="tab_menu">
+              <li data-tab="subject01" class="on">수학</li>
+              <li data-tab="subject02">영어</li>
+              <li data-tab="subject03">논술</li>
+              <li data-tab="subject04">활동</li>
+              <li data-tab="subject05">음악</li>
+            </ul>
+            <div class="tab_content_wrap">
+              <ul id="subject01" class="tab_content active">
+                <li>
+                  <div class="input_box">
+                    <label for="chk-01" class="r_icon_ckeck">
+                      <input id="chk-01" name="subject" type="radio" />
+                      <span>연산</span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="input_box">
+                    <label for="chk-02" class="r_icon_ckeck">
+                      <input id="chk-02" name="subject" type="radio" />
+                      <span>공간지각</span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="input_box">
+                    <label for="chk-03" class="r_icon_ckeck">
+                      <input id="chk-03" name="subject" type="radio" />
+                      <span>문제해결</span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="input_box">
+                    <label for="chk-04" class="r_icon_ckeck">
+                      <input id="chk-04" name="subject" type="radio" />
+                      <span>기타</span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+              <ul id="subject02" class="tab_content">
+                <li>
+                  <div class="input_box">
+                    <label for="chk-05" class="r_icon_ckeck">
+                      <input id="chk-05" name="subject" type="radio" />
+                      <span>영어 하위과목01</span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="input_box">
+                    <label for="chk-06" class="r_icon_ckeck">
+                      <input id="chk-06" name="subject" type="radio" />
+                      <span>영어 하위과목02</span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="input_box">
+                    <label for="chk-07" class="r_icon_ckeck">
+                      <input id="chk-07" name="subject" type="radio" />
+                      <span>영어 하위과목03</span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+              <ul id="subject03" class="tab_content">
+                <li>
+                  <div class="input_box">
+                    <label for="chk-08" class="r_icon_ckeck">
+                      <input id="chk-08" name="subject" type="radio" />
+                      <span>논술 하위과목01</span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="input_box">
+                    <label for="chk-09" class="r_icon_ckeck">
+                      <input id="chk-09" name="subject" type="radio" />
+                      <span>논술 하위과목02</span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="input_box">
+                    <label for="chk-10" class="r_icon_ckeck">
+                      <input id="chk-10" name="subject" type="radio" />
+                      <span>논술 하위과목03</span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+              <ul id="subject04" class="tab_content">
+                <li>
+                  <div class="input_box">
+                    <label for="chk-11" class="r_icon_ckeck">
+                      <input id="chk-11" name="subject" type="radio" />
+                      <span>활동 하위과목01</span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="input_box">
+                    <label for="chk-12" class="r_icon_ckeck">
+                      <input id="chk-12" name="subject" type="radio" />
+                      <span>활동 하위과목02</span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="input_box">
+                    <label for="chk-13" class="r_icon_ckeck">
+                      <input id="chk-13" name="subject" type="radio" />
+                      <span>활동 하위과목03</span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+              <ul id="subject05" class="tab_content">
+                <li>
+                  <div class="input_box">
+                    <label for="chk-14" class="r_icon_ckeck">
+                      <input id="chk-14" name="subject" type="radio" />
+                      <span>음악 하위과목01</span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="input_box">
+                    <label for="chk-15" class="r_icon_ckeck">
+                      <input id="chk-15" name="subject" type="radio" />
+                      <span>음악 하위과목02</span>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="input_box">
+                    <label for="chk-16" class="r_icon_ckeck">
+                      <input id="chk-16" name="subject" type="radio" />
+                      <span>음악 하위과목03</span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

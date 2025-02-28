@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아이디 찾기</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header">
+          <div class="inner">
+            <button class="back_btn"></button>
+            <h1>아이디 찾기</h1>
+          </div>
+        </header>
+        <!-- header -->
+        <div class="container_wrap global_inner h_02 find_id_finsh">
+          <h3 class="page_title txt_center">
+            회원님의 휴대전화로<br />
+            가입된 아이디가 있습니다.
+          </h3>
+          <div class="result_box">
+            <span class="tit">회원님의 아이디</span>
+            <span class="result">shou*****@gmail.com</span>
+          </div>
+          <div class="bottom_text">
+            <p class="link_txt">
+              <span>비밀번호가 기억나지 않으세요?</span>&nbsp;
+              <a href="#">비밀번호 찾기</a>
+            </p>
+          </div>
+          <div class="bottom_btn">
+            <button type="button" class="black">로그인하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

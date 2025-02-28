@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>숄더스 퍼블리싱 화면</title>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        padding: 40px 20px;
+      }
+      h1 {
+        font-size: 18px;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
+      a {
+        color: #007bff;
+        text-decoration: underline;
+      }
+      h2 {
+        margin-bottom: 20px;
+        padding: 20px;
+        background: #666;
+        color: #fff;
+      }
+      h2 span {
+        font-size: 14px;
+        opacity: 0.7;
+      }
+      .table_defalt {
+        width: 100%;
+        border-collapse: collapse;
+        border: 0;
+        border-bottom: 1px solid #ddd;
+        table-layout: fixed;
+        font-size: 14px;
+      }
+      .table_defalt th,
+      .table_defalt td {
+        border: 1px solid #ddd;
+        text-align: center;
+        padding: 8px;
+        margin: 0;
+      }
+      .table_defalt tbody tr:last-child th,
+      .table_defalt tbody tr:last-child td {
+        border-bottom: 0;
+      }
+      .table_defalt th {
+        background: #eee;
+      }
+      .table_defalt td {
+        background: #fff;
+        color: #666;
+      }
+      .table_defalt td.text_left {
+        text-align: left;
+      }
+      .table_defalt td input {
+        width: 100%;
+      }
+      .table_defalt td input:read-only {
+        background: #f2f2f2;
+      }
+      .table_defalt button.in_btn {
+        width: 100%;
+      }
+      .remove {
+        text-decoration: line-through;
+        background: #ccc !important;
+      }
+      .remove a {
+        color: #666 !important;
+        text-decoration: line-through;
+      }
+      .space {
+        background: #f2f2f2 !important;
+        height: 36px;
+      }
+      .tap_menu {
+        margin-bottom: 16px;
+        display: flex;
+        gap: 8px;
+      }
+      .tap_menu li {
+        padding: 0 8px 5px;
+        cursor: pointer;
+        list-style: none;
+      }
+      .tap_menu li.on {
+        font-weight: 800;
+        border-bottom: 2px solid #000;
+      }
+      section {
+        display: none;
+      }
+      section.on {
+        display: block;
+      }
+    </style>
+    <h1>씨럽 퍼블리싱 화면</h1>
+    <ul class="tap_menu">
+      <li class="on" data-name="tap01">사용자[학부모]</li>
+      <li data-name="tap02">사용자[강사]</li>
+      <li data-name="tap03">관리자</li>
+    </ul>
+    <!-- 사용자(학부모) 테이블 -->
+    <section id="tap01" class="on">
+      <h2>사용자 [학부모]</h2>
+      <table class="table_defalt">
+        <thead>
+          <tr>
+            <th width="80px">번호</th>
+            <th width="20%">화면구분</th>
+            <th>화면명</th>
+            <th>링크</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="count"></td>
+            <td>로그인</td>
+            <td>로그인</td>
+            <td>
+              <a target="_blank" href="./user/login.html">./user/login.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" class="space"></td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td rowspan="3">아이디 찾기</td>
+            <td>아이디 찾기</td>
+            <td>
+              <a target="_blank" href="./user/find_id.html"
+                >./user/find_id.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>아이디 찾기 결과 안내(이메일)</td>
+            <td>
+              <a target="_blank" href="./user/find_id_finsh_email.html"
+                >./user/find_id_finsh_email.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>아이디 찾기 결과 안내(SNS)</td>
+            <td>
+              <a target="_blank" href="./user/find_id_finsh_social.html"
+                >./user/find_id_finsh_social.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" class="space"></td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td rowspan="3">비밀번호 찾기</td>
+            <td>비밀번호 찾기</td>
+            <td>
+              <a target="_blank" href="./user/find_password.html"
+                >./user/find_password.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>비밀번호 재설정</td>
+            <td>
+              <a target="_blank" href="./user/find_password_change.html"
+                >./user/find_password_change.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>비밀번호 재설정 완료</td>
+            <td>
+              <a target="_blank" href="./user/find_password_finsh.html"
+                >./user/find_password_finsh.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" class="space"></td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td rowspan="8">이메일로 가입하기</td>
+            <td>본인인증 화면</td>
+            <td>
+              <a target="_blank" href="./user/join_step01.html"
+                >./user/join_step01.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>약관동의</td>
+            <td>
+              <a target="_blank" href="./user/join_step02.html"
+                >./user/join_step02.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>가입 계정 안내(가입한 계정 있을때)</td>
+            <td>
+              <a target="_blank" href="./user/join_step03.html"
+                >./user/join_step03.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>필수 정보 입력</td>
+            <td>
+              <a target="_blank" href="./user/join_step04.html"
+                >./user/join_step04.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>추가 정보 입력</td>
+            <td>
+              <a target="_blank" href="./user/join_step05.html"
+                >./user/join_step05.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>추가 정보 입력-수강생 정보 입력</td>
+            <td>
+              <a target="_blank" href="./user/join_step06.html"
+                >./user/join_step06.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>가입 완료</td>
+            <td>
+              <a target="_blank" href="./user/join_finsh.html"
+                >./user/join_finsh.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>오류 발생</td>
+            <td>
+              <a target="_blank" href="./user/join_error.html"
+                >./user/join_error.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" class="space"></td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td rowspan="6">메인</td>
+            <td>홈 화면</td>
+            <td>
+              <a target="_blank" href="./user/home.html">./user/home.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>검색</td>
+            <td>
+              <a target="_blank" href="./user/search.html"
+                >./user/search.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>알림</td>
+            <td>
+              <a target="_blank" href="./user/alarm.html">./user/alarm.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>알림 없을 때</td>
+            <td>
+              <a target="_blank" href="./user/no_alarm.html"
+                >./user/no_alarm.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>카테고리</td>
+            <td>
+              <a target="_blank" href="./user/category.html"
+                >./user/category.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>클래스(추천 마감 입박 수업) 전체보기</td>
+            <td>
+              <a target="_blank" href="./user/recommend_class.html"
+                >./user/recommend_class.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" class="space"></td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td rowspan="3">클래스</td>
+            <td>클래스 메뉴</td>
+            <td>
+              <a target="_blank" href="./user/class_list.html"
+                >./user/class_list.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>클래스 상세페이지</td>
+            <td>
+              <a target="_blank" href="./user/class_detail.html"
+                >./user/class_detail.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>선생님 상세페이지</td>
+            <td>
+              <a target="_blank" href="./user/teacher_detail.html"
+                >./user/teacher_detail.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" class="space"></td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>찜 메뉴</td>
+            <td>찜리스트</td>
+            <td>
+              <a target="_blank" href="./user/bookmark_list.html"
+                >./user/bookmark_list.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" class="space"></td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td rowspan="6">커뮤니티</td>
+            <td>커뮤니티 리스트</td>
+            <td>
+              <a target="_blank" href="./user/community_list.html"
+                >./user/community_list.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>댓글창</td>
+            <td>
+              <a target="_blank" href="./user/comment_list.html"
+                >./user/comment_list.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>커뮤니티 글작성 - 후기</td>
+            <td>
+              <a target="_blank" href="./user/community_edit_review.html"
+                >./user/community_edit_review.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>커뮤니티 글작성 - 질문</td>
+            <td>
+              <a target="_blank" href="./user/community_edit_question.html"
+                >./user/community_edit_question.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>커뮤니티 글작성 - 수업요청</td>
+            <td>
+              <a target="_blank" href="./user/community_edit_request.html"
+                >./user/community_edit_request.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>내 커뮤니티</td>
+            <td>
+              <a target="_blank" href="./user/my_community.html"
+                >./user/my_community.html</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <!-- 사용자(강사) 테이블 -->
+    <section id="tap02">
+      <h2>사용자 [강사]</h2>
+      <table class="table_defalt">
+        <thead>
+          <tr>
+            <th width="80px">번호</th>
+            <th width="20%">화면구분</th>
+            <th>화면명</th>
+            <th>링크</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="count"></td>
+            <td>관리자 로그인</td>
+            <td>관리자 로그인</td>
+            <td>
+              <a target="_blank" href="./login.html">./login.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" class="space"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <!-- 관리자 테이블 -->
+    <section id="tap03">
+      <h2>관리자</h2>
+      <table class="table_defalt">
+        <thead>
+          <tr>
+            <th width="80px">번호</th>
+            <th width="20%">화면구분</th>
+            <th>화면명</th>
+            <th>링크</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="count"></td>
+            <td>관리자 로그인</td>
+            <td>관리자 로그인</td>
+            <td>
+              <a target="_blank" href="./login.html">./login.html</a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" class="space"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <script>
+      // 각 테이블에서 .count 엘리먼트에 순서를 매기는 함수
+      function updateCounts() {
+        $(".table_defalt").each(function () {
+          $(this)
+            .find(".count")
+            .each(function (index) {
+              $(this).text(index + 1);
+            });
+        });
+      }
+      // 페이지 로드 시 각 테이블에 순서를 매김
+      updateCounts();
+
+      // 탭 메뉴 클릭 이벤트
+      $(".tap_menu li").click(function () {
+        var tabId = $(this).attr("data-name");
+        $(".tap_menu li").removeClass("on");
+        $(this).addClass("on");
+        $("section").removeClass("on");
+        $("#" + tabId).addClass("on");
+      });
+    </script>
+  </body>
+</html>
