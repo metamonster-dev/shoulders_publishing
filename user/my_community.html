@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내 커뮤니티</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- fullcalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!--main header -->
+        <header class="header border">
+          <div class="inner">
+            <button onclick="history.back();" class="back_btn"></button>
+            <h1>내 커뮤니티</h1>
+          </div>
+        </header>
+        <!--main header -->
+        <div class="container_wrap community_list h_04">
+          <h3 class="global_inner">카테고리</h3>
+          <div class="swiper category_sec swiper_menu round">
+            <div class="swiper-wrapper">
+              <div data-tab="allTypeTab" class="swiper-slide active">전체</div>
+              <div data-tab="reviewTab" class="swiper-slide">후기</div>
+              <div data-tab="questionTab" class="swiper-slide">질문</div>
+              <div data-tab="classRequestTab" class="swiper-slide">
+                수업 요청
+              </div>
+              <div data-tab="commentTab" class="swiper-slide">댓글</div>
+            </div>
+          </div>
+
+          <div id="allTypeTab" class="commu_list on">
+            <div class="card">
+              <div class="community_profile_box">
+                <div class="inner">
+                  <figure class="profile">
+                    <img src="./assets/image/dummy/dummy_profile.png" />
+                  </figure>
+                  <p class="nickname">
+                    <span>대치엄마 뽕순이</span>
+                    <span>3분전</span>
+                  </p>
+                </div>
+                <p class="badge_list">
+                  <span class="item blue">후기</span>
+                </p>
+              </div>
+              <p class="rating">3.2</p>
+              <p class="commu_title">선생님께서 아주 잘 알려주세요!</p>
+              <p class="desc">
+                선생님께서 아주 꼼꼼하게 잘 가르쳐 주셔서 그런지 아이가 성적이
+                많이 올랐어요. 선생님께서 아주 꼼꼼하게 잘 가르쳐 주셔서 그런지
+                아이가 성적이 많이 올랐어요. 단원 평가에서 좋은 점수를 받아 와서
+                기쁘네요^^
+              </p>
+              <div class="target_class">
+                <p class="class_image">
+                  <img src="./assets/image/thumbnail/math_74x74.png" alt="" />
+                </p>
+                <p class="class_name">
+                  [수학] 외국어 고등학교 입시 대비 수리 심화반 특강
+                </p>
+                <i class="icon_right_arrow_g"></i>
+              </div>
+              <div class="community_icon_box">
+                <p class="like_button">
+                  <i class="icon"></i>
+                  <span class="count">10</span>
+                </p>
+                <p
+                  class="comment_count"
+                  onclick="location.href='/user/comment_list.html'"
+                >
+                  <i class="icon"></i>
+                  <span class="count">7</span>
+                </p>
+                <p class="comment_view_count">
+                  <i class="icon"></i>
+                  <span class="count">12</span>
+                </p>
+              </div>
+            </div>
+            <p class="line"></p>
+            <div class="card">
+              <div class="community_profile_box">
+                <div class="inner">
+                  <figure class="profile">
+                    <img src="./assets/image/dummy/dummy_profile.png" />
+                  </figure>
+                  <p class="nickname">
+                    <span>하영맘</span>
+                    <span>3시간</span>
+                  </p>
+                </div>
+                <p class="badge_list">
+                  <span class="item red">질문</span>
+                </p>
+              </div>
+              <p class="desc">
+                아이가 중학교 1학년인데 수학 문제의 답을 모르겠네요.<br />
+                혹시 아시는 분 계실까요?ㅠ
+              </p>
+              <div class="thumbnail_box">
+                <figure class="thumbnail">
+                  <img src="./assets/image/dummy/community.png" alt="" />
+                </figure>
+              </div>
+              <div class="community_icon_box">
+                <p class="like_button">
+                  <i class="icon"></i>
+                  <span class="count">10</span>
+                </p>
+                <p
+                  class="comment_count"
+                  onclick="location.href='/user/comment_list.html'"
+                >
+                  <i class="icon"></i>
+                  <span class="count">7</span>
+                </p>
+                <p class="comment_view_count">
+                  <i class="icon"></i>
+                  <span class="count">12</span>
+                </p>
+              </div>
+            </div>
+            <p class="line"></p>
+            <div class="card">
+              <div class="community_profile_box">
+                <div class="inner">
+                  <figure class="profile">
+                    <img src="./assets/image/dummy/dummy_profile.png" />
+                  </figure>
+                  <p class="nickname">
+                    <span>강남엄마 학구열</span>
+                    <span>수학</span>
+                  </p>
+                </div>
+                <p class="badge_list">
+                  <span class="item green">수업요청</span>
+                </p>
+              </div>
+              <p class="commu_title">
+                [초등 저학년] 초등 입학 대비 수강 특강 요청 드립니다.
+              </p>
+              <p class="desc">
+                초등 입학 대비 수강 특강을 진행할 선생님을 찾고 있는데 혹시나
+                관심이 있으신 분들께서는 망설이지 마시고 채팅 주시기 바랍니다.
+                많은 관심 부탁드립니다!
+              </p>
+              <div class="hash_bookmark_box">
+                <p class="badge_list">
+                  <span class="item blue">온라인</span>
+                  <span class="item purple">중/고등학생</span>
+                </p>
+                <i class="icon_bookmark"></i>
+              </div>
+            </div>
+          </div>
+          <div id="reviewTab" class="commu_list">
+            <div class="card">
+              <div class="community_profile_box">
+                <div class="inner">
+                  <figure class="profile">
+                    <img src="./assets/image/dummy/dummy_profile.png" />
+                  </figure>
+                  <p class="nickname">
+                    <span>대치엄마 뽕순이</span>
+                    <span>3분전</span>
+                  </p>
+                </div>
+                <p class="badge_list">
+                  <span class="item blue">후기</span>
+                </p>
+              </div>
+              <p class="rating">3.2</p>
+              <p class="commu_title">선생님께서 아주 잘 알려주세요!</p>
+              <p class="desc">
+                선생님께서 아주 꼼꼼하게 잘 가르쳐 주셔서 그런지 아이가 성적이
+                많이 올랐어요. 선생님께서 아주 꼼꼼하게 잘 가르쳐 주셔서 그런지
+                아이가 성적이 많이 올랐어요. 단원 평가에서 좋은 점수를 받아 와서
+                기쁘네요^^
+              </p>
+              <div class="target_class">
+                <p class="class_image">
+                  <img src="./assets/image/thumbnail/math_74x74.png" alt="" />
+                </p>
+                <p class="class_name">
+                  [수학] 외국어 고등학교 입시 대비 수리 심화반 특강
+                </p>
+                <i class="icon_right_arrow_g"></i>
+              </div>
+              <div class="community_icon_box">
+                <p class="like_button">
+                  <i class="icon"></i>
+                  <span class="count">10</span>
+                </p>
+                <p
+                  class="comment_count"
+                  onclick="location.href='/user/comment_list.html'"
+                >
+                  <i class="icon"></i>
+                  <span class="count">7</span>
+                </p>
+                <p class="comment_view_count">
+                  <i class="icon"></i>
+                  <span class="count">12</span>
+                </p>
+              </div>
+            </div>
+            <p class="line"></p>
+            <div class="card">
+              <div class="community_profile_box">
+                <div class="inner">
+                  <figure class="profile">
+                    <img src="./assets/image/dummy/dummy_profile.png" />
+                  </figure>
+                  <p class="nickname">
+                    <span>대치엄마 뽕순이</span>
+                    <span>3분전</span>
+                  </p>
+                </div>
+                <p class="badge_list">
+                  <span class="item blue">후기</span>
+                </p>
+              </div>
+              <p class="rating">3.2</p>
+              <p class="commu_title">선생님께서 아주 잘 알려주세요!</p>
+              <p class="desc">
+                선생님께서 아주 꼼꼼하게 잘 가르쳐 주셔서 그런지 아이가 성적이
+                많이 올랐어요. 선생님께서 아주 꼼꼼하게 잘 가르쳐 주셔서 그런지
+                아이가 성적이 많이 올랐어요. 단원 평가에서 좋은 점수를 받아 와서
+                기쁘네요^^
+              </p>
+              <div class="target_class">
+                <p class="class_image">
+                  <img src="./assets/image/thumbnail/math_74x74.png" alt="" />
+                </p>
+                <p class="class_name">
+                  [수학] 외국어 고등학교 입시 대비 수리 심화반 특강
+                </p>
+                <i class="icon_right_arrow_g"></i>
+              </div>
+              <div class="community_icon_box">
+                <p class="like_button">
+                  <i class="icon"></i>
+                  <span class="count">10</span>
+                </p>
+                <p
+                  class="comment_count"
+                  onclick="location.href='/user/comment_list.html'"
+                >
+                  <i class="icon"></i>
+                  <span class="count">7</span>
+                </p>
+                <p class="comment_view_count">
+                  <i class="icon"></i>
+                  <span class="count">12</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="questionTab" class="commu_list">
+            <div class="card">
+              <div class="community_profile_box">
+                <div class="inner">
+                  <figure class="profile">
+                    <img src="./assets/image/dummy/dummy_profile.png" />
+                  </figure>
+                  <p class="nickname">
+                    <span>하영맘</span>
+                    <span>3시간</span>
+                  </p>
+                </div>
+                <p class="badge_list">
+                  <span class="item red">질문</span>
+                </p>
+              </div>
+              <p class="desc">
+                아이가 중학교 1학년인데 수학 문제의 답을 모르겠네요.<br />
+                혹시 아시는 분 계실까요?ㅠ
+              </p>
+              <div class="thumbnail_box">
+                <figure class="thumbnail">
+                  <img src="./assets/image/dummy/community.png" alt="" />
+                </figure>
+              </div>
+              <div class="community_icon_box">
+                <p class="like_button">
+                  <i class="icon"></i>
+                  <span class="count">10</span>
+                </p>
+                <p
+                  class="comment_count"
+                  onclick="location.href='/user/comment_list.html'"
+                >
+                  <i class="icon"></i>
+                  <span class="count">7</span>
+                </p>
+                <p class="comment_view_count">
+                  <i class="icon"></i>
+                  <span class="count">12</span>
+                </p>
+              </div>
+            </div>
+            <p class="line"></p>
+            <div class="card">
+              <div class="community_profile_box">
+                <div class="inner">
+                  <figure class="profile">
+                    <img src="./assets/image/dummy/dummy_profile.png" />
+                  </figure>
+                  <p class="nickname">
+                    <span>하영맘</span>
+                    <span>3시간</span>
+                  </p>
+                </div>
+                <p class="badge_list">
+                  <span class="item red">질문</span>
+                </p>
+              </div>
+              <p class="desc">
+                아이가 중학교 1학년인데 수학 문제의 답을 모르겠네요.<br />
+                혹시 아시는 분 계실까요?ㅠ
+              </p>
+              <div class="thumbnail_box">
+                <figure class="thumbnail">
+                  <img src="./assets/image/dummy/community.png" alt="" />
+                </figure>
+              </div>
+              <div class="community_icon_box">
+                <p class="like_button">
+                  <i class="icon"></i>
+                  <span class="count">10</span>
+                </p>
+                <p
+                  class="comment_count"
+                  onclick="location.href='/user/comment_list.html'"
+                >
+                  <i class="icon"></i>
+                  <span class="count">7</span>
+                </p>
+                <p class="comment_view_count">
+                  <i class="icon"></i>
+                  <span class="count">12</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="classRequestTab" class="commu_list">
+            <div class="card">
+              <div class="community_profile_box">
+                <div class="inner">
+                  <figure class="profile">
+                    <img src="./assets/image/dummy/dummy_profile.png" />
+                  </figure>
+                  <p class="nickname">
+                    <span>강남엄마 학구열</span>
+                    <span>수학</span>
+                  </p>
+                </div>
+                <p class="badge_list">
+                  <span class="item green">수업요청</span>
+                </p>
+              </div>
+              <p class="commu_title">
+                [초등 저학년] 초등 입학 대비 수강 특강 요청 드립니다.
+              </p>
+              <p class="desc">
+                초등 입학 대비 수강 특강을 진행할 선생님을 찾고 있는데 혹시나
+                관심이 있으신 분들께서는 망설이지 마시고 채팅 주시기 바랍니다.
+                많은 관심 부탁드립니다!
+              </p>
+              <div class="hash_bookmark_box">
+                <p class="badge_list">
+                  <span class="item blue">온라인</span>
+                  <span class="item purple">중/고등학생</span>
+                </p>
+                <i class="icon_bookmark"></i>
+              </div>
+            </div>
+            <p class="line"></p>
+            <div class="card">
+              <div class="community_profile_box">
+                <div class="inner">
+                  <figure class="profile">
+                    <img src="./assets/image/dummy/dummy_profile.png" />
+                  </figure>
+                  <p class="nickname">
+                    <span>강남엄마 학구열</span>
+                    <span>수학</span>
+                  </p>
+                </div>
+                <p class="badge_list">
+                  <span class="item green">수업요청</span>
+                </p>
+              </div>
+              <p class="commu_title">
+                [초등 저학년] 초등 입학 대비 수강 특강 요청 드립니다.
+              </p>
+              <p class="desc">
+                초등 입학 대비 수강 특강을 진행할 선생님을 찾고 있는데 혹시나
+                관심이 있으신 분들께서는 망설이지 마시고 채팅 주시기 바랍니다.
+                많은 관심 부탁드립니다!
+              </p>
+              <div class="hash_bookmark_box">
+                <p class="badge_list">
+                  <span class="item blue">온라인</span>
+                  <span class="item purple">중/고등학생</span>
+                </p>
+                <i class="icon_bookmark"></i>
+              </div>
+            </div>
+          </div>
+          <div id="commentTab" class="commu_list">
+            <div class="global_inner">
+              <ul class="comment_list">
+                <li class="comment_item">
+                  <div class="community_profile_box">
+                    <div class="inner">
+                      <figure class="profile">
+                        <img src="./assets/image/dummy/dummy_profile.png" />
+                      </figure>
+                      <p class="nickname">
+                        <span>하영맘</span>
+                        <span>3시간</span>
+                      </p>
+                    </div>
+                    <i
+                      class="icon_dot_btn open_bottom_sheet"
+                      data-target="edit_bottom_sheet"
+                    ></i>
+                  </div>
+                  <div class="comment_box">
+                    <p class="desc">한줄만 작성할때는 이렇게 보입니다.</p>
+                    <p class="like_button on">
+                      <i class="icon"></i>
+                      <span class="count">10</span>
+                    </p>
+                  </div>
+                  <p class="recomment_btn">답글 달기...</p>
+                </li>
+                <li class="comment_item">
+                  <div class="community_profile_box">
+                    <div class="inner">
+                      <figure class="profile">
+                        <img src="./assets/image/dummy/dummy_profile.png" />
+                      </figure>
+                      <p class="nickname">
+                        <span>하영맘</span>
+                        <span>3시간</span>
+                      </p>
+                    </div>
+                    <i
+                      class="icon_dot_btn open_bottom_sheet"
+                      data-target="edit_bottom_sheet"
+                    ></i>
+                  </div>
+                  <div class="comment_box">
+                    <p class="desc">
+                      두줄만 작성할때는 이렇게 보입니다. 두줄만 작성할때는
+                      이렇게 보입니다.
+                    </p>
+                    <p class="like_button">
+                      <i class="icon"></i>
+                    </p>
+                  </div>
+                  <p class="recomment_btn">답글 달기...</p>
+                </li>
+                <li class="comment_item">
+                  <div class="community_profile_box">
+                    <div class="inner">
+                      <figure class="profile">
+                        <img src="./assets/image/dummy/dummy_profile.png" />
+                      </figure>
+                      <p class="nickname">
+                        <span>하영맘</span>
+                        <span>3시간</span>
+                      </p>
+                    </div>
+                    <i
+                      class="icon_dot_btn open_bottom_sheet"
+                      data-target="edit_bottom_sheet"
+                    ></i>
+                  </div>
+                  <div class="comment_box">
+                    <p class="desc">
+                      세줄 네줄 쭉쭉 내려갑니다. 세줄 네줄 쭉쭉 내려갑니다.세줄
+                      네줄 쭉쭉 내려갑니다.세줄 네줄 쭉쭉 내려갑니다.세줄 네줄
+                      쭉쭉 내려갑니다.세줄 네줄 쭉쭉 내려갑니다.
+                    </p>
+                    <p class="like_button on">
+                      <i class="icon"></i>
+                      <span class="count">11</span>
+                    </p>
+                  </div>
+                  <p class="recomment_btn">답글 달기...</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- floating -->
+          <div class="floating_area">
+            <div class="inner">
+              <p
+                class="item icon_inquiry open_bottom_sheet"
+                data-target="inquery_bottom_sheet"
+              ></p>
+            </div>
+          </div>
+          <!-- floating -->
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+          <ul class="footer_menu">
+            <li onclick="location.href='/user/home.html'">
+              <i class="icon_home"></i>
+              <span class="tit">홈</span>
+            </li>
+            <li onclick="location.href='/user/class_list.html'">
+              <i class="icon_class"></i>
+              <span class="tit">클래스</span>
+            </li>
+            <li onclick="location.href='/user/bookmark_list.html'">
+              <i class="icon_like"></i>
+              <span class="tit">찜</span>
+            </li>
+            <li onclick="location.href='/user/community_list.html'">
+              <i class="icon_commu"></i>
+              <span class="tit">커뮤니티</span>
+            </li>
+            <li class="on" onclick="location.href='/user/mypage.html'">
+              <i class="icon_my"></i>
+              <span class="tit">마이</span>
+            </li>
+          </ul>
+        </footer>
+        <!-- footer -->
+        <div class="bottom_sheet_overlay"></div>
+        <div id="edit_bottom_sheet" class="bottom_sheet edit">
+          <div class="bottom_sheet_content">
+            <ul class="edit_menu_list">
+              <li>
+                <span><img src="./assets/image/icon/i_pen.svg" /></span>
+                <span>댓글 수정하기</span>
+              </li>
+              <li class="close_bottom_sheet" onclick="open_modal('#del_alret')">
+                <span><img src="./assets/image/icon/i_trush.svg" /></span>
+                <span>댓글 삭제하기</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--common bottom sheet -->
+        <div id="inquery_bottom_sheet" class="bottom_sheet">
+          <div class="bottom_sheet_header">
+            <h3>어깨 톡톡</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="inquery_menu_list">
+              <li>
+                <span>
+                  <img src="./assets/image/icon/i_inquery_chat.svg" />
+                </span>
+                <span>실시간 질문 입장</span>
+                <i class="icon_right_arrow"></i>
+              </li>
+              <li>
+                <span>
+                  <img src="./assets/image/icon/i_kakao_chat.svg" />
+                </span>
+                <span>카카오톡 채널 문의</span>
+                <i class="icon_right_arrow"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--common bottom sheet -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- swiper -->
+<script>
+  var swiper = new Swiper(".category_sec", {
+    slidesPerView: "auto",
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+  });
+</script>
+<!-- swiper -->
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

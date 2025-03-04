@@ -20,15 +20,18 @@
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
+
   <body>
     <style>
       * {
         padding: 0;
         margin: 0;
       }
+
       body {
         padding: 40px 20px;
       }
+
       h1 {
         font-size: 18px;
         padding: 10px;
@@ -36,20 +39,24 @@
         font-weight: 600;
         margin-bottom: 16px;
       }
+
       a {
         color: #007bff;
         text-decoration: underline;
       }
+
       h2 {
         margin-bottom: 20px;
         padding: 20px;
         background: #666;
         color: #fff;
       }
+
       h2 span {
         font-size: 14px;
         opacity: 0.7;
       }
+
       .table_defalt {
         width: 100%;
         border-collapse: collapse;
@@ -58,6 +65,7 @@
         table-layout: fixed;
         font-size: 14px;
       }
+
       .table_defalt th,
       .table_defalt td {
         border: 1px solid #ddd;
@@ -65,58 +73,73 @@
         padding: 8px;
         margin: 0;
       }
+
       .table_defalt tbody tr:last-child th,
       .table_defalt tbody tr:last-child td {
         border-bottom: 0;
       }
+
       .table_defalt th {
         background: #eee;
       }
+
       .table_defalt td {
         background: #fff;
         color: #666;
       }
+
       .table_defalt td.text_left {
         text-align: left;
       }
+
       .table_defalt td input {
         width: 100%;
       }
+
       .table_defalt td input:read-only {
         background: #f2f2f2;
       }
+
       .table_defalt button.in_btn {
         width: 100%;
       }
+
       .remove {
         text-decoration: line-through;
         background: #ccc !important;
       }
+
       .remove a {
         color: #666 !important;
         text-decoration: line-through;
       }
+
       .space {
         background: #f2f2f2 !important;
         height: 36px;
       }
+
       .tap_menu {
         margin-bottom: 16px;
         display: flex;
         gap: 8px;
       }
+
       .tap_menu li {
         padding: 0 8px 5px;
         cursor: pointer;
         list-style: none;
       }
+
       .tap_menu li.on {
         font-weight: 800;
         border-bottom: 2px solid #000;
       }
+
       section {
         display: none;
       }
+
       section.on {
         display: block;
       }
@@ -442,6 +465,118 @@
               >
             </td>
           </tr>
+          <tr>
+            <td colspan="4" class="space"></td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td rowspan="12">마이페이지</td>
+            <td>마이페이지 메뉴</td>
+            <td>
+              <a target="_blank" href="./user/mypage.html"
+                >./user/mypage.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>내 수업실</td>
+            <td>
+              <a target="_blank" href="./user/myclass.html"
+                >./user/myclass.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>결제 상세 내역</td>
+            <td>
+              <a target="_blank" href="./user/myclass_payments_detail_01.html"
+                >./user/myclass_payments_detail_01.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>결제 상세 내역 - 취소한 주문 결제 상세 내역 접속 화면</td>
+            <td>
+              <a target="_blank" href="./user/myclass_payments_detail_02.html"
+                >./user/myclass_payments_detail_02.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>결제 상세 내역 - 취소신청상태</td>
+            <td>
+              <a target="_blank" href="./user/myclass_payments_detail_03.html"
+                >./user/myclass_payments_detail_03.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>결제 상세 내역 - 환불완료상태</td>
+            <td>
+              <a target="_blank" href="./user/myclass_payments_detail_04.html"
+                >./user/myclass_payments_detail_04.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>결제 상세 내역 - 수업 연장 요청하기 - 신청전</td>
+            <td>
+              <a target="_blank" href="./user/myclass_payments_detail_05.html"
+                >./user/myclass_payments_detail_05.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>결제 상세 내역 - 수업 연장 요청하기 - 신청후</td>
+            <td>
+              <a target="_blank" href="./user/myclass_payments_detail_06.html"
+                >./user/myclass_payments_detail_06.html</a
+              >
+            </td>
+          </tr>
+          <!-- <tr>
+            <td class="count"></td>
+            <td>내 커뮤니티</td>
+            <td>
+              <a target="_blank" href="./user/my_community.html"
+                >./user/my_community.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>내 문의내역 - 내역 없을 때</td>
+            <td>
+              <a target="_blank" href="./user/no_my_inquery.html"
+                >./user/no_my_inquery.html</a
+              >
+            </td>
+          </tr> -->
+          <!-- <tr>
+            <td class="count"></td>
+            <td>내 문의내역</td>
+            <td>
+              <a target="_blank" href="./user/my_inquery.html"
+                >./user/my_inquery.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="count"></td>
+            <td>내 문의내역 - 편집</td>
+            <td>
+              <a target="_blank" href="./user/my_inquery_edit.html"
+                >./user/my_inquery_edit.html</a
+              >
+            </td>
+          </tr> -->
         </tbody>
       </table>
     </section>

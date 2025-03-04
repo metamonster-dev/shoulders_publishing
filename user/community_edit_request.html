@@ -1,283 +1,253 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>커뮤니티 글 작성</title>
-    <!-- CDN -->
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.js"
-      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-      crossorigin="anonymous"
-    ></script>
-    <!-- swiper -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/custom.css" />
-    <link rel="stylesheet" href="./css/fonts.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <!-- JS -->
-    <script src="./js/main.js"></script>
-  </head>
 
-  <body>
-    <div class="wrapper">
-      <div id="background" class="background_pc_txt"></div>
-      <div class="global_wrap">
-        <!-- header -->
-        <header class="header border">
-          <div class="inner">
-            <button onclick="history.back();" class="back_btn"></button>
-            <h1>커뮤니티 글 작성</h1>
-          </div>
-        </header>
-        <!-- header -->
-        <div class="container_wrap h_01 community_edit req">
-          <h3 class="global_inner">카테고리</h3>
-          <div class="swiper edit_type_sec swiper_menu round">
-            <div class="swiper-wrapper">
-              <div
-                class="swiper-slide"
-                onclick="location.href='/user/community_edit_review.html'"
-              >
-                후기
-              </div>
-              <div
-                class="swiper-slide"
-                onclick="location.href='/user/community_edit_question.html'"
-              >
-                질문
-              </div>
-              <div
-                class="swiper-slide active"
-                onclick="location.href='/user/community_edit_request.html'"
-              >
-                수업 요청
-              </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>커뮤니티 글 작성</title>
+  <!-- CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/custom.css" />
+  <link rel="stylesheet" href="./css/fonts.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <!-- JS -->
+  <script src="./js/main.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div id="background" class="background_pc_txt"></div>
+    <div class="global_wrap">
+      <!-- header -->
+      <header class="header border">
+        <div class="inner">
+          <button onclick="history.back();" class="back_btn"></button>
+          <h1>커뮤니티 글 작성</h1>
+        </div>
+      </header>
+      <!-- header -->
+      <div class="container_wrap h_01 community_edit req">
+        <h3 class="global_inner">카테고리</h3>
+        <div class="swiper edit_type_sec swiper_menu round">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" onclick="location.href='/user/community_edit_review.html'">
+              후기
             </div>
-          </div>
-          <div class="global_inner">
-            <div class="form_wrap">
-              <div class="input_box">
-                <label class="label">수업 제목</label>
-                <div class="textarea_wrap">
-                  <textarea
-                    placeholder="의뢰할 수업의 제목을 적어 주세요. 내용이 부적절하다고 판단될 경우에는 의뢰 내용이 삭제될 수 있어요."
-                  ></textarea>
-                  <span class="txt_counter">
-                    <span class="error">19</span>/300
-                  </span>
-                </div>
-              </div>
-              <div class="input_box">
-                <label class="label">수업 내용</label>
-                <div class="textarea_wrap">
-                  <textarea
-                    placeholder="개인 정보 노출에 유의하세요. 내용이 부적절하다고 판단될 경우에는 게시글이 삭제될 수 있어요."
-                  ></textarea>
-                  <span class="txt_counter">
-                    <span class="error">19</span>/300
-                  </span>
-                </div>
-              </div>
-              <div class="radi_chk_wrap">
-                <p class="label">수업 과목</p>
-                <div class="legend">
-                  <div class="input_box">
-                    <label for="subject01" class="text_radio">
-                      <input id="subject01" name="subject" type="radio" />
-                      <span>수학</span>
-                    </label>
-                  </div>
-                  <div class="input_box">
-                    <label for="subject02" class="text_radio">
-                      <input id="subject02" name="subject" type="radio" />
-                      <span>영어</span>
-                    </label>
-                  </div>
-                  <div class="input_box">
-                    <label for="subject03" class="text_radio">
-                      <input id="subject03" name="subject" type="radio" />
-                      <span>논술</span>
-                    </label>
-                  </div>
-                  <div class="input_box">
-                    <label for="subject04" class="text_radio">
-                      <input id="subject04" name="subject" type="radio" />
-                      <span>음악</span>
-                    </label>
-                  </div>
-                  <div class="input_box">
-                    <label for="subject05" class="text_radio">
-                      <input id="subject05" name="subject" type="radio" />
-                      <span>활동</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="radi_chk_wrap">
-                <p class="label">수업 대상</p>
-                <div class="legend">
-                  <div class="input_box">
-                    <label for="target01" class="text_radio">
-                      <input id="target01" name="target" type="radio" />
-                      <span>미취학(5~7세)</span>
-                    </label>
-                  </div>
-                  <div class="input_box">
-                    <label for="target02" class="text_radio">
-                      <input id="target02" name="target" type="radio" />
-                      <span>초등 저학년(8~10세)</span>
-                    </label>
-                  </div>
-                  <div class="input_box">
-                    <label for="target03" class="text_radio">
-                      <input id="target03" name="target" type="radio" />
-                      <span>초등 고학년(11~13세)</span>
-                    </label>
-                  </div>
-                  <div class="input_box">
-                    <label for="target04" class="text_radio">
-                      <input id="target04" name="target" type="radio" />
-                      <span>중/고등학생(14~19세)</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="radi_chk_wrap">
-                <p class="label">수업 형태</p>
-                <div class="legend">
-                  <div class="input_box">
-                    <label for="type01" class="text_radio">
-                      <input id="type01" name="type" type="radio" />
-                      <span>오프라인</span>
-                    </label>
-                  </div>
-                  <div class="input_box">
-                    <label for="type02" class="text_radio">
-                      <input id="type02" name="type" type="radio" />
-                      <span>온라인</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="radi_chk_wrap">
-                <p class="label">수업 형태</p>
-                <div class="swiper thumbnail_chk swiper_input">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <label for="thumbnail01" class="thumbnail_radio">
-                        <input id="thumbnail01" name="thumbnail" type="radio" />
-                        <span class="image">
-                          <img
-                            src="./assets/image/thumbnail/math_80x102.png"
-                            alt=""
-                          />
-                        </span>
-                      </label>
-                    </div>
-                    <div class="swiper-slide">
-                      <label for="thumbnail02" class="thumbnail_radio">
-                        <input id="thumbnail02" name="thumbnail" type="radio" />
-                        <span class="image">
-                          <img
-                            src="./assets/image/thumbnail/eng_80x102.png"
-                            alt=""
-                          />
-                        </span>
-                      </label>
-                    </div>
-                    <div class="swiper-slide">
-                      <label for="thumbnail03" class="thumbnail_radio">
-                        <input id="thumbnail03" name="thumbnail" type="radio" />
-                        <span class="image">
-                          <img
-                            src="./assets/image/thumbnail/music_80x102.png"
-                            alt=""
-                          />
-                        </span>
-                      </label>
-                    </div>
-                    <div class="swiper-slide">
-                      <label for="thumbnail04" class="thumbnail_radio">
-                        <input id="thumbnail04" name="thumbnail" type="radio" />
-                        <span class="image">
-                          <img
-                            src="./assets/image/thumbnail/essay_80x102.png"
-                            alt=""
-                          />
-                        </span>
-                      </label>
-                    </div>
-                    <div class="swiper-slide">
-                      <label for="thumbnail05" class="thumbnail_radio">
-                        <input id="thumbnail05" name="thumbnail" type="radio" />
-                        <span class="image">
-                          <img
-                            src="./assets/image/thumbnail/activity_80x102.png"
-                            alt=""
-                          />
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="swiper-slide" onclick="location.href='/user/community_edit_question.html'">
+              질문
             </div>
-          </div>
-          <div class="bottom_btn">
-            <!-- 유효성 통과 못했을때 버튼 스타일 -->
-            <!-- <button disabled type="button">수업 요청하기</button> -->
-            <button type="button" onclick="open_modal('#postComplete')">
-              수업 요청하기
-            </button>
+            <div class="swiper-slide active" onclick="location.href='/user/community_edit_request.html'">
+              수업 요청
+            </div>
           </div>
         </div>
+        <div class="global_inner">
+          <div class="form_wrap">
+            <div class="input_box">
+              <label class="label">수업 제목</label>
+              <div class="textarea_wrap h_100">
+                <textarea placeholder="의뢰할 수업의 제목을 적어 주세요. 내용이 부적절하다고 판단될 경우에는 의뢰 내용이 삭제될 수 있어요."></textarea>
+                <span class="txt_counter">
+                  <span class="">0</span>/30
+                </span>
+              </div>
+            </div>
+            <div class="input_box">
+              <label class="label">수업 내용</label>
+              <div class="textarea_wrap h_200">
+                <textarea placeholder="의뢰할 수업에 대한 과목, 수업 대상, 레벨, 수업 기간, 수업 내용 등을 상세하게 적어 주세요.
 
-        <!-- 수업 선택 bottom sheet-->
-        <div class="bottom_sheet_overlay"></div>
-        <div id="class_bottom_sheet" class="bottom_sheet sort">
-          <div class="bottom_sheet_header">
-            <h3>수업 선택</h3>
-            <p class="close_btn close_bottom_sheet"></p>
-          </div>
-          <div class="bottom_sheet_content">
-            <ul class="option_list">
-              <li>수업명</li>
-              <li>수업명</li>
-              <li>수업명</li>
-              <li>수업명</li>
-              <li>수업명</li>
-            </ul>
-          </div>
-        </div>
-        <!-- 선생님 정렬 순서 bottom sheet-->
-
-        <!-- 모달 -->
-        <!-- 댓글 삭제 확인 alret -->
-        <article id="postComplete" class="modal_wrap">
-          <div class="modal">
-            <p class="image">
-              <img src="./assets/image/alret/class_req.png" alt="" />
-            </p>
-            <p class="text">수업 요청이 완료되었어요.</p>
-            <p class="desc">
-              수업 요청 글은 메인 화면에서 홍보할 수 있어요.<br />
-              하단 마이 메뉴 - 내 수업 요청 광고하기로<br />
-              이동해 보세요.
-            </p>
-            <div class="btn_area">
-              <button class="black" onclick="close_modal()">확인</button>
+예시) 초등학교 3학년 겨울방학 대비 영어 문법 구해요. 기간은 주 2회 한 달 짜리 수업으로 부탁하고, 레벨은 초급입니다."></textarea>
+                <span class="txt_counter">
+                  <span class="error">19</span>/300
+                </span>
+              </div>
+            </div>
+            <div class="radi_chk_wrap">
+              <p class="label">수업 과목</p>
+              <div class="legend">
+                <div class="input_box">
+                  <label for="subject01" class="text_radio">
+                    <input id="subject01" name="subject" type="radio" />
+                    <span>수학</span>
+                  </label>
+                </div>
+                <div class="input_box">
+                  <label for="subject02" class="text_radio">
+                    <input id="subject02" name="subject" type="radio" />
+                    <span>영어</span>
+                  </label>
+                </div>
+                <div class="input_box">
+                  <label for="subject03" class="text_radio">
+                    <input id="subject03" name="subject" type="radio" />
+                    <span>논술</span>
+                  </label>
+                </div>
+                <div class="input_box">
+                  <label for="subject04" class="text_radio">
+                    <input id="subject04" name="subject" type="radio" />
+                    <span>음악</span>
+                  </label>
+                </div>
+                <div class="input_box">
+                  <label for="subject05" class="text_radio">
+                    <input id="subject05" name="subject" type="radio" />
+                    <span>활동</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="radi_chk_wrap">
+              <p class="label">수업 대상</p>
+              <div class="legend">
+                <div class="input_box">
+                  <label for="target01" class="text_radio">
+                    <input id="target01" name="target" type="radio" />
+                    <span>미취학(5~7세)</span>
+                  </label>
+                </div>
+                <div class="input_box">
+                  <label for="target02" class="text_radio">
+                    <input id="target02" name="target" type="radio" />
+                    <span>초등 저학년(8~10세)</span>
+                  </label>
+                </div>
+                <div class="input_box">
+                  <label for="target03" class="text_radio">
+                    <input id="target03" name="target" type="radio" />
+                    <span>초등 고학년(11~13세)</span>
+                  </label>
+                </div>
+                <div class="input_box">
+                  <label for="target04" class="text_radio">
+                    <input id="target04" name="target" type="radio" />
+                    <span>중/고등학생(14~19세)</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="radi_chk_wrap">
+              <p class="label">수업 형태</p>
+              <div class="legend">
+                <div class="input_box">
+                  <label for="type01" class="text_radio">
+                    <input id="type01" name="type" type="radio" />
+                    <span>오프라인</span>
+                  </label>
+                </div>
+                <div class="input_box">
+                  <label for="type02" class="text_radio">
+                    <input id="type02" name="type" type="radio" />
+                    <span>온라인</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="radi_chk_wrap">
+              <p class="label">수업 형태</p>
+              <div class="swiper thumbnail_chk swiper_input">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <label for="thumbnail01" class="thumbnail_radio">
+                      <input id="thumbnail01" name="thumbnail" type="radio" />
+                      <span class="image">
+                        <img src="./assets/image/thumbnail/math_80x102.png" alt="" />
+                      </span>
+                    </label>
+                  </div>
+                  <div class="swiper-slide">
+                    <label for="thumbnail02" class="thumbnail_radio">
+                      <input id="thumbnail02" name="thumbnail" type="radio" />
+                      <span class="image">
+                        <img src="./assets/image/thumbnail/eng_80x102.png" alt="" />
+                      </span>
+                    </label>
+                  </div>
+                  <div class="swiper-slide">
+                    <label for="thumbnail03" class="thumbnail_radio">
+                      <input id="thumbnail03" name="thumbnail" type="radio" />
+                      <span class="image">
+                        <img src="./assets/image/thumbnail/music_80x102.png" alt="" />
+                      </span>
+                    </label>
+                  </div>
+                  <div class="swiper-slide">
+                    <label for="thumbnail04" class="thumbnail_radio">
+                      <input id="thumbnail04" name="thumbnail" type="radio" />
+                      <span class="image">
+                        <img src="./assets/image/thumbnail/essay_80x102.png" alt="" />
+                      </span>
+                    </label>
+                  </div>
+                  <div class="swiper-slide">
+                    <label for="thumbnail05" class="thumbnail_radio">
+                      <input id="thumbnail05" name="thumbnail" type="radio" />
+                      <span class="image">
+                        <img src="./assets/image/thumbnail/activity_80x102.png" alt="" />
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </article>
+        </div>
+        <div class="bottom_btn">
+          <!-- 유효성 통과 못했을때 버튼 스타일 -->
+          <!-- <button disabled type="button">수업 요청하기</button> -->
+          <button type="button" onclick="open_modal('#postComplete')">
+            수업 요청하기
+          </button>
+        </div>
       </div>
+
+      <!-- 수업 선택 bottom sheet-->
+      <div class="bottom_sheet_overlay"></div>
+      <div id="class_bottom_sheet" class="bottom_sheet sort">
+        <div class="bottom_sheet_header">
+          <h3>수업 선택</h3>
+          <p class="close_btn close_bottom_sheet"></p>
+        </div>
+        <div class="bottom_sheet_content">
+          <ul class="option_list">
+            <li>수업명</li>
+            <li>수업명</li>
+            <li>수업명</li>
+            <li>수업명</li>
+            <li>수업명</li>
+          </ul>
+        </div>
+      </div>
+      <!-- 선생님 정렬 순서 bottom sheet-->
+
+      <!-- 모달 -->
+      <!-- 댓글 삭제 확인 alret -->
+      <article id="postComplete" class="modal_wrap">
+        <div class="modal">
+          <p class="image">
+            <img src="./assets/image/alret/class_req.png" alt="" />
+          </p>
+          <p class="text">수업 요청이 완료되었어요.</p>
+          <p class="desc">
+            수업 요청 글은 메인 화면에서 홍보할 수 있어요.<br />
+            하단 마이 메뉴 - 내 수업 요청 광고하기로<br />
+            이동해 보세요.
+          </p>
+          <div class="btn_area">
+            <button class="black" onclick="close_modal()">확인</button>
+          </div>
+        </div>
+      </article>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
 
 <!-- swiper -->

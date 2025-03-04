@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마이페이지</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- fullcalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!--main header -->
+        <header class="header main">
+          <div class="inner">
+            <h1 class="page_name">마이페이지</h1>
+            <ul class="header_menu">
+              <li
+                class="search"
+                onclick="location.href='/user/search.html'"
+              ></li>
+              <li class="alram" onclick="location.href='/user/alarm.html'">
+                <i class="icon_read"></i>
+              </li>
+              <li
+                onclick="location.href='/user/category.html'"
+                class="gnb_menu"
+              ></li>
+            </ul>
+          </div>
+        </header>
+        <!--main header -->
+        <div class="container_wrap mypage h_04">
+          <div class="my_profile_sec">
+            <div class="global_inner">
+              <figure class="image">
+                <img src="./assets/image/dummy/dummy_profile.png" alt="" />
+              </figure>
+              <p class="txt">김성호님, 반가워요!</p>
+            </div>
+          </div>
+          <div class="my_community_sec">
+            <div class="title_area">
+              <div class="global_inner">
+                <h3 class="unreading">내 커뮤니티</h3>
+                <p class="more">더보기</p>
+              </div>
+            </div>
+            <div class="swiper category_swiper swiper_menu round">
+              <div class="swiper-wrapper">
+                <div data-tab="allTypeTab" class="swiper-slide active">
+                  전체
+                </div>
+                <div data-tab="reviewTab" class="swiper-slide">후기</div>
+                <div data-tab="questionTab" class="swiper-slide">질문</div>
+                <div data-tab="classRequestTab" class="swiper-slide">
+                  수업 요청
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper my_commu_card_swiper swiper_card my_commu_card">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <p class="rating">3.0</p>
+                  <p class="desc">
+                    선생님께서 아주 꼼꼼하게 잘 가르쳐 주셔서 그런지 아이가
+                    성적이 많이 올랐어요. 단원 평가에서 좋은 점수 선생님께서
+                    아주 꼼꼼하게 잘 가르쳐 주셔서 그런지 아이가 성적이 많이
+                    올랐어요. 단원 평가에서 좋은 점수
+                  </p>
+                  <div class="community_icon_box">
+                    <p class="like_button on">
+                      <i class="icon"></i>
+                      <span class="count">10</span>
+                    </p>
+                    <p
+                      class="comment_count"
+                      onclick="location.href='/user/comment_list.html'"
+                    >
+                      <i class="icon"></i>
+                      <span class="count">7</span>
+                    </p>
+                    <p class="ago">3분전</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <p class="rating">3.0</p>
+                  <p class="desc">
+                    선생님께서 아주 꼼꼼하게 잘 가르쳐 주셔서 그런지 아이가
+                    성적이 많이 올랐어요. 단원 평가에서 좋은 점수 선생님께서
+                    아주 꼼꼼하게 잘 가르쳐 주셔서 그런지 아이가 성적이 많이
+                    올랐어요. 단원 평가에서 좋은 점수
+                  </p>
+                  <div class="community_icon_box">
+                    <p class="like_button on">
+                      <i class="icon"></i>
+                      <span class="count">10</span>
+                    </p>
+                    <p
+                      class="comment_count"
+                      onclick="location.href='/user/comment_list.html'"
+                    >
+                      <i class="icon"></i>
+                      <span class="count">7</span>
+                    </p>
+                    <p class="ago">3분전</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <p class="rating">3.0</p>
+                  <p class="desc">
+                    선생님께서 아주 꼼꼼하게 잘 가르쳐 주셔서 그런지 아이가
+                    성적이 많이 올랐어요. 단원 평가에서 좋은 점수 선생님께서
+                    아주 꼼꼼하게 잘 가르쳐 주셔서 그런지 아이가 성적이 많이
+                    올랐어요. 단원 평가에서 좋은 점수
+                  </p>
+                  <div class="community_icon_box">
+                    <p class="like_button on">
+                      <i class="icon"></i>
+                      <span class="count">10</span>
+                    </p>
+                    <p
+                      class="comment_count"
+                      onclick="location.href='/user/comment_list.html'"
+                    >
+                      <i class="icon"></i>
+                      <span class="count">7</span>
+                    </p>
+                    <p class="ago">3분전</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <p class="rating">3.0</p>
+                  <p class="desc">
+                    선생님께서 아주 꼼꼼하게 잘 가르쳐 주셔서 그런지 아이가
+                    성적이 많이 올랐어요. 단원 평가에서 좋은 점수 선생님께서
+                    아주 꼼꼼하게 잘 가르쳐 주셔서 그런지 아이가 성적이 많이
+                    올랐어요. 단원 평가에서 좋은 점수
+                  </p>
+                  <div class="community_icon_box">
+                    <p class="like_button on">
+                      <i class="icon"></i>
+                      <span class="count">10</span>
+                    </p>
+                    <p
+                      class="comment_count"
+                      onclick="location.href='/user/comment_list.html'"
+                    >
+                      <i class="icon"></i>
+                      <span class="count">7</span>
+                    </p>
+                    <p class="ago">3분전</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mypage_menu_sec">
+            <div class="global_inner">
+              <ul class="menu_list">
+                <li class="item" onclick="location.href='/user/myclass.html'">
+                  <span class="">내 수업실</span>
+                  <i class="icon_right_arrow_g_t"></i>
+                </li>
+                <li class="item">
+                  <span class="unreading">내 문의 내역</span>
+                  <i class="icon_right_arrow_g_t"></i>
+                </li>
+                <li class="item">
+                  <span class="">내 수업 요청 광고하기</span>
+                  <i class="icon_right_arrow_g_t"></i>
+                </li>
+                <li class="item">
+                  <span class="">내 정보 수정</span>
+                  <i class="icon_right_arrow_g_t"></i>
+                </li>
+                <li class="item" onclick="open_modal('#logout')">
+                  <span class="">로그아웃</span>
+                  <i class="icon_right_arrow_g_t"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <section class="footer_sec">
+            <div class="global_inner">
+              <ul class="footer_nav">
+                <li>고객센터</li>
+                <li>개인정보 처리방침</li>
+                <li>이용약관</li>
+              </ul>
+              <p class="logo">
+                <img src="./assets/image/logo.svg" alt="" />
+              </p>
+              <div class="desc">
+                <span>(주)씨럽</span>
+                <span>대표 : 문지후</span>
+                <span>서울 성동구 아차산로 7길 21 성수동 2가 4층 89호</span>
+                <span>이메일 : wearecluv@shoulders.co.kr</span>
+                <span>사업자등록번호 : 511-88-03029</span>
+                <span>통신판매업신고 : 제 2024-서울성동-0198호</span>
+                <span>고객센터 운영시간 : 10:00am - 18:00pm</span>
+                <span class="copyright">
+                  Copyright ⓒ SHOULDERS ALL RIGHTS RESERVED.
+                </span>
+              </div>
+            </div>
+          </section>
+
+          <!-- floating -->
+          <div class="floating_area">
+            <div class="inner">
+              <p
+                class="item icon_inquiry open_bottom_sheet"
+                data-target="inquery_bottom_sheet"
+              ></p>
+            </div>
+          </div>
+          <!-- floating -->
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+          <ul class="footer_menu">
+            <li onclick="location.href='/user/home.html'">
+              <i class="icon_home"></i>
+              <span class="tit">홈</span>
+            </li>
+            <li onclick="location.href='/user/class_list.html'">
+              <i class="icon_class"></i>
+              <span class="tit">클래스</span>
+            </li>
+            <li onclick="location.href='/user/bookmark_list.html'">
+              <i class="icon_like"></i>
+              <span class="tit">찜</span>
+            </li>
+            <li onclick="location.href='/user/community_list.html'">
+              <i class="icon_commu"></i>
+              <span class="tit">커뮤니티</span>
+            </li>
+            <li class="on" onclick="location.href='/user/mypage.html'">
+              <i class="icon_my"></i>
+              <span class="tit">마이</span>
+            </li>
+          </ul>
+        </footer>
+        <!-- footer -->
+        <div class="bottom_sheet_overlay"></div>
+        <!--common bottom sheet -->
+        <div id="inquery_bottom_sheet" class="bottom_sheet">
+          <div class="bottom_sheet_header">
+            <h3>어깨 톡톡</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="inquery_menu_list">
+              <li>
+                <span>
+                  <img src="./assets/image/icon/i_inquery_chat.svg" />
+                </span>
+                <span>실시간 질문 입장</span>
+                <i class="icon_right_arrow"></i>
+              </li>
+              <li>
+                <span>
+                  <img src="./assets/image/icon/i_kakao_chat.svg" />
+                </span>
+                <span>카카오톡 채널 문의</span>
+                <i class="icon_right_arrow"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--common bottom sheet -->
+        <!-- 모달 -->
+        <article id="logout" class="modal_wrap">
+          <div class="modal">
+            <p class="text">로그아웃 되었습니다.</p>
+            <p class="desc">다시 로그인해 주세요.</p>
+            <div class="btn_area">
+              <button class="black" onclick="close_modal()">로그인</button>
+            </div>
+          </div>
+        </article>
+        <!-- 모달 -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- swiper -->
+<script>
+  var swiper = new Swiper(".category_swiper", {
+    slidesPerView: "auto",
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+  });
+
+  var swiper = new Swiper(".my_commu_card_swiper", {
+    slidesPerView: "auto",
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+  });
+</script>
+<!-- swiper -->
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

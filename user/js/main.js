@@ -17,6 +17,7 @@ $(function () {
 
     $(".category_sec .swiper-wrapper > div").removeClass("active");
     $(".commu_list").removeClass("on");
+    $(".my_class_list").removeClass("on");
 
     $(this).addClass("active");
     $("#" + tabId).addClass("on");
