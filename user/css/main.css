@@ -4428,6 +4428,10 @@ header.chat .profile .badge_list .item {
   font-size: 14px;
   padding: 5px 0;
 }
+.container_wrap.home .main_visual_swiper .swiper-pagination > span {
+  line-height: 1;
+  display: block;
+}
 
 .container_wrap.home
   .main_visual_swiper
