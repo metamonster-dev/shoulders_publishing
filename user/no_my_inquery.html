@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>에러발생</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header border">
+          <div class="inner">
+            <button onclick="history.back();" class="back_btn"></button>
+            <h1>내 문의 내역</h1>
+            <p class="edit_btn">편집</p>
+          </div>
+        </header>
+        <!-- header -->
+        <div class="container_wrap h_01 my_inquery_list">
+          <div class="global_inner">
+            <!-- <div class="sort_sec">
+              <p
+                class="select_box_style border open_bottom_sheet"
+                data-target="sort_bottom_sheet"
+              >
+                <span>전체</span>
+                <i class="icon_bottom_arrow_g"></i>
+              </p>
+            </div> -->
+            <div class="no_data_content">
+              <p class="img">
+                <img src="./assets/image/icon/i_no_inquery.svg" />
+              </p>
+              <p class="txt">문의 내역이 없어요.</p>
+            </div>
+          </div>
+        </div>
+        <!-- footer -->
+        <!-- <footer class="footer">
+          <ul class="footer_menu">
+            <li onclick="location.href='/user/home.html'">
+              <i class="icon_home"></i>
+              <span class="tit">홈</span>
+            </li>
+            <li onclick="location.href='/user/class_list.html'">
+              <i class="icon_class"></i>
+              <span class="tit">클래스</span>
+            </li>
+            <li onclick="location.href='/user/bookmark_list.html'">
+              <i class="icon_like"></i>
+              <span class="tit">찜</span>
+            </li>
+            <li onclick="location.href='/user/community_list.html'">
+              <i class="icon_commu"></i>
+              <span class="tit">커뮤니티</span>
+            </li>
+            <li class="on" onclick="location.href='/user/mypage.html'">
+              <i class="icon_my"></i>
+              <span class="tit">마이</span>
+            </li>
+          </ul>
+        </footer> -->
+        <!-- footer -->
+        <div class="bottom_sheet_overlay"></div>
+        <div id="sort_bottom_sheet" class="bottom_sheet sort">
+          <div class="bottom_sheet_header">
+            <h3>정렬 순서</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="option_list">
+              <li>최신순</li>
+              <li>가나다순</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

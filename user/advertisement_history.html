@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>수업 요청 광고하기</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- fullcalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!--main header -->
+        <header class="header">
+          <div class="inner">
+            <button class="back_btn" onclick="history.back();"></button>
+            <h1>수업 요청 광고하기</h1>
+          </div>
+        </header>
+        <!--main header -->
+        <div class="container_wrap advertisement h_03">
+          <ul class="tab_menu underline">
+            <li onclick="location.href='/user/advertisement_add.html'">
+              광고 등록
+            </li>
+            <li
+              class="on"
+              onclick="location.href='/user/advertisement_history.html'"
+            >
+              최근 광고 결제 내역
+            </li>
+          </ul>
+          <div class="global_inner">
+            <ul class="advertisement_payments_list">
+              <li class="item">
+                <p class="title">수업 요청글 제목</p>
+                <div class="info_txt">
+                  <div class="txt">
+                    <span class="type">광고 ID</span>
+                    <span>1234567890</span>
+                  </div>
+                  <div class="txt">
+                    <span class="type">결제일시</span>
+                    <p class="dot_list">
+                      <span class="item">2025-01-01</span>
+                      <span class="item">13:00</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="result_txt">
+                  <p class="state">광고중</p>
+                  <p class="price">결제 금액 : 6,000원</p>
+                </div>
+              </li>
+              <li class="item">
+                <p class="title">수업 요청글 제목</p>
+                <div class="info_txt">
+                  <div class="txt">
+                    <span class="type">광고 ID</span>
+                    <span>1234567890</span>
+                  </div>
+                  <div class="txt">
+                    <span class="type">결제일시</span>
+                    <p class="dot_list">
+                      <span class="item">2025-01-01</span>
+                      <span class="item">13:00</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="result_txt">
+                  <p class="state end">광고 종료</p>
+                  <p class="price">결제 금액 : 6,000원</p>
+                </div>
+              </li>
+              <li class="item">
+                <p class="title">수업 요청글 제목</p>
+                <div class="info_txt">
+                  <div class="txt">
+                    <span class="type">광고 ID</span>
+                    <span>1234567890</span>
+                  </div>
+                  <div class="txt">
+                    <span class="type">결제일시</span>
+                    <p class="dot_list">
+                      <span class="item">2025-01-01</span>
+                      <span class="item">13:00</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="result_txt">
+                  <p class="state">광고중</p>
+                  <p class="price">결제 금액 : 6,000원</p>
+                </div>
+              </li>
+            </ul>
+            <div class="btn_area">
+              <p class="payments_btn">
+                <span>내 수업 요청 광고하기</span>
+                <i class="icon_right_arrow_color"></i>
+              </p>
+            </div>
+          </div>
+          <!-- 데이터 없을때 -->
+          <!-- <div class="no_history_data">
+            <span class="icon">
+              <img src="./assets/image/icon/i_round_alaram.svg" />
+            </span>
+            <p class="txt">결제 내역이 없습니다.</p>
+            <p class="sub_txt">첫번째 수업 요청 광고를 등록해 보세요.</p>
+            <p class="payments_btn">
+              <span>내 수업 요청 광고하기</span>
+              <i class="icon_right_arrow_color"></i>
+            </p>
+          </div> -->
+
+          <!-- floating -->
+          <div class="floating_area">
+            <div class="inner">
+              <p
+                class="item icon_inquiry open_bottom_sheet"
+                data-target="inquery_bottom_sheet"
+              ></p>
+            </div>
+          </div>
+          <!-- floating -->
+        </div>
+
+        <div class="bottom_sheet_overlay"></div>
+        <!--common bottom sheet -->
+        <div id="inquery_bottom_sheet" class="bottom_sheet">
+          <div class="bottom_sheet_header">
+            <h3>어깨 톡톡</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="inquery_menu_list">
+              <li>
+                <span>
+                  <img src="./assets/image/icon/i_inquery_chat.svg" />
+                </span>
+                <span>실시간 질문 입장</span>
+                <i class="icon_right_arrow"></i>
+              </li>
+              <li>
+                <span>
+                  <img src="./assets/image/icon/i_kakao_chat.svg" />
+                </span>
+                <span>카카오톡 채널 문의</span>
+                <i class="icon_right_arrow"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--common bottom sheet -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- swiper -->
+<script>
+  var swiper = new Swiper(".category_swiper", {
+    slidesPerView: "auto",
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+  });
+</script>
+<!-- swiper -->
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내 정보 수정</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- fullcalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!--main header -->
+        <header class="header">
+          <div class="inner">
+            <button class="back_btn" onclick="history.back();"></button>
+            <h1>내 정보 수정</h1>
+          </div>
+        </header>
+        <!--main header -->
+        <div class="container_wrap modify_my_info h_03">
+          <div class="global_inner">
+            <div class="form_wrap">
+              <div class="input_box pb_12">
+                <input type="file" id="profileUpload" />
+                <label for="profileUpload" class="preview_box">
+                  <figure>
+                    <img
+                      id="profilePreview"
+                      src="./assets/image/dummy/profile.svg"
+                    />
+                  </figure>
+                </label>
+                <span class="email">shoulders@gmail.com</span>
+              </div>
+              <div class="input_box">
+                <label class="label">
+                  <span>휴대폰 번호</span>
+                  <span class="change_btn">변경</span>
+                </label>
+                <input type="text" disabled placeholder="010-1234-5678" />
+              </div>
+              <div class="input_box">
+                <label class="label">
+                  <span>비밀번호</span>
+                  <span class="change_btn">변경</span>
+                </label>
+                <input type="password" disabled placeholder="************" />
+              </div>
+              <div class="input_box">
+                <label class="label">
+                  <span>닉네임</span>
+                  <span class="change_btn">변경</span>
+                </label>
+                <input type="text" disabled placeholder="숄더스" />
+              </div>
+              <div class="input_box">
+                <label class="label">
+                  <span>선호 지역</span>
+                  <span class="change_btn">변경</span>
+                </label>
+                <input type="text" disabled placeholder="서울 강남구" />
+              </div>
+              <ul class="student_list">
+                <li class="item">
+                  <p
+                    class="menu_btn open_bottom_sheet"
+                    data-target="edit_bottom_sheet"
+                  >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </p>
+                  <p class="name">수강생 1</p>
+                  <div class="option">
+                    <span class="tit">수강생 연령대</span>
+                    <ul class="sel_list">
+                      <li>미취학(5-7세)</li>
+                    </ul>
+                  </div>
+                  <div class="option">
+                    <span class="tit">수학 희망 과목 및 레벨 (다중 선택)</span>
+                    <ul class="sel_list">
+                      <li>수학-초급</li>
+                      <li>영어-미경험</li>
+                      <li>논술-심화</li>
+                      <li>영어-다지기</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="item add_item">
+                  <span class="img">
+                    <img src="./assets/image/icon/i_plus.svg" />
+                  </span>
+                  <span>수강생 정보 추가</span>
+                </li>
+              </ul>
+            </div>
+            <p class="draw_user">회원탈퇴</p>
+          </div>
+          <!-- floating -->
+          <div class="floating_area no_footer">
+            <div class="inner">
+              <p
+                class="item icon_inquiry open_bottom_sheet"
+                data-target="inquery_bottom_sheet"
+              ></p>
+            </div>
+          </div>
+          <!-- floating -->
+        </div>
+
+        <div class="bottom_sheet_overlay"></div>
+        <!--common bottom sheet -->
+        <div id="inquery_bottom_sheet" class="bottom_sheet">
+          <div class="bottom_sheet_header">
+            <h3>어깨 톡톡</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="inquery_menu_list">
+              <li>
+                <span>
+                  <img src="./assets/image/icon/i_inquery_chat.svg" />
+                </span>
+                <span>실시간 질문 입장</span>
+                <i class="icon_right_arrow"></i>
+              </li>
+              <li>
+                <span>
+                  <img src="./assets/image/icon/i_kakao_chat.svg" />
+                </span>
+                <span>카카오톡 채널 문의</span>
+                <i class="icon_right_arrow"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--common bottom sheet -->
+        <!-- 모달 -->
+        <article id="payments_cancel" class="modal_wrap">
+          <div class="modal">
+            <p class="text">결제 취소를 요청할까요?</p>
+            <p class="desc">
+              결제 취소 요청 후에는 취소 철회가<br />불가능합니다.
+            </p>
+            <div class="btn_area">
+              <button class="gray" onclick="close_modal()">취소</button>
+              <button class="black" onclick="close_modal()">확인</button>
+            </div>
+          </div>
+        </article>
+        <!-- 모달 -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

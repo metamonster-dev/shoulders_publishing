@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>에러발생</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header border">
+          <div class="inner">
+            <button onclick="history.back();" class="back_btn"></button>
+            <h1>내 문의 내역</h1>
+            <p
+              class="edit_btn finsh"
+              onclick="location.href='/user/my_inquery.html'"
+            >
+              완료
+            </p>
+          </div>
+        </header>
+        <!-- header -->
+        <div class="container_wrap h_01 my_inquery edit">
+          <div class="global_inner">
+            <div class="sort_sec">
+              <p
+                class="select_box_style border open_bottom_sheet"
+                data-target="sort_bottom_sheet"
+              >
+                <span>전체</span>
+                <i class="icon_bottom_arrow_g"></i>
+              </p>
+            </div>
+            <div class="inquery_list_sec">
+              <ul class="my_inquery_list edit">
+                <li class="card">
+                  <!-- 온라인 표시 online 클래스 추가 -->
+                  <div class="profile_box online">
+                    <figure class="profile">
+                      <img src="./assets/image/dummy/dummy_profile_02.png" />
+                    </figure>
+                  </div>
+                  <div class="text_box">
+                    <div class="tc_info">
+                      <p class="badge_list">
+                        <span class="item">영어</span>
+                      </p>
+                      <p class="name">허꽃별 선생님</p>
+                      <p class="dot_list">
+                        <span>2024.04.23</span>
+                        <span>20:55</span>
+                      </p>
+                    </div>
+                    <p class="desc">
+                      네 안녕하세요, 학부모님 이번에는 제가 먼저 인사를 드리게
+                      되었습니다 다름이 아니라
+                    </p>
+                  </div>
+                  <div class="chk_box">
+                    <label
+                      for="chk_01"
+                      class="icon_checkbox round color size24"
+                    >
+                      <input id="chk_01" type="checkbox" />
+                    </label>
+                  </div>
+                </li>
+                <li class="card">
+                  <div class="profile_box">
+                    <figure class="profile">
+                      <img
+                        src="./assets/image/dummy/dummy_profile_01.png"
+                        alt=""
+                      />
+                    </figure>
+                  </div>
+
+                  <div class="text_box">
+                    <div class="tc_info">
+                      <p class="badge_list">
+                        <span class="item">영어</span>
+                      </p>
+                      <p class="name">허꽃별 선생님</p>
+                      <p class="dot_list">
+                        <span>2024.04.23</span>
+                        <span>20:55</span>
+                      </p>
+                    </div>
+                    <p class="desc">
+                      네 안녕하세요, 학부모님 이번에는 제가 먼저 인사를 드리게
+                      되었습니다 다름이 아니라
+                    </p>
+                  </div>
+                  <div class="chk_box">
+                    <label
+                      for="chk_02"
+                      class="icon_checkbox round color size24"
+                    >
+                      <input id="chk_02" type="checkbox" />
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 문의내역 없을 경우 -->
+            <!-- <div class="no_data_content">
+              <p class="img">
+                <img src="./assets/image/icon/i_no_inquery.svg" />
+              </p>
+              <p class="txt">문의 내역이 없어요.</p>
+            </div> -->
+          </div>
+          <div class="bottom_btn">
+            <button onclick="open_modal('#inqDelete')">삭제하기</button>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+          <ul class="footer_menu">
+            <li onclick="location.href='/user/home.html'">
+              <i class="icon_home"></i>
+              <span class="tit">홈</span>
+            </li>
+            <li onclick="location.href='/user/class_list.html'">
+              <i class="icon_class"></i>
+              <span class="tit">클래스</span>
+            </li>
+            <li onclick="location.href='/user/bookmark_list.html'">
+              <i class="icon_like"></i>
+              <span class="tit">찜</span>
+            </li>
+            <li onclick="location.href='/user/community_list.html'">
+              <i class="icon_commu"></i>
+              <span class="tit">커뮤니티</span>
+            </li>
+            <li class="on" onclick="location.href='/user/mypage.html'">
+              <i class="icon_my"></i>
+              <span class="tit">마이</span>
+            </li>
+          </ul>
+        </footer>
+        <!-- footer -->
+        <div class="bottom_sheet_overlay"></div>
+        <div id="sort_bottom_sheet" class="bottom_sheet sort">
+          <div class="bottom_sheet_header">
+            <h3>정렬 순서</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="option_list">
+              <li>최신순</li>
+              <li>가나다순</li>
+            </ul>
+          </div>
+        </div>
+        <!-- 모달 -->
+        <article id="inqDelete" class="modal_wrap">
+          <div class="modal">
+            <p class="text">선택한 문의를 삭제할까요?</p>
+            <p class="desc">
+              문의 삭제시 해당 선생님와의 모든 문의 내용이 사라지고 문의
+              목록에서도 삭제돼요.
+            </p>
+            <div class="btn_area">
+              <button class="gray" onclick="close_modal()">취소</button>
+              <button class="black" onclick="close_modal()">확인</button>
+            </div>
+          </div>
+        </article>
+        <!-- 모달 -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>
