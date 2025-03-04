@@ -281,7 +281,7 @@
 <script>
   $(document).ready(function () {
     $("input[type='checkbox']").on("change", function () {
-      if ($(" input[type='checkbox']:checked").length > 3) {
+      if ($(" input[type='checkbox']:checked").length > 1) {
         open_modal("#alret01");
         $(this).prop("checked", false);
       }
