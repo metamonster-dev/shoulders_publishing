@@ -5199,7 +5199,7 @@ header.chat .profile .badge_list .item {
 .container_wrap.community_edit .radi_chk_wrap .legend .input_box {
   width: calc(50% - 4px);
 }
-
+.container_wrap.community_edit.ques .input_box .textarea_wrap.h_100,
 .container_wrap.community_edit.req .input_box .textarea_wrap.h_100 {
   height: 102px;
 }
