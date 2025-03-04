@@ -1,264 +1,252 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내 수업실</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- fullcalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>내 수업실</title>
-  <!-- CDN -->
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-    crossorigin="anonymous"></script>
-  <!-- swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- fullcalendar -->
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
-  <!-- CSS -->
-  <link rel="stylesheet" href="./css/custom.css" />
-  <link rel="stylesheet" href="./css/fonts.css" />
-  <link rel="stylesheet" href="./css/main.css" />
-  <!-- JS -->
-  <script src="./js/main.js"></script>
-</head>
-
-<body>
-  <div class="wrapper">
-    <div id="background" class="background_pc_txt"></div>
-    <div class="global_wrap">
-      <!--main header -->
-      <header class="header">
-        <div class="inner">
-          <button class="back_btn" onclick="history.back();"></button>
-          <h1>내 수업실</h1>
-        </div>
-      </header>
-      <!--main header -->
-      <div class="container_wrap myclass h_04">
-        <div class="category_sec">
-          <div class="swiper category_swiper swiper_menu round">
-            <div class="swiper-wrapper">
-              <div data-tab="allTab" class="swiper-slide active">전체</div>
-              <div data-tab="cancelTab" class="swiper-slide">취소</div>
-              <div data-tab="completeTab" class="swiper-slide">결제 완료</div>
-            </div>
-          </div>
-          <p class="select_box_style open_bottom_sheet" data-target="date_sort_bottom_sheet">
-            <span>전체</span>
-            <i class="icon_bottom_arrow_g"></i>
-          </p>
-        </div>
-
-
-        <div id="allTab" class="my_class_list on">
-          <div class="card">
-            <div class="card_inner">
-              <figure class="thumbnail">
-                <img src="./assets/image/thumbnail/math_80x102.png" alt="">
-              </figure>
-              <div class="text_box">
-                <p class="state_box">
-                  <span class="state cancel">취소 완료</span>
-                  <span class="date">2024-12-13</span>
-                  <i class="icon_dot_btn open_bottom_sheet" data-target="edit_bottom_sheet"></i>
-                </p>
-                <p class="title">
-                  [수학] 입시 장인에게 배우는 비법 노트! 초등학교 입학 수학
-                </p>
-                <p class="total">수량: 1</p>
-              </div>
-            </div>
-            <button class="btn line">재구매</button>
-          </div>
-          <p class="lines"></p>
-          <div class="card">
-            <div class="card_inner">
-              <figure class="thumbnail">
-                <img src="./assets/image/thumbnail/math_80x102.png" alt="">
-              </figure>
-              <div class="text_box">
-                <p class="state_box">
-                  <span class="state complete">결제 완료</span>
-                  <span class="date">2024-12-13</span>
-                  <i class="icon_dot_btn open_bottom_sheet" data-target="edit_bottom_sheet"></i>
-                </p>
-                <p class="title">
-                  [수학] 입시 장인에게 배우는 비법 노트! 초등학교 입학 수학
-                </p>
-                <p class="total">수량: 1</p>
-              </div>
-            </div>
-            <button class="btn line">결제 상세 내역</button>
-          </div>
-          <p class="lines"></p>
-          <div class="card">
-            <div class="card_inner">
-              <figure class="thumbnail">
-                <img src="./assets/image/thumbnail/math_80x102.png" alt="">
-              </figure>
-              <div class="text_box">
-                <p class="state_box">
-                  <span class="state complete">결제 완료</span>
-                  <span class="date">2024-12-13</span>
-                  <i class="icon_dot_btn open_bottom_sheet" data-target="edit_bottom_sheet"></i>
-                </p>
-                <p class="title">
-                  [수학] 입시 장인에게 배우는 비법 노트! 초등학교 입학 수학
-                </p>
-                <p class="total">수량: 1</p>
-              </div>
-            </div>
-            <button class="btn line">결제 상세 내역</button>
-          </div>
-        </div>
-        <div id="cancelTab" class="my_class_list">
-          <div class="card">
-            <div class="card_inner">
-              <figure class="thumbnail">
-                <img src="./assets/image/thumbnail/math_80x102.png" alt="">
-              </figure>
-              <div class="text_box">
-                <p class="state_box">
-                  <span class="state cancel">취소 완료</span>
-                  <span class="date">2024-12-13</span>
-                  <i class="icon_dot_btn open_bottom_sheet" data-target="edit_bottom_sheet"></i>
-                </p>
-                <p class="title">
-                  [수학] 입시 장인에게 배우는 비법 노트! 초등학교 입학 수학
-                </p>
-                <p class="total">수량: 1</p>
-              </div>
-            </div>
-            <button class="btn line">재구매</button>
-          </div>
-        </div>
-        <div id="completeTab" class="my_class_list">
-          <div class="card">
-            <div class="card_inner">
-              <figure class="thumbnail">
-                <img src="./assets/image/thumbnail/math_80x102.png" alt="">
-              </figure>
-              <div class="text_box">
-                <p class="state_box">
-                  <span class="state complete">결제 완료</span>
-                  <span class="date">2024-12-13</span>
-                  <i class="icon_dot_btn open_bottom_sheet" data-target="edit_bottom_sheet"></i>
-                </p>
-                <p class="title">
-                  [수학] 입시 장인에게 배우는 비법 노트! 초등학교 입학 수학
-                </p>
-                <p class="total">수량: 1</p>
-              </div>
-            </div>
-            <button class="btn line">결제 상세 내역</button>
-          </div>
-        </div>
-        <!-- floating -->
-        <div class="floating_area">
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!--main header -->
+        <header class="header">
           <div class="inner">
-            <p class="item icon_inquiry open_bottom_sheet" data-target="inquery_bottom_sheet"></p>
+            <button class="back_btn" onclick="history.back();"></button>
+            <h1>내 수업실</h1>
+          </div>
+        </header>
+        <!--main header -->
+        <div class="container_wrap myclass h_04">
+          <div class="category_sec">
+            <div class="swiper category_swiper swiper_menu round">
+              <div class="swiper-wrapper">
+                <div data-tab="allTab" class="swiper-slide active">전체</div>
+                <div data-tab="cancelTab" class="swiper-slide">취소</div>
+                <div data-tab="completeTab" class="swiper-slide">결제 완료</div>
+              </div>
+            </div>
+            <p
+              class="select_box_style open_bottom_sheet"
+              data-target="date_sort_bottom_sheet"
+            >
+              <span>전체</span>
+              <i class="icon_bottom_arrow_g"></i>
+            </p>
+          </div>
+
+          <div id="allTab" class="my_class_list on">
+            <div class="card">
+              <div class="card_inner">
+                <figure class="thumbnail">
+                  <img src="./assets/image/thumbnail/math_80x102.png" alt="" />
+                </figure>
+                <div class="text_box">
+                  <p class="state_box">
+                    <span class="state cancel">취소 완료</span>
+                    <span class="date">2024-12-13</span>
+                    <i
+                      class="icon_dot_btn open_bottom_sheet"
+                      data-target="edit_bottom_sheet"
+                    ></i>
+                  </p>
+                  <p class="title">
+                    [수학] 입시 장인에게 배우는 비법 노트! 초등학교 입학 수학
+                  </p>
+                  <p class="total">수량: 1</p>
+                </div>
+              </div>
+              <button class="btn line">재구매</button>
+            </div>
+            <p class="lines"></p>
+            <div class="card">
+              <div class="card_inner">
+                <figure class="thumbnail">
+                  <img src="./assets/image/thumbnail/math_80x102.png" alt="" />
+                </figure>
+                <div class="text_box">
+                  <p class="state_box">
+                    <span class="state complete">결제 완료</span>
+                    <span class="date">2024-12-13</span>
+                    <i
+                      class="icon_dot_btn open_bottom_sheet"
+                      data-target="edit_bottom_sheet"
+                    ></i>
+                  </p>
+                  <p class="title">
+                    [수학] 입시 장인에게 배우는 비법 노트! 초등학교 입학 수학
+                  </p>
+                  <p class="total">수량: 1</p>
+                </div>
+              </div>
+              <button class="btn line">결제 상세 내역</button>
+            </div>
+            <p class="lines"></p>
+            <div class="card">
+              <div class="card_inner">
+                <figure class="thumbnail">
+                  <img src="./assets/image/thumbnail/math_80x102.png" alt="" />
+                </figure>
+                <div class="text_box">
+                  <p class="state_box">
+                    <span class="state complete">결제 완료</span>
+                    <span class="date">2024-12-13</span>
+                    <i
+                      class="icon_dot_btn open_bottom_sheet"
+                      data-target="edit_bottom_sheet"
+                    ></i>
+                  </p>
+                  <p class="title">
+                    [수학] 입시 장인에게 배우는 비법 노트! 초등학교 입학 수학
+                  </p>
+                  <p class="total">수량: 1</p>
+                </div>
+              </div>
+              <button class="btn line">결제 상세 내역</button>
+            </div>
+          </div>
+          <div id="cancelTab" class="my_class_list">
+            <div class="card">
+              <div class="card_inner">
+                <figure class="thumbnail">
+                  <img src="./assets/image/thumbnail/math_80x102.png" alt="" />
+                </figure>
+                <div class="text_box">
+                  <p class="state_box">
+                    <span class="state cancel">취소 완료</span>
+                    <span class="date">2024-12-13</span>
+                    <i
+                      class="icon_dot_btn open_bottom_sheet"
+                      data-target="edit_bottom_sheet"
+                    ></i>
+                  </p>
+                  <p class="title">
+                    [수학] 입시 장인에게 배우는 비법 노트! 초등학교 입학 수학
+                  </p>
+                  <p class="total">수량: 1</p>
+                </div>
+              </div>
+              <button class="btn line">재구매</button>
+            </div>
+          </div>
+          <div id="completeTab" class="my_class_list">
+            <div class="card">
+              <div class="card_inner">
+                <figure class="thumbnail">
+                  <img src="./assets/image/thumbnail/math_80x102.png" alt="" />
+                </figure>
+                <div class="text_box">
+                  <p class="state_box">
+                    <span class="state complete">결제 완료</span>
+                    <span class="date">2024-12-13</span>
+                    <i
+                      class="icon_dot_btn open_bottom_sheet"
+                      data-target="edit_bottom_sheet"
+                    ></i>
+                  </p>
+                  <p class="title">
+                    [수학] 입시 장인에게 배우는 비법 노트! 초등학교 입학 수학
+                  </p>
+                  <p class="total">수량: 1</p>
+                </div>
+              </div>
+              <button class="btn line">결제 상세 내역</button>
+            </div>
           </div>
         </div>
-        <!-- floating -->
-      </div>
 
-      <!-- footer -->
-      <footer class="footer">
-        <ul class="footer_menu">
-          <li onclick="location.href='/user/home.html'">
-            <i class="icon_home"></i>
-            <span class="tit">홈</span>
-          </li>
-          <li onclick="location.href='/user/class_list.html'">
-            <i class="icon_class"></i>
-            <span class="tit">클래스</span>
-          </li>
-          <li onclick="location.href='/user/bookmark_list.html'">
-            <i class="icon_like"></i>
-            <span class="tit">찜</span>
-          </li>
-          <li class="on" onclick="location.href='/user/community_list.html'">
-            <i class="icon_commu"></i>
-            <span class="tit">커뮤니티</span>
-          </li>
-          <li onclick="location.href='/user/mypage.html'">
-            <i class="icon_my"></i>
-            <span class="tit">마이</span>
-          </li>
-        </ul>
-      </footer>
-      <!-- footer -->
-      <div class="bottom_sheet_overlay"></div>
-      <!-- 정렬 -->
-      <div id="date_sort_bottom_sheet" class="bottom_sheet sort_check">
-        <div class="bottom_sheet_header">
-          <h3>기간 설정</h3>
-          <p class="close_btn close_bottom_sheet"></p>
-        </div>
-        <div class="bottom_sheet_content">
-          <ul class="option_list">
-            <li class="input_box">
-              <label for="chk-01" class="r_icon_ckeck">
-                <input id="chk-01" name="date" type="radio" />
-                <span>1개월</span>
-              </label>
+        <!-- footer -->
+        <footer class="footer">
+          <ul class="footer_menu">
+            <li onclick="location.href='/user/home.html'">
+              <i class="icon_home"></i>
+              <span class="tit">홈</span>
             </li>
-            <li class="input_box">
-              <label for="chk-02" class="r_icon_ckeck">
-                <input id="chk-02" name="date" type="radio" />
-                <span>3개월</span>
-              </label>
+            <li onclick="location.href='/user/class_list.html'">
+              <i class="icon_class"></i>
+              <span class="tit">클래스</span>
             </li>
-            <li class="input_box">
-              <label for="chk-03" class="r_icon_ckeck">
-                <input id="chk-03" name="date" type="radio" />
-                <span>6개월</span>
-              </label>
+            <li onclick="location.href='/user/bookmark_list.html'">
+              <i class="icon_like"></i>
+              <span class="tit">찜</span>
             </li>
-            <li class="input_box">
-              <label for="chk-04" class="r_icon_ckeck">
-                <input id="chk-04" name="date" type="radio" />
-                <span>1년</span>
-              </label>
+            <li class="on" onclick="location.href='/user/community_list.html'">
+              <i class="icon_commu"></i>
+              <span class="tit">커뮤니티</span>
             </li>
-            <li class="input_box">
-              <label for="chk-05" class="r_icon_ckeck">
-                <input id="chk-05" name="date" type="radio" />
-                <span>3년</span>
-              </label>
+            <li onclick="location.href='/user/mypage.html'">
+              <i class="icon_my"></i>
+              <span class="tit">마이</span>
             </li>
           </ul>
+        </footer>
+        <!-- footer -->
+        <div class="bottom_sheet_overlay"></div>
+        <!-- 정렬 -->
+        <div id="date_sort_bottom_sheet" class="bottom_sheet sort_check">
+          <div class="bottom_sheet_header">
+            <h3>기간 설정</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="option_list">
+              <li class="input_box">
+                <label for="chk-01" class="r_icon_ckeck">
+                  <input id="chk-01" name="date" type="radio" />
+                  <span>1개월</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="chk-02" class="r_icon_ckeck">
+                  <input id="chk-02" name="date" type="radio" />
+                  <span>3개월</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="chk-03" class="r_icon_ckeck">
+                  <input id="chk-03" name="date" type="radio" />
+                  <span>6개월</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="chk-04" class="r_icon_ckeck">
+                  <input id="chk-04" name="date" type="radio" />
+                  <span>1년</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="chk-05" class="r_icon_ckeck">
+                  <input id="chk-05" name="date" type="radio" />
+                  <span>3년</span>
+                </label>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      <!--common bottom sheet -->
-      <div id="inquery_bottom_sheet" class="bottom_sheet">
-        <div class="bottom_sheet_header">
-          <h3>어깨 톡톡</h3>
-          <p class="close_btn close_bottom_sheet"></p>
-        </div>
-        <div class="bottom_sheet_content">
-          <ul class="inquery_menu_list">
-            <li>
-              <span>
-                <img src="./assets/image/icon/i_inquery_chat.svg" />
-              </span>
-              <span>실시간 질문 입장</span>
-              <i class="icon_right_arrow"></i>
-            </li>
-            <li>
-              <span>
-                <img src="./assets/image/icon/i_kakao_chat.svg" />
-              </span>
-              <span>카카오톡 채널 문의</span>
-              <i class="icon_right_arrow"></i>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!--common bottom sheet -->
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
 
 <!-- swiper -->
