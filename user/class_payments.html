@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>결제하기</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- fullcalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!--main header -->
+        <header class="header">
+          <div class="inner">
+            <button class="back_btn" onclick="history.back();"></button>
+            <h1>결제하기</h1>
+          </div>
+        </header>
+        <!--main header -->
+        <div class="container_wrap payments_detail class_payments h_01">
+          <div class="global_inner">
+            <div class="class_info_sec">
+              <div class="inner">
+                <div class="class_name">
+                  <figure class="thumbnail">
+                    <img src="./assets/image/thumbnail/math_74x74.png" alt="" />
+                  </figure>
+                  <div class="txt_box">
+                    <p class="title">
+                      [수학] 입시 장인에게 배우는 비법 노트! 초등학교 입학 수학
+                    </p>
+                    <p class="desc">옵션 - [얼리버드] 1인 수강권</p>
+                  </div>
+                </div>
+                <div class="text_list">
+                  <p class="item">
+                    <span class="tit">수업 방식</span>
+                    <span class="desc">오프라인</span>
+                  </p>
+                  <p class="item">
+                    <span class="tit">수업 기간</span>
+                    <span class="desc">2024-12-23 ~ 2024-12-27</span>
+                  </p>
+                  <p class="item">
+                    <span class="tit">대상</span>
+                    <span class="desc">미취학아동</span>
+                  </p>
+                  <p class="item">
+                    <span class="tit">수업 유형</span>
+                    <span class="desc">방학 특강</span>
+                  </p>
+                  <p class="item">
+                    <span class="tit">지역</span>
+                    <span class="desc">서울 노원구</span>
+                  </p>
+                  <p class="item">
+                    <span class="tit">학원</span>
+                    <span class="desc">메가스터디 노원점</span>
+                  </p>
+                  <p class="item">
+                    <span class="tit">강사</span>
+                    <span class="desc">이지영 선생님</span>
+                  </p>
+                </div>
+                <div class="total_price_box">
+                  <div class="item price">
+                    <p class="tit">수업 수강 금액</p>
+                    <p class="txt">
+                      <span class="count">수량 : 1</span>
+                      <span class="price">150,000원</span>
+                    </p>
+                  </div>
+                  <div class="item end_date">
+                    <p class="tit">수업 신청 마감</p>
+                    <p class="txt">2024-12-20(금)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="payments_type_list">
+              <p class="h4_title">결제 수단</p>
+              <div class="type">
+                <div class="item">
+                  <span class="icon">
+                    <img src="./assets/image/icon/i_card.svg" alt="" />
+                  </span>
+                  <span>신용카드</span>
+                </div>
+                <div class="item">
+                  <span class="icon">
+                    <img src="./assets/image/icon/i_toss.svg" alt="" />
+                  </span>
+                  <span>토스 간편결제</span>
+                </div>
+              </div>
+              <p class="notice">
+                카드사 정책에 따라 할부 거래 가능하며, 관련 정보는 결제하기 진행
+                시에 확인 가능합니다.
+              </p>
+            </div>
+          </div>
+          <div class="bottom_btn">
+            <button>15,000원 결제하기</button>
+          </div>
+          <!-- floating -->
+          <div class="floating_area">
+            <div class="inner">
+              <p
+                class="item icon_inquiry open_bottom_sheet"
+                data-target="inquery_bottom_sheet"
+              ></p>
+            </div>
+          </div>
+          <!-- floating -->
+        </div>
+
+        <div class="bottom_sheet_overlay"></div>
+        <!-- 정렬 -->
+        <div id="class_extend_bottom_sheet" class="bottom_sheet extend_date">
+          <div class="bottom_sheet_header">
+            <h3>수업 연장 요청</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="form_wrap">
+              <li class="input_box">
+                <label class="label required">휴강 날짜</label>
+                <input type="date" />
+              </li>
+              <li class="input_box">
+                <label class="label required">휴강 날짜</label>
+                <input type="date" />
+              </li>
+            </ul>
+            <div class="bottom_btn">
+              <!-- 날짜선택안했을때 버튼 스타일 -->
+              <!-- <button disabled>요청하기</button> -->
+              <button>요청하기</button>
+            </div>
+          </div>
+        </div>
+        <!--common bottom sheet -->
+        <div id="inquery_bottom_sheet" class="bottom_sheet">
+          <div class="bottom_sheet_header">
+            <h3>어깨 톡톡</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="inquery_menu_list">
+              <li>
+                <span>
+                  <img src="./assets/image/icon/i_inquery_chat.svg" />
+                </span>
+                <span>실시간 질문 입장</span>
+                <i class="icon_right_arrow"></i>
+              </li>
+              <li>
+                <span>
+                  <img src="./assets/image/icon/i_kakao_chat.svg" />
+                </span>
+                <span>카카오톡 채널 문의</span>
+                <i class="icon_right_arrow"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--common bottom sheet -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- swiper -->
+<script>
+  var swiper = new Swiper(".category_swiper", {
+    slidesPerView: "auto",
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+  });
+</script>
+<!-- swiper -->
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

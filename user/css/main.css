@@ -917,7 +917,7 @@ button {
   height: 52px;
   border-radius: 6px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   width: 100%;
   border: 1px solid #00d9d5;
   display: flex;
@@ -929,7 +929,6 @@ button {
 button.black {
   background-color: #111111;
   border: 1px solid #111111;
-  font-weight: 600;
 }
 
 button.line {
@@ -943,7 +942,6 @@ button.b_line {
   border: 1px solid #111111;
   background-color: transparent;
   color: #111;
-  font-weight: 600;
 }
 
 button.primary_line {
@@ -956,7 +954,6 @@ button.red {
   border: 1px solid #ff3a4a;
   background-color: #ff3a4a;
   color: #fff;
-  font-weight: 600;
 }
 
 button.red_line {
@@ -970,7 +967,7 @@ button.gray {
   background-color: #f1f1f5;
   border: 1px solid #f1f1f5;
   color: #999999;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 /* custom_select_box */
@@ -5262,7 +5259,8 @@ header.chat .profile .badge_list .item {
 
 /* 결제 상세 내역 */
 .container_wrap.payments_detail {
-  padding: 20px 0 36px;
+  padding-top: 20px;
+  padding-bottom: 156px;
 }
 .container_wrap.payments_detail .gap_line {
   height: 16px;
@@ -5471,6 +5469,16 @@ header.chat .profile .badge_list .item {
 .container_wrap.payments_detail .btn_ {
   margin-top: 4px;
 }
+.container_wrap.payments_detail.class_payments .payments_type_list {
+  padding-left: 0;
+  padding-right: 0;
+}
+.container_wrap.payments_detail.class_payments .payments_type_list .h4_title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
 .container_wrap.payments_detail .payments_type_list {
   padding-left: 16px;
   padding-right: 16px;
@@ -5499,6 +5507,7 @@ header.chat .profile .badge_list .item {
   line-height: 18px;
   padding-left: 16px;
   position: relative;
+  color: #767676;
 }
 .container_wrap.payments_detail .payments_type_list .notice::before {
   content: "";
@@ -5508,7 +5517,7 @@ header.chat .profile .badge_list .item {
   width: 2px;
   height: 2px;
   border-radius: 50rem;
-  background-color: #000;
+  background-color: #767676;
 }
 
 .container_wrap.payments_detail .no_border_wrap {
@@ -5542,6 +5551,17 @@ header.chat .profile .badge_list .item {
   .icon_right_arrow_g {
   width: 14px;
   height: 14px;
+}
+.container_wrap.payments_detail .complete_title .title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  margin-bottom: 6px;
+}
+.container_wrap.payments_detail .complete_title .order_number {
+  color: #767676;
+  font-size: 14px;
+  line-height: 20px;
 }
 /* 내 문의내역 */
 .container_wrap.my_inquery {
