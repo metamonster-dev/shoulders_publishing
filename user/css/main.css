@@ -23,7 +23,7 @@
 /* pc버전 배경 */
 html,
 body {
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
 }
 
@@ -37,7 +37,7 @@ body {
   content: "";
   position: absolute;
   width: 100%;
-  height: 62.3vh;
+  height: 62.3dvh;
   background-color: rgba(0, 193, 190, 0.12);
   z-index: -1;
 }
@@ -66,7 +66,7 @@ body {
   min-width: 406px;
   display: flex;
   min-width: 406px;
-  height: 62.3vh;
+  height: 62.3dvh;
   flex-direction: column;
   justify-content: center;
   align-items: baseline;
@@ -163,7 +163,7 @@ body {
   margin-left: 25px;
   background-color: #fff;
   box-shadow: 0px 0px 12px 0px #00000014;
-  height: 100vh;
+  height: 100dvh;
 }
 
 /* pc버전 배경 */
@@ -210,7 +210,7 @@ body {
 }
 
 .gradient_txt {
-  background: linear-gradient(89.19deg, #00fffa -2.87%, #0082d2 43.92%);
+  background: linear-gradient(89.19deg, #00fffa -2.87%, #0082d2 111.92%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -645,6 +645,7 @@ input[type="file"] {
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
+  z-index: 1;
 }
 .input_box.search > input {
   height: 48px;
@@ -652,7 +653,9 @@ input[type="file"] {
   padding-left: 40px;
   background-color: #f7f7fb;
   border-color: #f7f7fb;
+  position: relative;
 }
+
 /* 댓글, 문의하기 input */
 .comment_input_box {
   display: flex;
@@ -2390,10 +2393,11 @@ button.gray {
   height: 18px;
   background-image: url("../assets/image/icon/arrow_top.svg");
   transition: all 0.2s ease-in-out;
+  transform: rotate(180deg);
 }
 
 .slide_btn.on {
-  transform: rotate(180deg);
+  transform: rotate(0);
 }
 
 .slide_content {
@@ -2409,9 +2413,11 @@ button.gray {
 
 /* progress_bar 헤더 아래 진행바 */
 .progress_bar {
-  position: relative;
+  position: sticky;
+  top: 0;
   height: 2px;
   background-color: #f7f7fb;
+  z-index: 1;
 }
 
 .progress_bar::after {
@@ -2539,7 +2545,7 @@ button.gray {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: calc(100vh - 56px);
+  height: calc(100dvh - 56px);
 }
 
 .modal_wrap.privew .image_box .image {
@@ -2643,7 +2649,7 @@ button.gray {
 
 .container_wrap {
   overflow-y: auto;
-  height: 100vh;
+  height: 100dvh;
 }
 
 /* 헤더, bottom_btn 있을 떄 container 높이값*/
@@ -2654,7 +2660,7 @@ button.gray {
 /* header, bottom_btn ,bottom_text 있을 떄 container 높이값*/
 .container_wrap.h_02 {
   /* margin-top: 56px; */
-  height: calc(100vh - 168px);
+  height: calc(100dvh - 168px);
   padding-bottom: 56px;
 }
 
@@ -2671,22 +2677,22 @@ button.gray {
 
 /* header, bottom_text 있을 때 */
 .container_wrap.h_05 {
-  height: calc(100vh - 90px);
+  height: calc(100dvh - 90px);
 }
 
 /* 검색헤서 height: 70px */
 .container_wrap.h_06 {
-  height: calc(100vh - 70px);
+  height: calc(100dvh - 70px);
 }
 
 /* header, footer_input_box 있을때 */
 .container_wrap.h_07 {
-  height: calc(100vh - 124px);
+  height: calc(100dvh - 124px);
 }
 
 /* 문의하기 container*/
 .container_wrap.h_08 {
-  height: calc(100vh - 214px);
+  height: calc(100dvh - 214px);
 }
 .bottom_text {
   position: absolute;
@@ -3311,6 +3317,9 @@ header.chat .profile .badge_list .item {
 
 .floating_area .item.icon_inquiry {
   background-image: url("../assets/image/icon/i_inquiry_floating.svg");
+}
+.floating_area .item.icon_plus {
+  background-image: url("../assets/image/icon/i_add_write.svg");
 }
 
 /* -------------------------------------------------------------------------- */
@@ -4104,7 +4113,9 @@ header.chat .profile .badge_list .item {
 .container_wrap.find_pw_finsh .page_title {
   padding-top: 12px;
 }
-
+.container_wrap.find_pw_finsh .img {
+  width: 68px;
+}
 /* -------------------------------------------------------------------------- */
 /*                                 이메일로 가입하기                              */
 /* -------------------------------------------------------------------------- */
@@ -4127,7 +4138,47 @@ header.chat .profile .badge_list .item {
   background-size: 100%;
   background-repeat: no-repeat;
 }
+.container_wrap.join.step01 .content .notification {
+  position: absolute;
+  top: 47%;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(150px);
+  border-radius: 12px;
+  padding: 14px;
+  gap: 10px;
+}
+.container_wrap.join.step01 .content .notification .img {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 9px;
+  overflow: hidden;
+}
+.container_wrap.join.step01 .content .notification .text_box {
+  width: 100%;
+}
+.container_wrap.join.step01 .content .notification .name {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container_wrap.join.step01 .content .notification .name .ago {
+  color: #7f7f7f80;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+}
 
+.container_wrap.join.step01 .content .notification .desc {
+  font-size: 14px;
+  line-height: 20px;
+}
 .container_wrap.join.step01 .bottom_text {
   padding-top: 24px;
   height: 94px;
@@ -4158,7 +4209,15 @@ header.chat .profile .badge_list .item {
   border-radius: 6px;
   transition: all 0.3s ease-in-out;
 }
-
+.container_wrap.join.step02 .form_wrap.agree_list .marketing_agree_box > label {
+  margin-bottom: 4px;
+}
+.container_wrap.join.step02
+  .form_wrap.agree_list
+  .marketing_agree_box
+  > label:last-child {
+  margin-bottom: 0;
+}
 .container_wrap.join.step02 .form_wrap.agree_list .marketing_agree_box.on {
   visibility: visible;
 }
@@ -4367,6 +4426,7 @@ header.chat .profile .badge_list .item {
   bottom: 16px;
   left: auto;
   font-size: 14px;
+  padding: 5px 0;
 }
 
 .container_wrap.home
@@ -4596,6 +4656,9 @@ header.chat .profile .badge_list .item {
   padding-top: 8px;
   padding-bottom: 20px;
 }
+.container_wrap.home .review_sec .sub_title .gradient_txt {
+  font-weight: 700;
+}
 
 /* 추천! 마감 입박 수업 페이지 */
 .container_wrap.recommend_class .visual_sec figure {
@@ -4618,6 +4681,7 @@ header.chat .profile .badge_list .item {
   border: 1px solid #e5e5ec;
   border-radius: 5px;
   padding: 4px 6px;
+  height: 24px;
 }
 
 .container_wrap.recommend_class .recommend_list_sec .subject_list {
@@ -4899,10 +4963,6 @@ header.chat .profile .badge_list .item {
   justify-content: center;
 }
 
-.bottom_btn.flex .bookmark_btn:has(.icon_bookmark.on) {
-  background-color: #fff;
-}
-
 .bottom_btn.flex .bookmark_btn:has(.icon_bookmark.on) > span {
   color: #111;
 }
@@ -5014,7 +5074,7 @@ header.chat .profile .badge_list .item {
 .container_wrap.teacher_detail .profile_info_sec .total_class {
   font-size: 18px;
   font-weight: 600;
-  line-height: 26px;
+  line-height: 36px;
   margin: 18px 0 13px;
 }
 
