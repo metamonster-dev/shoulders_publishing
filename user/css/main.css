@@ -440,8 +440,7 @@ textarea {
 }
 /* label */
 .label {
-  /* display: flex; */
-  /* justify-content: space-between; */
+  display: block;
   margin-bottom: 8px;
   align-items: center;
 }
@@ -458,6 +457,9 @@ textarea {
 .label .desc {
   color: #767676;
   font-size: 13px;
+}
+.label.bold {
+  font-weight: 600;
 }
 /* input */
 input {
@@ -4346,6 +4348,12 @@ header.chat .profile .badge_list .item {
   color: #00c5c1;
   border-radius: 4px;
   padding: 6px 8px;
+}
+/* -------------------------------------------------------------------------- */
+/*                                  선생님 회원가입                               */
+/* -------------------------------------------------------------------------- */
+.itt_join .form_wrap {
+  gap: 32px;
 }
 
 /* join_finsh 가입완료 */
