@@ -471,8 +471,8 @@ input:disabled {
   background-color: #f1f1f5;
   color: #999;
   border: 1px solid #e5e5ec;
-  opacity: 1!important;
-  -webkit-text-fill-color: inherit!important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: inherit !important;
 }
 
 input::placeholder {
@@ -3549,8 +3549,9 @@ header.chat .profile .badge_list .item {
   line-height: 24px;
 }
 
-.r_icon_ckeck:has(input[type="radio"]:checked)::after,
-.r_icon_ckeck:has(input[type="checkbox"]:checked)::after {
+.bottom_sheet.sort_check .r_icon_ckeck:has(input[type="radio"]:checked)::after,
+.bottom_sheet.sort_check
+  .r_icon_ckeck:has(input[type="checkbox"]:checked)::after {
   right: 0;
 }
 
