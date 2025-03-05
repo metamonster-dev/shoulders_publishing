@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>가입 신청 완료</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header">
+          <div class="inner">
+            <button class="back_btn"></button>
+            <h1>가입 신청 완료</h1>
+          </div>
+        </header>
+        <!-- header -->
+        <div class="container_wrap h_03 itt_join wait">
+          <div class="global_inner">
+            <div class="page_title_box reject">
+              <p class="state">승인 거절</p>
+              <p class="gradient_txt">가입 승인이 거절되었어요.</p>
+              <div class="desc_box">
+                <p class="tit">거절 사유</p>
+                <p class="txt">
+                  첨부하신 사진의 정보와 일치하지 않습니다. 올바른 사진을 다시
+                  첨부해주세요.
+                </p>
+              </div>
+            </div>
+            <div class="sect color">
+              <div class="box">
+                <p class="box_tit">가입 정보</p>
+                <div class="text_list">
+                  <p class="item">
+                    <span class="tit">이름</span>
+                    <span class="txt">허꽃별</span>
+                  </p>
+                  <p class="item">
+                    <span class="tit">생년월일</span>
+                    <span class="txt">960703</span>
+                  </p>
+                  <p class="item">
+                    <span class="tit">휴대번호</span>
+                    <span class="txt">010-1234-5678</span>
+                  </p>
+                  <p class="item">
+                    <span class="tit">이메일</span>
+                    <span class="txt">teach@gmail.com</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="sect list">
+              <div class="box">
+                <p class="box_tit">선생님 소속 정보</p>
+                <div class="text_list">
+                  <p class="item">
+                    <span class="tit">선생님명</span>
+                    <span class="txt">대치어학원 허꽃별</span>
+                  </p>
+                  <p class="item">
+                    <span class="tit">학원명</span>
+                    <span class="txt">-</span>
+                  </p>
+                </div>
+              </div>
+              <div class="box">
+                <p class="box_tit">선생님 학력 정보</p>
+                <div class="text_list">
+                  <p class="item">
+                    <span class="tit">출신 대학교</span>
+                    <span class="txt">서울대학교</span>
+                  </p>
+                  <p class="item">
+                    <span class="tit">출신 캠퍼스</span>
+                    <span class="txt">신림 본 캠퍼스</span>
+                  </p>
+                  <p class="item">
+                    <span class="tit">출신 학과</span>
+                    <span class="txt">경영학과</span>
+                  </p>
+                </div>
+                <div class="img_list">
+                  <p></p>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onclick="open_modal('#cancelAlret')"
+              class="red_txt"
+            >
+              신청 취소하기
+            </button>
+          </div>
+        </div>
+        <!-- 모달 -->
+        <article id="cancelAlret" class="modal_wrap">
+          <div class="modal">
+            <p class="text">가입 신청을 취소할까요?</p>
+            <p class="desc">
+              취소하면 가입이 중단되고 초기화돼요.<br />가입 신청을
+              취소하시겠어요?
+            </p>
+            <div class="btn_area">
+              <button class="gray" onclick="close_modal()">취소</button>
+              <button class="black" onclick="close_modal()">확인</button>
+            </div>
+          </div>
+        </article>
+        <!-- 모달 -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>
