@@ -4128,12 +4128,12 @@ header.chat .profile .badge_list .item {
 
 .container_wrap.join.step01 .page_title {
   padding-top: 62px;
-  padding-bottom: 100px;
+  padding-bottom: 75px;
 }
 
 .container_wrap.join.step01 .content {
   background-image: url("../assets/image/phone.png");
-  width: 84%;
+  width: 100%;
   max-width: 400px;
   margin: 0 auto;
   height: 100%;
