@@ -2310,7 +2310,7 @@ button.gray {
 }
 .advertisement_payments_list > .item .result_txt {
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
 }
 .advertisement_payments_list > .item .result_txt .state {
   color: #0eca20;
@@ -5720,6 +5720,9 @@ header.chat .profile .badge_list .item {
 
   flex-direction: column;
   gap: 9px;
+}
+.container_wrap.payments_detail .payments_type_list .type .item .toss {
+  width: 34px;
 }
 .container_wrap.payments_detail .payments_type_list .notice {
   margin: 10px 0 20px;
