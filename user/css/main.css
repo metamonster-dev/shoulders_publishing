@@ -806,6 +806,9 @@ input[type="date"] {
   color: #505050;
   text-align: left;
 }
+input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
+}
 
 input[type="date"]::-webkit-clear-button,
 input[type="date"]::-webkit-inner-spin-button {
