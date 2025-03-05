@@ -635,7 +635,11 @@ input[type="file"] {
   color: #767676;
   font-size: 12px;
 }
-
+/* 파일 업로드 */
+.file_input_box {
+  width: 100%;
+  height: 52px;
+}
 /* 검색 input */
 .input_box.search {
   position: relative;
@@ -4193,6 +4197,7 @@ header.chat .profile .badge_list .item {
 .container_wrap.join.step01 .bottom_text {
   padding-top: 24px;
   height: 94px;
+  bottom: 40px;
 }
 
 /* .step02 약관 동의 */
