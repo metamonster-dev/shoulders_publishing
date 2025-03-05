@@ -1265,6 +1265,33 @@ button.red_txt {
   background-repeat: no-repeat;
   display: block;
 }
+.icon_widget_01 {
+  width: 20px;
+  height: 20px;
+  background-image: url("../assets/image/icon/i_widget_01.svg");
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: block;
+}
+.icon_widget_02 {
+  width: 20px;
+  height: 20px;
+  background-image: url("../assets/image/icon/i_widget_02.svg");
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: block;
+}
+.icon_widget_03 {
+  width: 20px;
+  height: 20px;
+  background-image: url("../assets/image/icon/i_widget_03.svg");
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: block;
+}
 
 /* -------------------------------------------------------------------------- */
 /*                                  item style                                */
@@ -2992,15 +3019,15 @@ button.red_txt {
   position: relative;
 }
 
-.header.main .header_menu > li:nth-child(1) {
+.header.main .header_menu > .search {
   background-image: url("../assets/image/icon/i_header_search.svg");
 }
 
-.header.main .header_menu > li:nth-child(2) {
+.header.main .header_menu > .alram {
   background-image: url("../assets/image/icon/i_alram.svg");
 }
 
-.header.main .header_menu > li:nth-child(3) {
+.header.main .header_menu > .gnb_menu {
   background-image: url("../assets/image/icon/i_gnb.svg");
 }
 
@@ -5855,7 +5882,8 @@ header.chat .profile .badge_list .item {
   gap: 9px;
 }
 .container_wrap.payments_detail .payments_type_list .type .item .toss {
-  width: 34px;
+  transform: translateY(10px);
+  width: 44px;
 }
 .container_wrap.payments_detail .payments_type_list .notice {
   margin: 10px 0 20px;
