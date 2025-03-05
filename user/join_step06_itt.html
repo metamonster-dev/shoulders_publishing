@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>추가 정보 입력</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header">
+          <div class="inner">
+            <button class="back_btn"></button>
+            <h1>추가 정보 입력</h1>
+          </div>
+        </header>
+        <!-- header -->
+        <div class="container_wrap h_01 itt_join step06">
+          <p class="progress_bar bar03"></p>
+          <div class="global_inner">
+            <h3 class="page_title"></h3>
+            <section>
+              <div class="form_wrap">
+                <div class="input_box">
+                  <label class="label bold required"
+                    >수업 가능한 지역을 최대 2개까지 선택하세요.</label
+                  >
+                  <div class="search_box">
+                    <input type="text" placeholder="도/시를 검색해주세요." />
+                  </div>
+                  <ul class="select_list">
+                    <li>
+                      <span>서울시 강남구</span>
+                      <span class="del_btn"></span>
+                    </li>
+                    <li>
+                      <span>서울시 서초구</span>
+                      <span class="del_btn"></span>
+                    </li>
+                  </ul>
+                  <ul class="drop_down scroll_bar">
+                    <li>서울시 서초구</li>
+                    <li>서울시 송파구</li>
+                    <li>서울시 강남구</li>
+                    <li>서울시 강동구</li>
+                  </ul>
+                </div>
+                <div class="radi_chk_wrap">
+                  <p class="label required bold">
+                    수업 대상 연령대를 최대 2개까지 선택하세요.
+                  </p>
+                  <div class="legend">
+                    <div class="input_box">
+                      <label for="age01" class="text_radio">
+                        <input id="age01" name="age" type="radio" />
+                        <span>미취학(5~7세)</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="age02" class="text_radio">
+                        <input id="age02" name="age" type="radio" />
+                        <span>초등 저학년(8~10세)</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="age03" class="text_radio">
+                        <input id="age03" name="age" type="radio" />
+                        <span>초등 고학년(11~13세)</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="age04" class="text_radio">
+                        <input id="age04" name="age" type="radio" />
+                        <span>중/고등학생(14~19세)</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="radi_chk_wrap">
+                  <p class="label required bold">
+                    전문 과목을 최대 2개까지 선택하세요.
+                  </p>
+                  <div class="legend">
+                    <div class="input_box">
+                      <label for="subject01" class="text_radio">
+                        <input id="subject01" name="age" type="checkbox" />
+                        <span>수학</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="subject02" class="text_radio">
+                        <input id="subject02" name="age" type="checkbox" />
+                        <span>영어</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="subject03" class="text_radio">
+                        <input id="subject03" name="age" type="checkbox" />
+                        <span>논술</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="subject04" class="text_radio">
+                        <input id="subject04" name="age" type="checkbox" />
+                        <span>음악 </span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="subject05" class="text_radio">
+                        <input id="subject05" name="age" type="checkbox" />
+                        <span>활동</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="bottom_btn">
+              <button disabled>다음</button>
+              <!-- 유효성 검사 통과시 버튼 스타일 -->
+              <!-- <button >다음</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>
