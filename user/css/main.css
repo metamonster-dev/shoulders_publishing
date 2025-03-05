@@ -19,7 +19,9 @@
 *::-webkit-scrollbar-track {
   background-color: transparent;
 }
-
+input::-webkit-date-and-time-value {
+  text-align: left;
+}
 /* pc버전 배경 */
 html,
 body {
@@ -804,9 +806,6 @@ input[type="date"] {
   background-position: right 13px center;
   padding-right: 10px;
   color: #505050;
-  text-align: left;
-}
-input[type="date"]::-webkit-date-and-time-value {
   text-align: left;
 }
 
