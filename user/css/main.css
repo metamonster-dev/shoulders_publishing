@@ -471,7 +471,10 @@ input:disabled {
   background-color: #f1f1f5;
   color: #999;
   border: 1px solid #e5e5ec;
+  opacity: 1;
+  -webkit-text-fill-color: inherit;
 }
+
 input::placeholder {
   color: #767676;
   font-size: 15px;
