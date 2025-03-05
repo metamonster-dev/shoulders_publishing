@@ -806,7 +806,9 @@ input[type="date"] {
   background-position: right 13px center;
   padding-right: 10px;
   color: #505050;
-  text-align: left;
+  appearance: none;
+  -webkit-appearance: none;
+  text-align: left !important;
 }
 
 input[type="date"]::-webkit-clear-button,
