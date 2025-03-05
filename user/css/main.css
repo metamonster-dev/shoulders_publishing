@@ -471,8 +471,8 @@ input:disabled {
   background-color: #f1f1f5;
   color: #999;
   border: 1px solid #e5e5ec;
-  opacity: 1;
-  -webkit-text-fill-color: inherit;
+  opacity: 1!important;
+  -webkit-text-fill-color: inherit!important;
 }
 
 input::placeholder {
