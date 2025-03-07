@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>Shoulders</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!--main header -->
+        <header class="header main gray_bg">
+          <div class="inner">
+            <h1 class="logo">
+              <a href="home_itt.html">
+                <img src="./assets/image/logo.svg" />
+              </a>
+            </h1>
+            <ul class="header_menu">
+              <li class="alram" onclick="location.href='alarm_itt.html'">
+                <i class="icon_read"></i>
+              </li>
+            </ul>
+          </div>
+        </header>
+        <!--main header -->
+        <div class="container_wrap h_04 home">
+          <div class="error_sec">
+            <p class="icon">
+              <img src="./assets/image/icon/i_round_alaram.svg" />
+            </p>
+            <p class="txt">
+              예상치 못한 오류가 발생했어요<br />
+              다시 시도해 주세요
+            </p>
+            <button class="black">다시 시도</button>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+          <ul class="footer_menu">
+            <li class="on" onclick="location.href='home.html'">
+              <i class="icon_home"></i>
+              <span class="tit">홈</span>
+            </li>
+            <li onclick="location.href='class_list.html'">
+              <i class="icon_class"></i>
+              <span class="tit">클래스</span>
+            </li>
+            <li onclick="location.href='class_setting_itt.html'">
+              <i class="class_set"></i>
+              <span class="tit">클래스 관리</span>
+            </li>
+            <li onclick="location.href='community_list.html'">
+              <i class="icon_commu"></i>
+              <span class="tit">커뮤니티</span>
+            </li>
+            <li onclick="location.href='mypage.html'">
+              <i class="icon_my"></i>
+              <span class="tit">마이</span>
+            </li>
+          </ul>
+        </footer>
+        <!-- footer -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- swiper -->
+<script>
+  var swiper = new Swiper(".main_visual_swiper", {
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+  });
+
+  var swiper = new Swiper(".sub_visual_swiper", {
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  var swiper = new Swiper(".best_sec_swiper", {
+    spaceBetween: 16,
+    slidesPerView: 1.9,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+</script>
+<!-- swiper -->
+
+<script>
+  $(document).ready(function () {
+    let $container = $(".container_wrap");
+    $container.on("scroll", function () {
+      let scrollPos = $container.scrollTop();
+      if (scrollPos > 50) {
+        $("header").removeClass("gray_bg");
+      } else {
+        $("header").addClass("gray_bg");
+      }
+    });
+  });
+</script>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

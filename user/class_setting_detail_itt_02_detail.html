@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>수강생 관리</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- fullcalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!--main header -->
+        <header class="header border">
+          <div class="inner">
+            <button class="back_btn" onclick="history.back();"></button>
+            <h1>수강생 관리</h1>
+          </div>
+        </header>
+        <!--main header -->
+        <div class="container_wrap h_03 class_detail_itt">
+          <div class="class_party_detail_sec">
+            <div class="global_inner">
+              <div class="info">
+                <div class="state">
+                  <p class="name">하연맘</p>
+                  <p class="badge_list">
+                    <span class="item">결제완료</span>
+                  </p>
+                </div>
+                <div class="text_list">
+                  <p class="item">
+                    <span class="tit">연락처</span>
+                    <span class="txt">010-1234-4567</span>
+                  </p>
+                  <p class="item">
+                    <span class="tit">수업 구매일</span>
+                    <span class="txt">2024-12-10</span>
+                  </p>
+                  <p class="item">
+                    <span class="tit">구매 수량 : 11</span>
+                    <span class="txt bold">3,000,000원</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="class_extend_list_sec">
+            <div class="global_inner">
+              <div class="title_box">
+                <h4>수업 연장 신청 내역</h4>
+              </div>
+              <ul class="extend_list">
+                <li class="card">
+                  <p class="date">연장 신청일 : 2024-12-10</p>
+                  <div class="text_list">
+                    <p class="item">
+                      <span class="tit">휴강 날짜</span>
+                      <span class="txt">2024-12-10</span>
+                    </p>
+                    <p class="item">
+                      <span class="tit">수업 희망일</span>
+                      <span class="txt">2024-12-20</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="card">
+                  <p class="date">연장 신청일 : 2024-12-10</p>
+                  <div class="text_list">
+                    <p class="item">
+                      <span class="tit">휴강 날짜</span>
+                      <span class="txt">2024-12-10</span>
+                    </p>
+                    <p class="item">
+                      <span class="tit">수업 희망일</span>
+                      <span class="txt">2024-12-20</span>
+                    </p>
+                  </div>
+                  <button class="line">연장 수락하기</button>
+                </li>
+                <li class="card">
+                  <p class="date">연장 신청일 : 2024-12-10</p>
+                  <div class="text_list">
+                    <p class="item">
+                      <span class="tit">휴강 날짜</span>
+                      <span class="txt">2024-12-10</span>
+                    </p>
+                    <p class="item">
+                      <span class="tit">수업 희망일</span>
+                      <span class="txt">2024-12-20</span>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bottom_sheet_overlay"></div>
+        <!--page bottom sheet -->
+        <!-- 수업 정렬 순서 bottom sheet-->
+        <div id="class_sort_bottom_sheet" class="bottom_sheet sort">
+          <div class="bottom_sheet_header">
+            <h3>정렬 순서</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="option_list">
+              <li>인기순</li>
+              <li>날짜 최신순</li>
+              <li>가격 낮은순</li>
+              <li>가격 높은순</li>
+              <li>평점 높은순</li>
+              <li>마감 임박순</li>
+            </ul>
+          </div>
+        </div>
+        <!-- 선생님 정렬 순서 bottom sheet-->
+        <div id="tc_sort_bottom_sheet" class="bottom_sheet sort">
+          <div class="bottom_sheet_header">
+            <h3>정렬 순서</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="option_list">
+              <li>인기순</li>
+              <li>가나다순</li>
+              <li>평점 높은순</li>
+              <li>찜 많은순</li>
+              <li>수업 많은순</li>
+            </ul>
+          </div>
+        </div>
+
+        <!--page bottom sheet -->
+        <!-- 모달 -->
+        <article id="class_open_alert" class="modal_wrap">
+          <div class="modal">
+            <p class="text">판매를 재개할까요?</p>
+            <p class="desc">
+              판매 재개 시 학부모의 수업 조회 및<br />수강 신청이 가능해져요.
+            </p>
+            <div class="btn_area">
+              <button class="gray" onclick="close_modal()">취소</button>
+              <button class="black" onclick="openClass()">확인</button>
+            </div>
+          </div>
+        </article>
+        <!-- 모달 -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>정산 관리</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header border">
+          <div class="inner">
+            <button onclick="history.back();" class="back_btn"></button>
+            <h1>정산 관리</h1>
+          </div>
+        </header>
+        <!-- header -->
+        <div class="container_wrap h_01 adjustment_set">
+          <div class="this_month_sec">
+            <div class="global_inner">
+              <div class="title_box">
+                <h4>2024년 12월 정산</h4>
+              </div>
+              <div class="text_list g_bold">
+                <p class="item">
+                  <span class="tit">총 판매 금액</span>
+                  <span class="txt">3,100,000원</span>
+                </p>
+                <p class="item">
+                  <span class="tit">수수료(20%)</span>
+                  <span class="txt">- 100,000원</span>
+                </p>
+                <p class="item line"></p>
+                <p class="item">
+                  <span class="tit">마감 예정일</span>
+                  <span class="txt">2024-12-10</span>
+                </p>
+                <p class="item">
+                  <span class="tit">입금 예정일</span>
+                  <span class="txt">2024-12-10</span>
+                </p>
+                <p class="item line"></p>
+                <p class="item">
+                  <span class="txt bold t_16">예상 정산 금액</span>
+                  <span class="txt bold t_16">3,000,000원</span>
+                </p>
+              </div>
+              <p class="dot_notice_list">
+                <span class="item">
+                  입금 예정일이 공휴일인 경우, 입금일 전일자에 입금 처리됩니다.
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="account_sec">
+            <div class="global_inner">
+              <div class="title_box">
+                <h4>정산 계좌 정보</h4>
+              </div>
+              <div class="add_account">
+                <p class="image">
+                  <img src="./assets/image/account.png" alt="" />
+                </p>
+                <p class="desc">
+                  아직 등록된 정산 계좌가 없어요.<br />
+                  계좌 등록 후 정산금 입금이 가능해요.
+                </p>
+              </div>
+              <div class="text_list">
+                <p class="item">
+                  <span class="tit t_14 c_76">은행명</span>
+                  <span class="txt t_14">ㅇㅇ은행</span>
+                </p>
+                <p class="item">
+                  <span class="tit t_14 c_76">예금주</span>
+                  <span class="txt t_14">홍길동</span>
+                </p>
+                <p class="item">
+                  <span class="tit t_14 c_76">계좌번호</span>
+                  <span class="txt t_14">123-123-123456</span>
+                </p>
+              </div>
+              <button class="b_line w_209">정산 계좌 등록</button>
+            </div>
+          </div>
+          <div class="total_list">
+            <div class="global_inner">
+              <div class="title_box">
+                <h4>정산완료 내역</h4>
+                <p
+                  class="select_box_style open_bottom_sheet"
+                  data-target="sort_bottom_sheet"
+                >
+                  <span>기간 전체</span>
+                  <i class="icon_bottom_arrow_g"></i>
+                </p>
+              </div>
+              <ul class="adjustment_list">
+                <li class="item">
+                  <p class="month_tit">2024년 12월 정산</p>
+                  <div class="text_list">
+                    <p class="item">
+                      <span class="tit t_14 c_76">정산일</span>
+                      <span class="txt t_14">2024-12-20</span>
+                    </p>
+                    <p class="item">
+                      <span class="tit t_14 c_76">총 판매 금액</span>
+                      <span class="txt t_14">3,000,000원</span>
+                    </p>
+                    <p class="item">
+                      <span class="tit t_14 c_76">수수료(20%)</span>
+                      <span class="txt t_14">- 100,000원</span>
+                    </p>
+                    <p class="item line"></p>
+                    <p class="item">
+                      <span class="tit t_14 bold">총 정산 금액</span>
+                      <span class="txt t_14 bold">2,500,000원</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="item">
+                  <p class="month_tit">2024년 12월 정산</p>
+                  <div class="text_list">
+                    <p class="item">
+                      <span class="tit t_14 c_76">정산일</span>
+                      <span class="txt t_14">2024-12-20</span>
+                    </p>
+                    <p class="item">
+                      <span class="tit t_14 c_76">총 판매 금액</span>
+                      <span class="txt t_14">3,000,000원</span>
+                    </p>
+                    <p class="item">
+                      <span class="tit t_14 c_76">수수료(20%)</span>
+                      <span class="txt t_14">- 100,000원</span>
+                    </p>
+                    <p class="item line"></p>
+                    <p class="item">
+                      <span class="tit t_14 bold">총 정산 금액</span>
+                      <span class="txt t_14 bold">2,500,000원</span>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- footer -->
+        <footer class="footer">
+          <ul class="footer_menu">
+            <li onclick="location.href='home.html'">
+              <i class="icon_home"></i>
+              <span class="tit">홈</span>
+            </li>
+            <li onclick="location.href='class_list.html'">
+              <i class="icon_class"></i>
+              <span class="tit">클래스</span>
+            </li>
+            <li onclick="location.href='class_setting_itt.html'">
+              <i class="class_set"></i>
+              <span class="tit">클래스 관리</span>
+            </li>
+            <li onclick="location.href='community_list.html'">
+              <i class="icon_commu"></i>
+              <span class="tit">커뮤니티</span>
+            </li>
+            <li class="on" onclick="location.href='mypage.html'">
+              <i class="icon_my"></i>
+              <span class="tit">마이</span>
+            </li>
+          </ul>
+        </footer>
+        <!-- footer -->
+        <!-- 수업 선택 bottom sheet-->
+        <div class="bottom_sheet_overlay"></div>
+        <div id="class_bottom_sheet" class="bottom_sheet sort">
+          <div class="bottom_sheet_header">
+            <h3>수업 선택</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="option_list">
+              <li>수업명</li>
+              <li>수업명</li>
+              <li>수업명</li>
+              <li>수업명</li>
+              <li>수업명</li>
+            </ul>
+          </div>
+        </div>
+        <!-- 선생님 정렬 순서 bottom sheet-->
+
+        <!-- 모달 -->
+        <!-- 댓글 삭제 확인 alret -->
+        <article id="postComplete" class="modal_wrap">
+          <div class="modal">
+            <p class="image">
+              <img src="./assets/image/alret/class_req.png" alt="" />
+            </p>
+            <p class="text">수업 요청이 완료되었어요.</p>
+            <p class="desc">
+              수업 요청 글은 메인 화면에서 홍보할 수 있어요.<br />
+              하단 마이 메뉴 - 내 수업 요청 광고하기로<br />
+              이동해 보세요.
+            </p>
+            <div class="btn_area">
+              <button class="black" onclick="close_modal()">확인</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- swiper -->
+<script>
+  var swiper = new Swiper(".edit_type_sec", {
+    slidesPerView: "auto",
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+  });
+
+  var swiper = new Swiper(".thumbnail_chk", {
+    slidesPerView: "auto",
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+  });
+</script>
+<!-- swiper -->
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

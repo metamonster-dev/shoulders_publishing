@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>수업 생성</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- fullcalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header border">
+          <div class="inner">
+            <button onclick="history.back();" class="back_btn"></button>
+            <h1>수업 생성</h1>
+          </div>
+        </header>
+        <!-- header -->
+        <div class="container_wrap h_01 create_itt">
+          <div class="tab_wrap">
+            <ul class="tab_menu progress">
+              <li data-target="#section1" class="on">기본 정보</li>
+              <li data-target="#section2">카테고리</li>
+              <li data-target="#section3">수업 정보</li>
+              <li data-target="#section4">판매 정보</li>
+            </ul>
+            <p class="progress_bar bar01"></p>
+          </div>
+
+          <div id="section1" class="section">
+            <div class="global_inner">
+              <div class="page_title">기본 정보</div>
+              <div class="form_wrap">
+                <div class="input_box">
+                  <label class="label required">수업명</label>
+                  <div class="textarea_wrap h_100">
+                    <textarea placeholder="수업명을 입력하세요."></textarea>
+                    <span class="txt_counter"> <span class="">0</span>/30</span>
+                  </div>
+                </div>
+                <div class="radi_chk_wrap">
+                  <p class="label required">대표 이미지</p>
+                  <div class="swiper thumbnail_chk swiper_input">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <label for="thumbnail01" class="thumbnail_radio">
+                          <input
+                            id="thumbnail01"
+                            name="thumbnail"
+                            type="radio"
+                          />
+                          <span class="image">
+                            <img
+                              src="./assets/image/thumbnail/math_80x102.png"
+                              alt=""
+                            />
+                          </span>
+                        </label>
+                      </div>
+                      <div class="swiper-slide">
+                        <label for="thumbnail02" class="thumbnail_radio">
+                          <input
+                            id="thumbnail02"
+                            name="thumbnail"
+                            type="radio"
+                          />
+                          <span class="image">
+                            <img
+                              src="./assets/image/thumbnail/eng_80x102.png"
+                              alt=""
+                            />
+                          </span>
+                        </label>
+                      </div>
+                      <div class="swiper-slide">
+                        <label for="thumbnail03" class="thumbnail_radio">
+                          <input
+                            id="thumbnail03"
+                            name="thumbnail"
+                            type="radio"
+                          />
+                          <span class="image">
+                            <img
+                              src="./assets/image/thumbnail/music_80x102.png"
+                              alt=""
+                            />
+                          </span>
+                        </label>
+                      </div>
+                      <div class="swiper-slide">
+                        <label for="thumbnail04" class="thumbnail_radio">
+                          <input
+                            id="thumbnail04"
+                            name="thumbnail"
+                            type="radio"
+                          />
+                          <span class="image">
+                            <img
+                              src="./assets/image/thumbnail/essay_80x102.png"
+                              alt=""
+                            />
+                          </span>
+                        </label>
+                      </div>
+                      <div class="swiper-slide">
+                        <label for="thumbnail05" class="thumbnail_radio">
+                          <input
+                            id="thumbnail05"
+                            name="thumbnail"
+                            type="radio"
+                          />
+                          <span class="image">
+                            <img
+                              src="./assets/image/thumbnail/activity_80x102.png"
+                              alt=""
+                            />
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input_box">
+                  <label class="label required">수업 대상</label>
+                  <div
+                    class="custom_select_box open_bottom_sheet"
+                    data-target="class_target_bottom_sheet"
+                  >
+                    <p class="select_option">
+                      <span class="placeholder">수업 대상을 선택하세요</span>
+                      <!-- <span>선택된 수업명</span> -->
+                      <i class="icon_sel_bottom_arrow"></i>
+                    </p>
+                  </div>
+                </div>
+                <div class="radi_chk_wrap">
+                  <p class="label required">수업 목표</p>
+                  <div class="legend col_3">
+                    <div class="input_box">
+                      <label for="subject01" class="text_radio">
+                        <input id="subject01" name="subject" type="radio" />
+                        <span>정규수업</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="subject02" class="text_radio">
+                        <input id="subject02" name="subject" type="radio" />
+                        <span>레벨 테스트</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="subject03" class="text_radio">
+                        <input id="subject03" name="subject" type="radio" />
+                        <span>집중특강</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="subject04" class="text_radio">
+                        <input id="subject04" name="subject" type="radio" />
+                        <span>학과목 경시</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="subject05" class="text_radio">
+                        <input id="subject05" name="subject" type="radio" />
+                        <span>대회</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="subject06" class="text_radio">
+                        <input id="subject06" name="subject" type="radio" />
+                        <span>기타</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="section2" class="section">
+            <div class="global_inner">
+              <div class="page_title">카테고리</div>
+              <div class="form_wrap">
+                <div class="input_box">
+                  <label class="label required">상위 과목</label>
+                  <div
+                    class="custom_select_box open_bottom_sheet"
+                    data-target="class_cate_bottom_sheet01"
+                  >
+                    <p class="select_option">
+                      <span class="placeholder">과목을 선택하세요</span>
+                      <!-- <span>선택된 과목명</span> -->
+                      <i class="icon_sel_bottom_arrow"></i>
+                    </p>
+                  </div>
+                </div>
+                <div class="input_box">
+                  <label class="label required">하위 과목</label>
+                  <div
+                    class="custom_select_box open_bottom_sheet"
+                    data-target="class_cate_bottom_sheet02"
+                  >
+                    <p class="select_option">
+                      <span class="placeholder">과목을 선택하세요</span>
+                      <!-- <span>선택된 과목명</span> -->
+                      <i class="icon_sel_bottom_arrow"></i>
+                    </p>
+                  </div>
+                </div>
+                <div class="input_box">
+                  <label class="label required">레벨</label>
+                  <div
+                    class="custom_select_box open_bottom_sheet"
+                    data-target="class_level_bottom_sheet"
+                  >
+                    <p class="select_option">
+                      <span class="placeholder">레벨을 선택하세요</span>
+                      <!-- <span>선택된 레벨</span> -->
+                      <i class="icon_sel_bottom_arrow"></i>
+                    </p>
+                  </div>
+                </div>
+                <div class="radi_chk_wrap">
+                  <p class="label required">수업 방식</p>
+                  <div class="legend col_2">
+                    <div class="input_box">
+                      <label for="class_type-01" class="text_radio">
+                        <input
+                          id="class_type-01"
+                          name="class_type"
+                          type="radio"
+                          value="offline"
+                        />
+                        <span>오프라인</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="class_type-02" class="text_radio">
+                        <input
+                          id="class_type-02"
+                          name="class_type"
+                          type="radio"
+                          value="online"
+                        />
+                        <span>온라인</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="input_box online_input">
+                  <label class="label required">수업 접속 링크</label>
+                  <input
+                    type="text"
+                    placeholder="수강생이 시청할 URL을 입력하세요"
+                  />
+                </div>
+                <div class="input_box offline_input">
+                  <label class="label">지역</label>
+                  <div
+                    class="input_box search2"
+                    onclick="location.href='location_category.html'"
+                  >
+                    <input
+                      type="text"
+                      placeholder="오프라인 수업을 진행할 지역을 선택하세요"
+                    />
+                  </div>
+                </div>
+                <div class="input_box">
+                  <label class="label required">상세 주소</label>
+                  <input
+                    type="text"
+                    placeholder="학원명, 상호명 등 상세 주소를 기재해 주세요."
+                  />
+                </div>
+                <div class="radi_chk_wrap">
+                  <p class="label">셔틀버스 제공 여부</p>
+                  <div class="legend col_2">
+                    <div class="input_box">
+                      <label for="bus-01" class="text_radio">
+                        <input id="bus-01" name="bus" type="radio" />
+                        <span>미제공</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="bus-02" class="text_radio">
+                        <input id="bus-02" name="bus" type="radio" />
+                        <span>제공</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="section3" class="section">
+            <div class="global_inner">
+              <div class="page_title">수업 정보</div>
+              <div class="form_wrap">
+                <div class="radi_chk_wrap">
+                  <p class="label">수업 횟수</p>
+                  <div class="legend col_3">
+                    <div class="input_box">
+                      <label for="class_count-01" class="text_radio">
+                        <input
+                          id="class_count-01"
+                          name="class_count"
+                          type="radio"
+                          value="short_week"
+                        />
+                        <span>1일</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="class_count-02" class="text_radio">
+                        <input
+                          id="class_count-02"
+                          name="class_count"
+                          type="radio"
+                        />
+                        <span>일주일</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="class_count-03" class="text_radio">
+                        <input
+                          id="class_count-03"
+                          name="class_count"
+                          type="radio"
+                        />
+                        <span>30일</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="input_box">
+                  <label class="label required">수업 시작일</label>
+                  <input
+                    type="date"
+                    data-target="date_bottom_sheet"
+                    class="open_bottom_sheet"
+                    readonly
+                  />
+                </div>
+                <!-- 수업 횟수 일주일 이상 선택시 -->
+                <div class="input_box more_than_week">
+                  <label class="label required">주간 수업 횟수</label>
+                  <div
+                    class="custom_select_box open_bottom_sheet"
+                    data-target="class_week_bottom_sheet"
+                  >
+                    <p class="select_option">
+                      <span class="placeholder">횟수를 선택하세요</span>
+                      <!-- <span>선택된 횟수</span> -->
+                      <i class="icon_sel_bottom_arrow"></i>
+                    </p>
+                  </div>
+                </div>
+                <div class="radi_chk_wrap more_than_week">
+                  <p class="label">주간 수업 요일(다중선택)</p>
+                  <div class="legend col_7">
+                    <div class="input_box">
+                      <label for="week-01" class="text_radio">
+                        <input
+                          id="week-01"
+                          type="checkbox"
+                          name="week_select"
+                        />
+                        <span>월</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="week-02" class="text_radio">
+                        <input
+                          id="week-02"
+                          type="checkbox"
+                          name="week_select"
+                        />
+                        <span>화</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="week-03" class="text_radio">
+                        <input
+                          id="week-03"
+                          type="checkbox"
+                          name="week_select"
+                        />
+                        <span>수</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="week-04" class="text_radio">
+                        <input
+                          id="week-04"
+                          type="checkbox"
+                          name="week_select"
+                        />
+                        <span>목</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="week-05" class="text_radio">
+                        <input
+                          id="week-05"
+                          type="checkbox"
+                          name="week_select"
+                        />
+                        <span>금</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="week-06" class="text_radio">
+                        <input id="week-06" type="checkbox" />
+                        <span>토</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="week-07" class="text_radio">
+                        <input id="week-07" type="checkbox" />
+                        <span>일</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- 수업 횟수 일주일 이상 선택시 -->
+                <div class="input_box">
+                  <label class="label required">수업 시간</label>
+                  <div class="legend col_2">
+                    <input type="time" />
+                    <input type="time" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="page_title has_desc">수업 소개</div>
+              <p class="section_desc">
+                수업 소개는 이미지로 첨부해 주세요.
+                <span class="red">(필수)</span>
+              </p>
+              <div class="form_wrap">
+                <div class="fileupload_wrap">
+                  <div class="input_box">
+                    <input type="file" />
+                    <label for="profileUpload" class="image_file_box">
+                      <i class="icon_add_circle"></i>
+                      <span class="count">2/3</span>
+                    </label>
+                  </div>
+                  <div class="priview_box">
+                    <img
+                      src="./assets/image/dummy/class_detail_01.png"
+                      alt=""
+                    />
+                    <i class="icon_del_circle"></i>
+                  </div>
+                  <div class="priview_box">
+                    <img
+                      src="./assets/image/dummy/class_detail_02.png"
+                      alt=""
+                    />
+                    <i class="icon_del_circle"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="desc_box">
+                <span>- 이미지당 최대 10MB</span>
+                <span>- 권장 이미지 사이즈: 350px*가로 제한 없음</span>
+                <span>
+                  - 권장 포함 내용: 과목 소개, 커리큘럼, 강사 상세 소개, 수업
+                  상세 목표
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div id="section4" class="section">
+            <div class="global_inner">
+              <div class="page_title">판매 정보</div>
+              <div class="form_wrap">
+                <div class="input_box">
+                  <label class="label required">수업 옵션명</label>
+                  <input type="text" placeholder="예: 1인 수강료 (20자)" />
+                </div>
+                <div class="input_box">
+                  <label class="label required">가격</label>
+                  <div class="legend">
+                    <input type="text" placeholder="가격을 입력하세요." /> 원
+                  </div>
+                </div>
+                <div class="radi_chk_wrap">
+                  <p class="label required">1인당 구매 개수 제한</p>
+                  <div class="legend col_2">
+                    <div class="input_box">
+                      <label for="purchase-01" class="text_radio">
+                        <input id="purchase-01" name="purchase" type="radio" />
+                        <span>미제한</span>
+                      </label>
+                    </div>
+                    <div class="input_box">
+                      <label for="purchase-02" class="text_radio">
+                        <input id="purchase-02" name="purchase" type="radio" />
+                        <span>제한</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="input_box">
+                  <label for="" class="label">검색 키워드(선택)</label>
+                  <div class="inner">
+                    <input type="text" placeholder="예 : 수학, 수리, 개념" />
+                    <button class="black">등록</button>
+                  </div>
+                  <ul class="select_list">
+                    <li>
+                      <span>수학</span>
+                      <span class="del_btn"></span>
+                    </li>
+                    <li>
+                      <span>수리</span>
+                      <span class="del_btn"></span>
+                    </li>
+                    <li>
+                      <span>개념</span>
+                      <span class="del_btn"></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="notice_sec">
+            <div class="global_inner">
+              <div class="title">
+                <i class="icon_notice"></i>
+                <span>환불 규정</span>
+              </div>
+              <div class="desc">
+                「학원의 설립·운영 및 과외교습에 관한 법률」 (이하 ‘학원법’)을
+                준용하여 교습비 환불 금액의 기준을 정하고 있는 것이므로, 회사의
+                환불규정은 학원법 시행령에서 정하는 교습비등 반환 기준과는
+                무관한 별개의 규칙입니다. 회원이 본 약관 및 회사의 환불규정
+                준수에 대한 동의를 한 경우, 회사의 환불정책에 의거 개인과외교습
+                당사자 회원 간 환불방법에 대해 합의한 사항이 없다면 선생님
+                회원은 학생 회원에게 환불규정에 따라 교습비를 환불해주어야
+                합니다.<br /><br />
+
+                환불/취소 규정<br />
+                1. 구매자가 환불을 요청하는 경우 판매회원은 관련 법률에 의거하여
+                환불을 해주어야 하며, 추가로 발생하는 비용은 환불의 책임이 있는
+                측에서 부담합니다.<br />
+                2. 판매회원의 사정으로 수업을 중단해야 하는 경우 학원의 설립,
+                운영에 관한 법률 제 18조 및 동법 시행령 제 18조 제 3항에 기준에
+                의거하여 수강료 환불을 진행합니다.<br /><br />
+
+                단, 환불 해당 사유 질병, 교통사고, 천재지변으로 인한 사고 발생
+                시, 미성년자(중,고등학생) 수업으로 관련된 환불은 상담을 기준으로
+                합니다.<br /><br />
+
+                1)전액환불: 수업 시작 3일전까지<br />
+                2)부분환불: 수업 시작 2일전까지는 10%, 1일전까지는 20%의 수수료
+                발생<br />
+                3)환불불가: 수업 시작일 부터는 환불 불가<br /><br />
+
+                3. 반환 수강료는 사유 발생 일부터 영업일 기준 3~7일 정도 소요될
+                수 있습니다.
+              </div>
+            </div>
+          </div>
+          <div class="bottom_btn">
+            <!-- 유효성 통과 못했을때 버튼 스타일 -->
+            <!-- <button disabled type="button">수업 등록</button> -->
+            <button type="button" onclick="open_modal('#reject_alret')">
+              수업 등록
+            </button>
+          </div>
+        </div>
+
+        <div class="bottom_sheet_overlay"></div>
+        <!-- 수업 대상 bottom sheet-->
+        <div id="class_target_bottom_sheet" class="bottom_sheet sort_check">
+          <div class="bottom_sheet_header">
+            <h3>수업 대상</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="option_list">
+              <li class="input_box">
+                <label for="target-01" class="r_icon_ckeck">
+                  <input id="target-01" name="target" type="radio" />
+                  <span>미취학아동</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="target-02" class="r_icon_ckeck">
+                  <input id="target-02" name="date" type="radio" />
+                  <span>초등학교 저학년</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="target-03" class="r_icon_ckeck">
+                  <input id="target-03" name="date" type="radio" />
+                  <span>초등학교 고학년</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="target-04" class="r_icon_ckeck">
+                  <input id="target-04" name="date" type="radio" />
+                  <span>중/고등학생</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 상위 과목 bottom sheet -->
+        <div id="class_cate_bottom_sheet01" class="bottom_sheet sort_check">
+          <div class="bottom_sheet_header">
+            <h3>상위 과목</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="option_list">
+              <li class="input_box">
+                <label for="cate01-01" class="r_icon_ckeck">
+                  <input id="cate01-01" name="cate01" type="radio" />
+                  <span>상위과목 01</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="cate01-02" class="r_icon_ckeck">
+                  <input id="cate01-02" name="cate01" type="radio" />
+                  <span>상위과목 02</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="cate01-03" class="r_icon_ckeck">
+                  <input id="cate01-03" name="cate01" type="radio" />
+                  <span>상위과목 03</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="cate01-04" class="r_icon_ckeck">
+                  <input id="cate01-04" name="cate01" type="radio" />
+                  <span>상위과목 04</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 하위 과목 bottom sheet -->
+        <div id="class_cate_bottom_sheet02" class="bottom_sheet sort_check">
+          <div class="bottom_sheet_header">
+            <h3>하위 과목</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="option_list">
+              <li class="input_box">
+                <label for="cate02-01" class="r_icon_ckeck">
+                  <input id="cate02-01" name="cate02" type="radio" />
+                  <span>하위과목 01</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="cate02-02" class="r_icon_ckeck">
+                  <input id="cate02-02" name="cate02" type="radio" />
+                  <span>하위과목 02</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="cate02-03" class="r_icon_ckeck">
+                  <input id="cate02-03" name="cate02" type="radio" />
+                  <span>하위과목 03</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="cate02-04" class="r_icon_ckeck">
+                  <input id="cate02-04" name="cate02" type="radio" />
+                  <span>하위과목 04</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 레벨 bottom sheet -->
+        <div id="class_level_bottom_sheet" class="bottom_sheet sort_check">
+          <div class="bottom_sheet_header">
+            <h3>레벨</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="option_list">
+              <li class="input_box">
+                <label for="level-01" class="r_icon_ckeck">
+                  <input id="level-01" name="level" type="radio" />
+                  <span>레벨 01</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="level-02" class="r_icon_ckeck">
+                  <input id="level-02" name="level" type="radio" />
+                  <span>레벨 02</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="level-03" class="r_icon_ckeck">
+                  <input id="level-03" name="level" type="radio" />
+                  <span>레벨 03</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="level-04" class="r_icon_ckeck">
+                  <input id="level-04" name="level" type="radio" />
+                  <span>레벨 04</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 수업 시작일 bottom sheet -->
+        <div id="date_bottom_sheet" class="bottom_sheet calendar">
+          <div class="bottom_sheet_header">
+            <h3>수업 시작일</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <div
+              id="calendar"
+              tabindex="0"
+              role="application"
+              aria-live="polite"
+              aria-label="월별 캘린더 테이블"
+            ></div>
+          </div>
+        </div>
+        <!-- 주간 수업 횟수 bottom sheet -->
+        <div id="class_week_bottom_sheet" class="bottom_sheet sort_check">
+          <div class="bottom_sheet_header">
+            <h3>주간 수업 횟수</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="option_list">
+              <li class="input_box">
+                <label for="week_count-01" class="r_icon_ckeck">
+                  <input id="week_count-01" name="week_count" type="radio" />
+                  <span>주 1회</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="week_count-02" class="r_icon_ckeck">
+                  <input id="week_count-02" name="week_count" type="radio" />
+                  <span>주 2회</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="week_count-03" class="r_icon_ckeck">
+                  <input id="week_count-03" name="week_count" type="radio" />
+                  <span>주 3회</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="week_count-04" class="r_icon_ckeck">
+                  <input id="week_count-04" name="week_count" type="radio" />
+                  <span>주 4회</span>
+                </label>
+              </li>
+              <li class="input_box">
+                <label for="week_count-05" class="r_icon_ckeck">
+                  <input id="week_count-05" name="week_count" type="radio" />
+                  <span>주 5회</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 모달 -->
+        <!-- 요일 초과 선택 알럿 -->
+        <article id="alret01" class="modal_wrap">
+          <div class="modal">
+            <p class="text">선택 가능한 요일 개수를 초과했어요.</p>
+            <p class="desc">
+              선택한 주간 수업 횟수만큼만<br />
+              요일 선택이 가능해요.
+            </p>
+            <div class="btn_area">
+              <button class="black" onclick="close_modal()">확인</button>
+            </div>
+          </div>
+        </article>
+        <!-- 유효성 알럿 -->
+        <article id="reject_alret" class="modal_wrap">
+          <div class="modal">
+            <p class="text">필수 정보가 누락되었어요.</p>
+            <p class="desc">
+              아래 정보를 입력해 주세요.<br />
+              [기본정보 - 수업명]
+            </p>
+            <div class="btn_area">
+              <button class="black" onclick="close_modal()">확인</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- swiper -->
+<script>
+  var swiper = new Swiper(".thumbnail_chk", {
+    slidesPerView: "auto",
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+  });
+</script>
+<!-- swiper -->
+
+<script>
+  $(document).ready(function () {
+    // 수업방식 선택시 입력창 ui 바뀜
+    $(".online_input").hide();
+    $(".offline_input").hide();
+    $('input[name="class_type"]').change(function () {
+      let selectedValue = $(this).val();
+      if (selectedValue === "offline") {
+        $(".online_input").hide();
+        $(".offline_input").show();
+      } else {
+        $(".online_input").show();
+        $(".offline_input").hide();
+      }
+    });
+
+    // 수업횟수 일주일 이상 선택시 입력 보이기
+    $(".more_than_week").hide();
+    $('input[name="class_count"]').change(function () {
+      let selectedValue = $(this).val();
+      if (selectedValue === "short_week") {
+        $(".more_than_week").hide();
+      } else {
+        $(".more_than_week").show();
+      }
+    });
+    // 요일 초과 선택시 알럿
+    $("input[name='week_select']").on("change", function () {
+      if ($("input[name='week_select']:checked").length > 2) {
+        open_modal("#alret01");
+        $(this).prop("checked", false);
+      }
+    });
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    // 상단 탭메뉴
+    let $container = $(".container_wrap");
+    // 탭 버튼 클릭 시 해당 섹션으로 스크롤 이동
+    $(".tab_menu li").on("click", function () {
+      let targetId = $(this).data("target");
+      let target = $(targetId);
+
+      if (target.length) {
+        $container.animate(
+          { scrollTop: target.position().top + $container.scrollTop() - 100 },
+          500
+        );
+      } else {
+        console.error("해당 섹션을 찾을 수 없습니다:", targetId);
+      }
+    });
+
+    // .container_wrap 내부에서 스크롤 감지하여 'on' 클래스 추가
+    $container.on("scroll", function () {
+      let scrollPos = $container.scrollTop();
+
+      $(".section").each(function () {
+        let top = $(this).position().top + $container.scrollTop() - 150;
+        let bottom = top + $(this).outerHeight();
+        let id = $(this).attr("id");
+        let id_num = id.slice(7, 8);
+
+        if (scrollPos >= top && scrollPos < bottom) {
+          $(".tab_menu li").removeClass("on");
+          $('.tab_menu li[data-target="#' + id + '"]').addClass("on");
+          $(".progress_bar").removeClass("bar01");
+          $(".progress_bar").removeClass("bar02");
+          $(".progress_bar").removeClass("bar03");
+          $(".progress_bar").removeClass("bar04");
+          $(".progress_bar").addClass("bar0" + id_num);
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+  // 달력 라이브러리
+  let startDate = null; // 시작 날짜
+  let endDate = null; // 종료 날짜
+  let selectedDates = []; // 선택된 모든 날짜 저장
+  const calendarEl = document.getElementById("calendar");
+  const calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: "dayGridMonth",
+    locale: "ko",
+    headerToolbar: {
+      left: "prev",
+      center: "title",
+      right: "next",
+    },
+    titleFormat: function (date) {
+      return `${date.date.year}년 ${String(date.date.month + 1).padStart(
+        2,
+        "0"
+      )}월`;
+    },
+    dayCellContent: function (args) {
+      return args.date.getDate().toString();
+    },
+    height: "auto",
+    selectable: true,
+    unselectAuto: false,
+    dateClick: function (info) {
+      let clickedDate = info.dateStr;
+
+      if (!startDate) {
+        // ✅ 시작 날짜 선택
+        startDate = clickedDate;
+        // console.log("시작일:", startDate);
+      } else {
+        // ✅ 종료 날짜 선택
+        endDate = clickedDate;
+
+        // 시작일이 종료일보다 이후라면 서로 교체
+        if (new Date(startDate) > new Date(endDate)) {
+          [startDate, endDate] = [endDate, startDate];
+        }
+
+        // console.log("종료일:", endDate);
+
+        // ✅ 기존 선택 스타일 초기화 (이전 선택된 날짜 리셋)
+        $(".fc-daygrid-day").removeClass("start end selected");
+
+        // ✅ 종료일을 하루 줄여서 범위 보정
+        let start = new Date(startDate);
+        let end = new Date(endDate);
+
+        // ✅ 선택된 날짜를 저장할 배열 초기화
+        selectedDates = [];
+
+        let currentDate = new Date(start);
+        while (currentDate <= end) {
+          let formattedDate = currentDate.toISOString().split("T")[0];
+          selectedDates.push(formattedDate); // 배열에 저장
+
+          let cell = $(`.fc-day[data-date="${formattedDate}"]`).closest(
+            ".fc-daygrid-day"
+          );
+
+          if (formattedDate === startDate) {
+            cell.addClass("start"); // ✅ 시작일 스타일
+          } else if (formattedDate === end.toISOString().split("T")[0]) {
+            cell.addClass("end"); // ✅ 종료일 스타일
+          } else {
+            cell.addClass("selected"); // ✅ 중간 날짜 스타일
+          }
+
+          currentDate.setDate(currentDate.getDate() + 1);
+        }
+
+        // console.log("선택된 날짜:", selectedDates);
+
+        // ✅ 날짜 선택 후 초기화하여 다시 선택 가능하도록
+        startDate = null;
+        endDate = null;
+      }
+    },
+  });
+  calendar.render();
+</script>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

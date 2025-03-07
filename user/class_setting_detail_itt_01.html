@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>수업 상세 관리</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- fullcalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!--main header -->
+        <header class="header border">
+          <div class="inner">
+            <button class="back_btn" onclick="history.back();"></button>
+            <h1>수업 상세 관리</h1>
+          </div>
+        </header>
+        <!--main header -->
+        <div class="container_wrap h_03 class_detail_itt">
+          <div class="class_detail_sec subject_list_itt global_inner">
+            <div class="subject_item">
+              <div class="item_body">
+                <div class="text_box">
+                  <div class="title_box">
+                    <div class="item_head">
+                      <p class="class_id">수업 ID : 123ABC</p>
+                    </div>
+                    <p class="tit">
+                      [수학] 입시 장인에게 배우는 비법 노트! 초등학교 입학 수학
+                    </p>
+                    <p class="dot_list">
+                      <span>서울 강남</span>
+                      <span>2024-12-10</span>
+                      <span class="blue">온라인</span>
+                    </p>
+                  </div>
+                  <div class="price_box">
+                    <p class="price">192,000원</p>
+                  </div>
+                </div>
+                <figure class="thumb">
+                  <img src="./assets/image/thumbnail/math_74x74.png" />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="class_score_sec">
+            <div class="item">
+              <span class="tit">수강인원</span>
+              <div class="score">
+                <i class="icon_user"></i>
+                <span>22</span>
+              </div>
+            </div>
+            <div class="item">
+              <span class="tit">리뷰 수</span>
+              <div class="score">
+                <i class="icon_review"></i>
+                <span>22</span>
+              </div>
+            </div>
+            <div class="item">
+              <span class="tit">총 평점</span>
+              <div class="score">
+                <p class="rating">3.2</p>
+              </div>
+            </div>
+          </div>
+          <div class="class_state_sec">
+            <div class="global_inner">
+              <div class="inner">
+                <div class="state">
+                  <p class="tit">판매상태</p>
+                  <p class="badge_list">
+                    <span class="item">모집중</span>
+                  </p>
+                </div>
+                <div class="switch_btn active">
+                  <p class="toggle"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="class_search_keyword_sec">
+            <div class="global_inner">
+              <div class="title_box">
+                <h4>설정</h4>
+              </div>
+              <div class="input_box">
+                <label for="" class="label">검색 키워드(선택)</label>
+                <div class="inner">
+                  <input type="text" placeholder="예 : 수학, 수리, 개념" />
+                  <button class="black">등록</button>
+                </div>
+                <ul class="select_list">
+                  <li>
+                    <span>수학</span>
+                    <span class="del_btn"></span>
+                  </li>
+                  <li>
+                    <span>수리</span>
+                    <span class="del_btn"></span>
+                  </li>
+                  <li>
+                    <span>개념</span>
+                    <span class="del_btn"></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 모달 -->
+        <article id="class_open_alert" class="modal_wrap">
+          <div class="modal">
+            <p class="text">판매를 재개할까요?</p>
+            <p class="desc">
+              판매 재개 시 학부모의 수업 조회 및<br />수강 신청이 가능해져요.
+            </p>
+            <div class="btn_area">
+              <button class="gray" onclick="close_modal()">취소</button>
+              <button class="black" onclick="openClass()">확인</button>
+            </div>
+          </div>
+        </article>
+        <!-- 모달 -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    $(".switch_btn").click(function () {
+      let isOn = $(this).hasClass("active");
+      if (isOn) {
+        $(this).removeClass("active");
+        $(".class_state_sec .badge_list .item").addClass("red");
+        $(".class_state_sec .badge_list .item").text("모집 종료");
+      } else {
+        open_modal("#class_open_alert");
+      }
+    });
+  });
+
+  const openClass = () => {
+    close_modal();
+    $(".class_state_sec .badge_list .item").removeClass("red");
+    $(".switch_btn").addClass("active");
+    $(".class_state_sec .badge_list .item").text("모집중");
+  };
+</script>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

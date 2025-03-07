@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>수업 상세 관리</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- fullcalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!--main header -->
+        <header class="header border">
+          <div class="inner">
+            <button class="back_btn" onclick="history.back();"></button>
+            <h1>수업 상세 관리</h1>
+          </div>
+        </header>
+        <!--main header -->
+        <div class="container_wrap h_03 class_detail_itt">
+          <div class="class_detail_sec subject_list_itt global_inner">
+            <div class="subject_item">
+              <div class="item_body">
+                <div class="text_box">
+                  <div class="title_box">
+                    <div class="item_head">
+                      <p class="class_id">수업 ID : 123ABC</p>
+                    </div>
+                    <p class="tit">
+                      [수학] 입시 장인에게 배우는 비법 노트! 초등학교 입학 수학
+                    </p>
+                    <p class="dot_list">
+                      <span>서울 강남</span>
+                      <span>2024-12-10</span>
+                      <span class="blue">온라인</span>
+                    </p>
+                  </div>
+                  <div class="price_box">
+                    <p class="price">192,000원</p>
+                  </div>
+                </div>
+                <figure class="thumb">
+                  <img src="./assets/image/thumbnail/math_74x74.png" />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="class_score_sec">
+            <div class="item">
+              <span class="tit">수강인원</span>
+              <div class="score">
+                <i class="icon_user"></i>
+                <span>22</span>
+              </div>
+            </div>
+            <div class="item">
+              <span class="tit">리뷰 수</span>
+              <div class="score">
+                <i class="icon_review"></i>
+                <span>22</span>
+              </div>
+            </div>
+            <div class="item">
+              <span class="tit">총 평점</span>
+              <div class="score">
+                <p class="rating">3.2</p>
+              </div>
+            </div>
+          </div>
+          <div class="class_setting_menu_sec">
+            <div class="global_inner">
+              <ul class="menu_list">
+                <li
+                  class="menu_item"
+                  onclick="location.href='class_setting_detail_itt_01.html'"
+                >
+                  <div>
+                    <p class="menu_tit">
+                      <i class="icon_bag"></i>
+                      <span>판매 관리</span>
+                    </p>
+                    <p class="desc">
+                      수업 판매 상태 및 옵션을 관리할 수 있어요.
+                    </p>
+                  </div>
+                  <i class="icon_right_arrow_ggg"></i>
+                </li>
+                <li
+                  class="menu_item"
+                  onclick="location.href='class_setting_detail_itt_02.html'"
+                >
+                  <div>
+                    <p class="menu_tit">
+                      <i class="icon_user_tag"></i>
+                      <span>수강생 관리</span>
+                    </p>
+                    <p class="desc">수강생을 관리할 수 있어요.</p>
+                  </div>
+                  <i class="icon_right_arrow_ggg"></i>
+                </li>
+                <li
+                  class="menu_item"
+                  onclick="location.href='class_setting_detail_itt_03.html'"
+                >
+                  <div>
+                    <p class="menu_tit">
+                      <i class="icon_review_mana"></i>
+                      <span>리뷰 관리</span>
+                    </p>
+                    <p class="desc">나에게 남겨진 리뷰를 관리할 수 있어요.</p>
+                  </div>
+                  <i class="icon_right_arrow_ggg"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bottom_sheet_overlay"></div>
+        <!--page bottom sheet -->
+        <!-- 필터 bottom sheet -->
+        <div id="filter_bottom_sheet" class="bottom_sheet itt_class_filter">
+          <p class="tab_bar"></p>
+          <div class="bottom_sheet_header">
+            <h3>필터</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <div class="form_wrap">
+              <div class="input_box">
+                <label class="label">수업 제목</label>
+                <div class="input_box search2">
+                  <input type="text" />
+                </div>
+              </div>
+              <div class="radi_chk_wrap">
+                <p class="label">수업 과목</p>
+                <div class="legend">
+                  <div class="input_box">
+                    <label for="date01" class="text_radio">
+                      <input id="date01" name="date" type="radio" />
+                      <span>전체</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="date02" class="text_radio">
+                      <input id="date02" name="date" type="radio" />
+                      <span>최근 일주일</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="date03" class="text_radio">
+                      <input id="date03" name="date" type="radio" />
+                      <span>최근 1개월</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="date04" class="text_radio">
+                      <input id="date04" name="date" type="radio" />
+                      <span>최근 6개월</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="date05" class="text_radio">
+                      <input id="date05" name="date" type="radio" />
+                      <span>최근 1년</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="date06" class="text_radio">
+                      <input id="date06" name="date" type="radio" />
+                      <span>최근 3년</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="radi_chk_wrap">
+                <p class="label">수업 상태</p>
+                <div class="legend">
+                  <div class="input_box">
+                    <label for="state01" class="text_radio">
+                      <input id="state01" name="state" type="radio" />
+                      <span>전체</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="state02" class="text_radio">
+                      <input id="state02" name="state" type="radio" />
+                      <span>검수 중</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="state03" class="text_radio">
+                      <input id="state03" name="state" type="radio" />
+                      <span>등록 완료</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="state04" class="text_radio">
+                      <input id="state04" name="state" type="radio" />
+                      <span>모집 중</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="state05" class="text_radio">
+                      <input id="state05" name="state" type="radio" />
+                      <span>모집 완료</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="state06" class="text_radio">
+                      <input id="state06" name="state" type="radio" />
+                      <span>재검수 필요</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="state07" class="text_radio">
+                      <input id="state07" name="state" type="radio" />
+                      <span>모집 종료</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom_btn two">
+              <button class="gray">초기화</button>
+              <button>적용하기</button>
+            </div>
+          </div>
+        </div>
+        <!--page bottom sheet -->
+        <!-- 모달 -->
+        <article id="date_alert" class="modal_wrap">
+          <div class="modal">
+            <p class="text">종료일 지정은 필수입니다.</p>
+            <p class="desc">
+              조회할 날짜의 시작일과 종료일을<br />모두 지정해 주세요.
+            </p>
+            <div class="btn_area">
+              <button class="black" onclick="close_modal()">확인</button>
+            </div>
+          </div>
+        </article>
+        <!-- 모달 -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

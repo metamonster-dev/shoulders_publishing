@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>전체과목</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header search">
+          <div class="inner">
+            <button onclick="history.back();" class="back_btn"></button>
+            <p class="input_box search">
+              <input
+                type="text"
+                class="search"
+                placeholder="검색어를 입력하세요."
+              />
+            </p>
+          </div>
+        </header>
+        <!-- header -->
+        <div class="container_wrap h_06 search">
+          <div class="global_inner">
+            <ul class="subject_list_itt">
+              <li class="subject_item">
+                <div class="item_head">
+                  <p class="class_id">수업 ID : 123ABC</p>
+                  <p class="badge_list"></p>
+                </div>
+                <div class="item_body">
+                  <figure class="thumb">
+                    <img src="./assets/image/thumbnail/math_74x74.png" />
+                  </figure>
+                  <div class="text_box">
+                    <div class="title_box">
+                      <p class="tit">
+                        [초등 저학년] 주간 단순 연산 주간 단순 연산 주간 단순
+                        연산 주간 단순 연산
+                      </p>
+                      <p class="dot_list">
+                        <span>서울 강남</span>
+                        <span>2024-12-10</span>
+                      </p>
+                    </div>
+                    <div class="price_box">
+                      <p class="badge_list">
+                        <span class="item blue">온라인</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="subject_item">
+                <div class="item_head">
+                  <p class="class_id">수업 ID : 123ABC</p>
+                  <p class="badge_list"></p>
+                </div>
+                <div class="item_body">
+                  <figure class="thumb">
+                    <img src="./assets/image/thumbnail/math_74x74.png" />
+                  </figure>
+                  <div class="text_box">
+                    <div class="title_box">
+                      <p class="tit">
+                        [초등 저학년] 주간 단순 연산 주간 단순 연산 주간 단순
+                        연산 주간 단순 연산
+                      </p>
+                      <p class="dot_list">
+                        <span>서울 강남</span>
+                        <span>2024-12-10</span>
+                      </p>
+                    </div>
+                    <div class="price_box">
+                      <p class="badge_list">
+                        <span class="item blue">온라인</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

@@ -44,89 +44,40 @@
           <div class="swiper edit_type_sec swiper_menu round">
             <div class="swiper-wrapper">
               <div
-                class="swiper-slide"
-                onclick="location.href='community_edit_review.html'"
-              >
-                후기
-              </div>
-              <div
-                class="swiper-slide"
-                onclick="location.href='community_edit_question.html'"
-              >
-                질문
-              </div>
-              <div
                 class="swiper-slide active"
-                onclick="location.href='community_edit_request.html'"
+                onclick="location.href='community_edit_exam.html'"
               >
-                수업 요청
+                입시 설명회
               </div>
             </div>
           </div>
           <div class="global_inner">
             <div class="form_wrap">
               <div class="input_box">
-                <label class="label">수업 제목</label>
+                <label class="label">설명회 제목</label>
                 <div class="textarea_wrap h_100">
                   <textarea
-                    placeholder="의뢰할 수업의 제목을 적어 주세요. 내용이 부적절하다고 판단될 경우에는 의뢰 내용이 삭제될 수 있어요."
+                    placeholder="등록할 일정의 제목을 입력해 주세요."
                   ></textarea>
-                  <span class="txt_counter"> <span class="">0</span>/30 </span>
+                  <span class="txt_counter"> <span class="">0</span>/30</span>
                 </div>
                 <!-- 유효성 문구 -->
-                <p class="err_msg">제목을 입력해 주세요.</p>
+                <p class="err_msg">제목을 30자 내로 입력해 주세요.</p>
               </div>
               <div class="input_box">
-                <label class="label">수업 내용</label>
+                <label class="label">설명회 내용</label>
                 <div class="textarea_wrap h_200">
                   <textarea
-                    placeholder="의뢰할 수업에 대한 과목, 수업 대상, 레벨, 수업 기간, 수업 내용 등을 상세하게 적어 주세요.
+                    placeholder="등록할 학원 일정에 대한 내용을 입력해 주세요.
 
-예시) 초등학교 3학년 겨울방학 대비 영어 문법 구해요. 기간은 주 2회 한 달 짜리 수업으로 부탁하고, 레벨은 초급입니다."
+예시) ㅇㅇ여고 입학을 위한 입시 설명회를 진행합니다. 오프라인 일정으로 진행하며 약 1시간 진행 예정입니다. 총 20분만 모십니다."
                   ></textarea>
                   <span class="txt_counter">
-                    <span class="error">19</span>/300
+                    <span class="error">19</span>/250
                   </span>
                 </div>
                 <!-- 유효성 문구 -->
-                <p class="err_msg">내용을 입력해 주세요.</p>
-              </div>
-              <div class="radi_chk_wrap">
-                <p class="label">수업 과목</p>
-                <div class="legend">
-                  <div class="input_box">
-                    <label for="subject01" class="text_radio">
-                      <input id="subject01" name="subject" type="radio" />
-                      <span>수학</span>
-                    </label>
-                  </div>
-                  <div class="input_box">
-                    <label for="subject02" class="text_radio">
-                      <input id="subject02" name="subject" type="radio" />
-                      <span>영어</span>
-                    </label>
-                  </div>
-                  <div class="input_box">
-                    <label for="subject03" class="text_radio">
-                      <input id="subject03" name="subject" type="radio" />
-                      <span>논술</span>
-                    </label>
-                  </div>
-                  <div class="input_box">
-                    <label for="subject04" class="text_radio">
-                      <input id="subject04" name="subject" type="radio" />
-                      <span>음악</span>
-                    </label>
-                  </div>
-                  <div class="input_box">
-                    <label for="subject05" class="text_radio">
-                      <input id="subject05" name="subject" type="radio" />
-                      <span>활동</span>
-                    </label>
-                  </div>
-                </div>
-                <!-- 유효성 문구 -->
-                <p class="err_msg">과목을 선택해 주세요.</p>
+                <p class="err_msg">내용을 250자 내로 입력해 주세요.</p>
               </div>
               <div class="radi_chk_wrap">
                 <p class="label">수업 대상</p>
@@ -134,33 +85,34 @@
                   <div class="input_box">
                     <label for="target01" class="text_radio">
                       <input id="target01" name="target" type="radio" />
-                      <span>미취학(5~7세)</span>
+                      <span>미취학 아동</span>
                     </label>
                   </div>
                   <div class="input_box">
                     <label for="target02" class="text_radio">
                       <input id="target02" name="target" type="radio" />
-                      <span>초등 저학년(8~10세)</span>
+                      <span>초등 저학년</span>
                     </label>
                   </div>
                   <div class="input_box">
                     <label for="target03" class="text_radio">
                       <input id="target03" name="target" type="radio" />
-                      <span>초등 고학년(11~13세)</span>
+                      <span>초등 고학년</span>
                     </label>
                   </div>
                   <div class="input_box">
                     <label for="target04" class="text_radio">
                       <input id="target04" name="target" type="radio" />
-                      <span>중/고등학생(14~19세)</span>
+                      <span>중/고등학생</span>
                     </label>
                   </div>
                 </div>
                 <!-- 유효성 문구 -->
                 <p class="err_msg">대상을 선택해 주세요.</p>
               </div>
+
               <div class="radi_chk_wrap">
-                <p class="label">수업 형태</p>
+                <p class="label">형태</p>
                 <div class="legend">
                   <div class="input_box">
                     <label for="type01" class="text_radio">
@@ -178,69 +130,14 @@
                 <!-- 유효성 문구 -->
                 <p class="err_msg">수업 형태를 선택해 주세요.</p>
               </div>
-              <div class="radi_chk_wrap">
-                <p class="label">수업 의뢰 썸네일</p>
-                <div class="swiper thumbnail_chk swiper_input">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <label for="thumbnail01" class="thumbnail_radio">
-                        <input id="thumbnail01" name="thumbnail" type="radio" />
-                        <span class="image">
-                          <img
-                            src="./assets/image/thumbnail/math_80x102.png"
-                            alt=""
-                          />
-                        </span>
-                      </label>
-                    </div>
-                    <div class="swiper-slide">
-                      <label for="thumbnail02" class="thumbnail_radio">
-                        <input id="thumbnail02" name="thumbnail" type="radio" />
-                        <span class="image">
-                          <img
-                            src="./assets/image/thumbnail/eng_80x102.png"
-                            alt=""
-                          />
-                        </span>
-                      </label>
-                    </div>
-                    <div class="swiper-slide">
-                      <label for="thumbnail03" class="thumbnail_radio">
-                        <input id="thumbnail03" name="thumbnail" type="radio" />
-                        <span class="image">
-                          <img
-                            src="./assets/image/thumbnail/music_80x102.png"
-                            alt=""
-                          />
-                        </span>
-                      </label>
-                    </div>
-                    <div class="swiper-slide">
-                      <label for="thumbnail04" class="thumbnail_radio">
-                        <input id="thumbnail04" name="thumbnail" type="radio" />
-                        <span class="image">
-                          <img
-                            src="./assets/image/thumbnail/essay_80x102.png"
-                            alt=""
-                          />
-                        </span>
-                      </label>
-                    </div>
-                    <div class="swiper-slide">
-                      <label for="thumbnail05" class="thumbnail_radio">
-                        <input id="thumbnail05" name="thumbnail" type="radio" />
-                        <span class="image">
-                          <img
-                            src="./assets/image/thumbnail/activity_80x102.png"
-                            alt=""
-                          />
-                        </span>
-                      </label>
-                    </div>
-                  </div>
+              <div class="input_box">
+                <label class="label">일정</label>
+                <div class="legend">
+                  <input type="date" />
+                  <input type="time" />
                 </div>
                 <!-- 유효성 문구 -->
-                <p class="err_msg">섬네일을 선택해 주세요.</p>
+                <p class="err_msg">일정을 선택해 주세요.</p>
               </div>
             </div>
           </div>

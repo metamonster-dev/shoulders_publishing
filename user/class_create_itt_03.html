@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>검수 반려</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header">
+          <div class="inner">
+            <button class="back_btn"></button>
+            <h1>검수 반려</h1>
+          </div>
+        </header>
+        <!-- header -->
+        <div class="container_wrap h_01 create_itt wait">
+          <div class="global_inner">
+            <div class="page_title_box reject">
+              <p class="state">검수 반려</p>
+              <p class="gradient_txt">수업 정보 수정이 필요해요.</p>
+              <div class="desc_box">
+                <p class="tit">검수 반려 사유</p>
+                <p class="txt">
+                  생성하신 수업의 정보 수정이 필요하니, 아래 상세 내용 확인 후
+                  수정해 주세요.
+                </p>
+              </div>
+            </div>
+            <div class="sect reject">
+              <div class="box">
+                <div class="class_name">
+                  <figure class="thumbnail">
+                    <img src="./assets/image/thumbnail/math_74x74.png" alt="" />
+                  </figure>
+                  <div class="txt_box">
+                    <p class="title">
+                      [수학] 입시 장인에게 배우는 비법 노트! 초등학교 입학 수학
+                    </p>
+                    <p class="desc">옵션 - [얼리버드] 1인 수강권</p>
+                  </div>
+                </div>
+                <div class="text_list">
+                  <p class="item">
+                    <span class="tit">기본 정보</span>
+                    <span class="desc">대상 연령대 수정 필요합니다.</span>
+                  </p>
+                  <p class="item">
+                    <span class="tit">카테고리</span>
+                    <span class="desc"
+                      >하위 과목과 수업명 내용이 다릅니다.</span
+                    >
+                  </p>
+                  <p class="item">
+                    <span class="tit">수업 일정</span>
+                    <span class="desc">2024-12-23 ~ 2024-12-27</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bottom_btn two">
+            <button type="button" class="b_line">수정하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

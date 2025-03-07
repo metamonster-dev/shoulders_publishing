@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>마이페이지</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- fullcalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!--main header -->
+        <header class="header main">
+          <div class="inner">
+            <h1 class="page_name">마이페이지</h1>
+            <ul class="header_menu">
+              <li class="alram" onclick="location.href='alarm_itt.html'">
+                <i class="icon_read"></i>
+              </li>
+            </ul>
+          </div>
+        </header>
+        <!--main header -->
+        <div class="container_wrap mypage h_04">
+          <div class="my_profile_itt_sec">
+            <div class="global_inner">
+              <figure class="image">
+                <img src="./assets/image/dummy/profile_02.svg" alt="" />
+              </figure>
+              <div class="info_box">
+                <span class="name">홍길동</span>
+                <p class="line_list">
+                  <span>수업 지역</span>
+                  <span>shoul@gmail.com</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="my_score_sec">
+            <div class="global_inner">
+              <ul class="score_list">
+                <li class="card">
+                  <span class="tit">누적문의</span>
+                  <span class="txt">20건</span>
+                </li>
+                <li class="card">
+                  <span class="tit">총 평점</span>
+                  <div class="txt">
+                    <p class="rating">3.5</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="mypage_menu_sec">
+            <div class="global_inner">
+              <ul class="menu_list">
+                <li
+                  class="item"
+                  onclick="location.href='adjustment_itt_01.html'"
+                >
+                  <p class="tit">
+                    <span class="">정산 관리</span>
+                  </p>
+                  <i class="icon_right_arrow_g_t"></i>
+                </li>
+                <li class="item" onclick="location.href='my_inquery_itt.html'">
+                  <p class="tit">
+                    <span class="">내 문의 관리</span>
+                    <span class="alarm_badge">새 문의 n건</span>
+                  </p>
+                  <i class="icon_right_arrow_g_t"></i>
+                </li>
+                <li class="item">
+                  <p class="tit">
+                    <span class="">내 리뷰</span>
+                  </p>
+                  <i class="icon_right_arrow_g_t"></i>
+                </li>
+                <li class="item">
+                  <p class="tit">
+                    <span class="">내 수업 광고하기</span>
+                  </p>
+                  <i class="icon_right_arrow_g_t"></i>
+                </li>
+                <li class="item">
+                  <p class="tit">
+                    <span class="">내 정보 수정</span>
+                  </p>
+                  <i class="icon_right_arrow_g_t"></i>
+                </li>
+                <li class="item" onclick="open_modal('#logout')">
+                  <span class="">로그아웃</span>
+                  <i class="icon_right_arrow_g_t"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <section class="footer_sec">
+            <div class="global_inner">
+              <ul class="footer_nav">
+                <li>고객센터</li>
+                <li>개인정보 처리방침</li>
+                <li>이용약관</li>
+              </ul>
+              <p class="logo">
+                <img src="./assets/image/logo.svg" alt="" />
+              </p>
+              <div class="desc">
+                <span>(주)씨럽</span>
+                <span>대표 : 문지후</span>
+                <span>서울 성동구 아차산로 7길 21 성수동 2가 4층 89호</span>
+                <span>이메일 : wearecluv@shoulders.co.kr</span>
+                <span>사업자등록번호 : 511-88-03029</span>
+                <span>통신판매업신고 : 제 2024-서울성동-0198호</span>
+                <span>고객센터 운영시간 : 10:00am - 18:00pm</span>
+                <span class="copyright">
+                  Copyright ⓒ SHOULDERS ALL RIGHTS RESERVED.
+                </span>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+          <ul class="footer_menu">
+            <li onclick="location.href='home.html'">
+              <i class="icon_home"></i>
+              <span class="tit">홈</span>
+            </li>
+            <li onclick="location.href='class_list.html'">
+              <i class="icon_class"></i>
+              <span class="tit">클래스</span>
+            </li>
+            <li onclick="location.href='class_setting_itt.html'">
+              <i class="class_set"></i>
+              <span class="tit">클래스 관리</span>
+            </li>
+            <li onclick="location.href='community_list.html'">
+              <i class="icon_commu"></i>
+              <span class="tit">커뮤니티</span>
+            </li>
+            <li class="on" onclick="location.href='mypage.html'">
+              <i class="icon_my"></i>
+              <span class="tit">마이</span>
+            </li>
+          </ul>
+        </footer>
+        <!-- footer -->
+        <!-- 모달 -->
+        <article id="logout" class="modal_wrap">
+          <div class="modal">
+            <p class="text">로그아웃 되었습니다.</p>
+            <p class="desc">다시 로그인해 주세요.</p>
+            <div class="btn_area">
+              <button class="black" onclick="close_modal()">로그인</button>
+            </div>
+          </div>
+        </article>
+        <!-- 모달 -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- swiper -->
+<script>
+  var swiper = new Swiper(".category_swiper", {
+    slidesPerView: "auto",
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+  });
+
+  var swiper = new Swiper(".my_commu_card_swiper", {
+    slidesPerView: "auto",
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+  });
+</script>
+<!-- swiper -->
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

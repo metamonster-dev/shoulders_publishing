@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>클래스 관리</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- fullcalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!--main header -->
+        <header class="header main">
+          <div class="inner">
+            <h1 class="page_name">클래스 관리</h1>
+            <ul class="header_menu">
+              <li class="alram" onclick="location.href='alarm_itt.html'">
+                <i class="icon_read"></i>
+              </li>
+            </ul>
+          </div>
+        </header>
+        <!--main header -->
+        <div class="container_wrap h_04 class_itt">
+          <ul class="tab_menu his sub_p">
+            <li data-tab="class_menu01" class="on">수업 목록</li>
+            <li data-tab="sales_menu02">판매 목록</li>
+          </ul>
+          <!-- 수업 목록 content -->
+          <div id="class_menu01" class="tab_content his active">
+            <div class="search_result">
+              <p class="desc">전체 N건</p>
+              <ul class="page_menu swiper_menu round">
+                <li
+                  data-target="class_filter_bottom_sheet"
+                  class="swiper-slide open_bottom_sheet active"
+                >
+                  <!-- active 상태 아닐떄 아이콘 on -->
+                  <!-- <i class="icon_filter"></i> -->
+                  <i class="icon_filter on"></i>
+                  <span>필터</span>
+                </li>
+                <li class="swiper-slide">
+                  <i class="icon_create"></i>
+                  <span>수업 생성</span>
+                </li>
+              </ul>
+            </div>
+            <div class="global_inner">
+              <ul class="subject_list_itt">
+                <li
+                  class="subject_item"
+                  onclick="location.href='class_detail.html'"
+                >
+                  <div class="item_head">
+                    <p class="class_id">수업 ID : 123ABC</p>
+                    <p class="badge_list">
+                      <span class="item green">검수중</span>
+                    </p>
+                  </div>
+                  <div class="item_body">
+                    <figure class="thumb">
+                      <img src="./assets/image/thumbnail/math_74x74.png" />
+                    </figure>
+                    <div class="text_box">
+                      <div class="title_box">
+                        <p class="tit">
+                          [초등 저학년] 주간 단순 연산 주간 단순 연산 주간 단순
+                          연산 주간 단순 연산
+                        </p>
+                        <p class="dot_list">
+                          <span>서울 강남</span>
+                          <span>2024-12-10</span>
+                        </p>
+                      </div>
+                      <div class="price_box">
+                        <p class="badge_list">
+                          <span class="item blue">온라인</span>
+                        </p>
+                        <p class="price">192,000원</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="subject_item"
+                  onclick="location.href='class_detail.html'"
+                >
+                  <div class="item_head">
+                    <p class="class_id">수업 ID : 123ABC</p>
+                    <p class="badge_list">
+                      <span class="item orange">재검수 필요</span>
+                    </p>
+                  </div>
+                  <div class="item_body">
+                    <figure class="thumb">
+                      <img src="./assets/image/thumbnail/math_74x74.png" />
+                    </figure>
+                    <div class="text_box">
+                      <div class="title_box">
+                        <p class="tit">
+                          [초등 저학년] 주간 단순 연산 주간 단순 연산 주간 단순
+                          연산 주간 단순 연산
+                        </p>
+                        <p class="dot_list">
+                          <span>서울 강남</span>
+                          <span>2024-12-10</span>
+                        </p>
+                      </div>
+                      <div class="price_box">
+                        <p class="badge_list">
+                          <span class="item blue">오프라인</span>
+                        </p>
+                        <p class="price">192,000원</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="subject_item"
+                  onclick="location.href='class_detail.html'"
+                >
+                  <div class="item_head">
+                    <p class="class_id">수업 ID : 123ABC</p>
+                    <p class="badge_list">
+                      <span class="item gray">모집 완료</span>
+                    </p>
+                  </div>
+                  <div class="item_body">
+                    <figure class="thumb">
+                      <img src="./assets/image/thumbnail/math_74x74.png" />
+                    </figure>
+                    <div class="text_box">
+                      <div class="title_box">
+                        <p class="tit">
+                          [초등 저학년] 주간 단순 연산 주간 단순 연산 주간 단순
+                          연산 주간 단순 연산
+                        </p>
+                        <p class="dot_list">
+                          <span>서울 강남</span>
+                          <span>2024-12-10</span>
+                        </p>
+                      </div>
+                      <div class="price_box">
+                        <p class="badge_list">
+                          <span class="item blue">온라인</span>
+                        </p>
+                        <p class="price">192,000원</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="subject_item"
+                  onclick="location.href='class_detail.html'"
+                >
+                  <div class="item_head">
+                    <p class="class_id">수업 ID : 123ABC</p>
+                    <p class="badge_list">
+                      <span class="item">모집중</span>
+                    </p>
+                  </div>
+                  <div class="item_body">
+                    <figure class="thumb">
+                      <img src="./assets/image/thumbnail/math_74x74.png" />
+                    </figure>
+                    <div class="text_box">
+                      <div class="title_box">
+                        <p class="tit">
+                          [초등 저학년] 주간 단순 연산 주간 단순 연산 주간 단순
+                          연산 주간 단순 연산
+                        </p>
+                        <p class="dot_list">
+                          <span>서울 강남</span>
+                          <span>2024-12-10</span>
+                        </p>
+                      </div>
+                      <div class="price_box">
+                        <p class="badge_list">
+                          <span class="item blue">온라인</span>
+                        </p>
+                        <p class="price">192,000원</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 판매 목록 content -->
+          <div id="sales_menu02" class="tab_content his">
+            <div class="search_result h_66">
+              <p class="desc">2025년 03월 판매 정보</p>
+            </div>
+            <div class="global_inner">
+              <ul class="state_panel">
+                <li class="card">
+                  <i class="icon_deco_chk"></i>
+                  <span class="tit">수입 판매 건</span>
+                  <p class="count">16건</p>
+                </li>
+                <li class="card">
+                  <i class="icon_deco_danger"></i>
+                  <span class="tit">취소/환불 건</span>
+                  <p class="count">22건</p>
+                </li>
+                <li class="card">
+                  <span class="tit">판매 금액</span>
+                  <p class="count">14건</p>
+                  <p class="date">(2025.01.01 ~<br />2025.01.31)</p>
+                </li>
+                <li class="card">
+                  <span class="tit">정산 예정 금액</span>
+                  <p class="count">1,923,000원</p>
+                  <p class="date">(2025.01.01 ~<br />2025.01.31)</p>
+                </li>
+              </ul>
+            </div>
+            <div class="search_result h_66 border sticky">
+              <p class="desc">전체 판매 내역</p>
+              <ul class="page_menu swiper_menu round">
+                <li
+                  data-target="sales_filter_bottom_sheet"
+                  class="swiper-slide open_bottom_sheet"
+                >
+                  <i class="icon_filter"></i>
+                  <!-- active 상태 일때 아이콘 -->
+                  <!-- <i class="icon_filter on"></i> -->
+                  <span>필터</span>
+                </li>
+                <li
+                  data-target="sales_sort_bottom_sheet"
+                  class="swiper-slide open_bottom_sheet"
+                >
+                  <span>최신순</span>
+                  <i class="icon_sel_bottom_arrow"></i>
+                </li>
+              </ul>
+            </div>
+            <div class="total_sales_list_sec">
+              <div class="global_inner">
+                <ul class="sales_list">
+                  <li class="card">
+                    <p class="tit">
+                      [대상] 수업명 수업명 수업명 수업명 수업명 수업명 수업명
+                    </p>
+                    <div class="text_list">
+                      <div class="list">
+                        <div class="tit">주문자</div>
+                        <div class="txt">학부모 계정 닉네임</div>
+                      </div>
+                      <div class="list">
+                        <div class="tit">주문자</div>
+                        <div class="txt line_list">
+                          <span>YYYY-MM-DD</span>
+                          <span>HH:MM:SS</span>
+                        </div>
+                      </div>
+                      <div class="list">
+                        <div class="tit">판매 금액</div>
+                        <div class="txt bold">150,000원</div>
+                      </div>
+                      <div class="list">
+                        <div class="tit">주문자</div>
+                        <div class="txt badge_list">
+                          <span class="item green">결제 완료</span>
+                          <span class="item orange">정산 예정</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card">
+                    <p class="tit">
+                      [대상] 수업명 수업명 수업명 수업명 수업명 수업명 수업명
+                    </p>
+                    <div class="text_list">
+                      <div class="list">
+                        <div class="tit">주문자</div>
+                        <div class="txt">학부모 계정 닉네임</div>
+                      </div>
+                      <div class="list">
+                        <div class="tit">주문자</div>
+                        <div class="txt line_list">
+                          <span>YYYY-MM-DD</span>
+                          <span>HH:MM:SS</span>
+                        </div>
+                      </div>
+                      <div class="list">
+                        <div class="tit">판매 금액</div>
+                        <div class="txt bold">150,000원</div>
+                      </div>
+                      <div class="list">
+                        <div class="tit">주문자</div>
+                        <div class="txt badge_list">
+                          <span class="item red">취소 완료</span>
+                          <span class="item red">미정산</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+          <ul class="footer_menu">
+            <li onclick="location.href='home.html'">
+              <i class="icon_home"></i>
+              <span class="tit">홈</span>
+            </li>
+            <li onclick="location.href='class_list.html'">
+              <i class="icon_class"></i>
+              <span class="tit">클래스</span>
+            </li>
+            <li class="on" onclick="location.href='class_setting_itt.html'">
+              <i class="class_set"></i>
+              <span class="tit">클래스 관리</span>
+            </li>
+            <li onclick="location.href='community_list.html'">
+              <i class="icon_commu"></i>
+              <span class="tit">커뮤니티</span>
+            </li>
+            <li onclick="location.href='mypage.html'">
+              <i class="icon_my"></i>
+              <span class="tit">마이</span>
+            </li>
+          </ul>
+        </footer>
+        <!-- footer -->
+
+        <div class="bottom_sheet_overlay"></div>
+        <!--page bottom sheet -->
+        <!-- 정렬 순서 bottom sheet-->
+        <div id="sales_sort_bottom_sheet" class="bottom_sheet sort">
+          <div class="bottom_sheet_header">
+            <h3>정렬 순서</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="option_list">
+              <li>판매 최신순</li>
+              <li>판매 오래된순</li>
+            </ul>
+          </div>
+        </div>
+        <!-- 필터 bottom sheet -->
+        <div
+          id="class_filter_bottom_sheet"
+          class="bottom_sheet itt_class_filter"
+        >
+          <p class="tab_bar"></p>
+          <div class="bottom_sheet_header">
+            <h3>필터</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <div class="form_wrap">
+              <div class="input_box">
+                <label class="label">수업 제목</label>
+                <div class="input_box search2">
+                  <input type="text" />
+                </div>
+              </div>
+              <div class="radi_chk_wrap">
+                <p class="label">수업 과목</p>
+                <div class="legend">
+                  <div class="input_box">
+                    <label for="date01" class="text_radio">
+                      <input id="date01" name="date" type="radio" />
+                      <span>전체</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="date02" class="text_radio">
+                      <input id="date02" name="date" type="radio" />
+                      <span>최근 일주일</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="date03" class="text_radio">
+                      <input id="date03" name="date" type="radio" />
+                      <span>최근 1개월</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="date04" class="text_radio">
+                      <input id="date04" name="date" type="radio" />
+                      <span>최근 6개월</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="date05" class="text_radio">
+                      <input id="date05" name="date" type="radio" />
+                      <span>최근 1년</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="date06" class="text_radio">
+                      <input id="date06" name="date" type="radio" />
+                      <span>최근 3년</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="radi_chk_wrap">
+                <p class="label">수업 상태</p>
+                <div class="legend">
+                  <div class="input_box">
+                    <label for="state01" class="text_radio">
+                      <input id="state01" name="state" type="radio" />
+                      <span>전체</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="state02" class="text_radio">
+                      <input id="state02" name="state" type="radio" />
+                      <span>검수 중</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="state03" class="text_radio">
+                      <input id="state03" name="state" type="radio" />
+                      <span>등록 완료</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="state04" class="text_radio">
+                      <input id="state04" name="state" type="radio" />
+                      <span>모집 중</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="state05" class="text_radio">
+                      <input id="state05" name="state" type="radio" />
+                      <span>모집 완료</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="state06" class="text_radio">
+                      <input id="state06" name="state" type="radio" />
+                      <span>재검수 필요</span>
+                    </label>
+                  </div>
+                  <div class="input_box">
+                    <label for="state07" class="text_radio">
+                      <input id="state07" name="state" type="radio" />
+                      <span>모집 종료</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom_btn two">
+              <button class="gray">초기화</button>
+              <button>적용하기</button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="sales_filter_bottom_sheet"
+          class="bottom_sheet itt_sales_filter"
+        >
+          <div class="bottom_sheet_header">
+            <h3>필터</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <div class="legend">
+              <p class="label">결제 상태</p>
+              <div class="input_wrap">
+                <div class="input_box">
+                  <label for="pay_state_01" class="icon_radio">
+                    <input id="pay_state_01" name="pay_state" type="radio" />
+                    <span>전체</span>
+                  </label>
+                </div>
+                <div class="input_box">
+                  <label for="pay_state_02" class="icon_radio">
+                    <input id="pay_state_02" name="pay_state" type="radio" />
+                    <span>결제 완료</span>
+                  </label>
+                </div>
+                <div class="input_box">
+                  <label for="pay_state_03" class="icon_radio">
+                    <input id="pay_state_03" name="pay_state" type="radio" />
+                    <span>취소 요청</span>
+                  </label>
+                </div>
+                <div class="input_box">
+                  <label for="pay_state_04" class="icon_radio">
+                    <input id="pay_state_04" name="pay_state" type="radio" />
+                    <span>취소 완료</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="legend">
+              <p class="label">기간</p>
+              <div class="input_wrap">
+                <div class="input_box">
+                  <label for="date_01" class="icon_radio">
+                    <input id="date_01" name="date" type="radio" />
+                    <span>전체</span>
+                  </label>
+                </div>
+                <div class="input_box">
+                  <label for="date_02" class="icon_radio">
+                    <input id="date_02" name="date" type="radio" />
+                    <span>최근 1개월</span>
+                  </label>
+                </div>
+                <div class="input_box">
+                  <label for="date_03" class="icon_radio">
+                    <input id="date_03" name="date" type="radio" />
+                    <span>최근 6개월</span>
+                  </label>
+                </div>
+                <div class="input_box">
+                  <label for="date_04" class="icon_radio">
+                    <input id="date_04" name="date" type="radio" />
+                    <span>최근 1년</span>
+                  </label>
+                </div>
+                <div class="input_box">
+                  <label for="date_05" class="icon_radio">
+                    <input id="date_05" name="date" type="radio" />
+                    <span>최근 3년</span>
+                  </label>
+                </div>
+                <div class="input_box">
+                  <label for="date_06" class="icon_radio">
+                    <input id="date_06" name="date" type="radio" />
+                    <span>최근 5년</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="bottom_btn">
+              <button>적용하기</button>
+            </div>
+          </div>
+        </div>
+        <!--page bottom sheet -->
+        <!-- 모달 -->
+        <article id="date_alert" class="modal_wrap">
+          <div class="modal">
+            <p class="text">종료일 지정은 필수입니다.</p>
+            <p class="desc">
+              조회할 날짜의 시작일과 종료일을<br />모두 지정해 주세요.
+            </p>
+            <div class="btn_area">
+              <button class="black" onclick="close_modal()">확인</button>
+            </div>
+          </div>
+        </article>
+        <!-- 모달 -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

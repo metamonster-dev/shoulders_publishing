@@ -32,15 +32,15 @@
       <div id="background" class="background_pc_txt"></div>
       <div class="global_wrap">
         <!--main header -->
-        <header class="header main">
+        <header class="header main gray_bg">
           <div class="inner">
             <h1 class="logo">
-              <a href="home.html">
+              <a href="home_itt.html">
                 <img src="./assets/image/logo.svg" />
               </a>
             </h1>
             <ul class="header_menu">
-              <li class="alram" onclick="location.href='alarm.html'">
+              <li class="alram" onclick="location.href='alarm_itt.html'">
                 <i class="icon_read"></i>
               </li>
             </ul>
@@ -51,9 +51,36 @@
           <section class="dashboard_sec">
             <div class="global_inner">
               <ul class="widget_list">
-                <li>
-                  <i class="icon_widget_01"></i>
-                  <p>판매 중인<br /></p>
+                <li class="widget">
+                  <i class="icon icon_widget_01"></i>
+                  <p class="tit">판매 중인<br />수업 수</p>
+                  <p class="count">20건</p>
+                </li>
+                <li class="widget">
+                  <i class="icon icon_widget_02"></i>
+                  <p class="tit">당월 수업<br />결제 건</p>
+                  <p class="count">82개</p>
+                </li>
+                <li class="widget">
+                  <i class="icon icon_widget_03"></i>
+                  <p class="tit">문의<br />응대률</p>
+                  <p class="count">89%</p>
+                </li>
+              </ul>
+              <ul class="total_list">
+                <li class="item">
+                  <p class="title">
+                    <i class="icon_coin"></i>
+                    <span>당월 수업 판매 금액</span>
+                  </p>
+                  <p class="total">1,000,000원</p>
+                </li>
+                <li class="item">
+                  <p class="title">
+                    <i class="icon_chart"></i>
+                    <span>2025년 3월 정산 금액</span>
+                  </p>
+                  <p class="total">500,000원</p>
                 </li>
               </ul>
             </div>
@@ -689,9 +716,9 @@
               <i class="icon_class"></i>
               <span class="tit">클래스</span>
             </li>
-            <li onclick="location.href='bookmark_list.html'">
-              <i class="icon_like"></i>
-              <span class="tit">찜</span>
+            <li onclick="location.href='class_setting_itt.html'">
+              <i class="class_set"></i>
+              <span class="tit">클래스 관리</span>
             </li>
             <li onclick="location.href='community_list.html'">
               <i class="icon_commu"></i>
@@ -741,13 +768,27 @@
     spaceBetween: 16,
     slidesPerView: 1.9,
     loop: true,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
   });
 </script>
 <!-- swiper -->
+
+<script>
+  $(document).ready(function () {
+    let $container = $(".container_wrap");
+    $container.on("scroll", function () {
+      let scrollPos = $container.scrollTop();
+      if (scrollPos > 50) {
+        $("header").removeClass("gray_bg");
+      } else {
+        $("header").addClass("gray_bg");
+      }
+    });
+  });
+</script>
 
 <script>
   // 공통 영역

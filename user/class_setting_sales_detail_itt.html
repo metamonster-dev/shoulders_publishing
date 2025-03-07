@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>주문 상세 내역</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- fullcalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!--main header -->
+        <header class="header border">
+          <div class="inner">
+            <button class="back_btn" onclick="history.back();"></button>
+            <h1>주문 상세 내역</h1>
+          </div>
+        </header>
+        <!--main header -->
+        <div class="container_wrap h_01 class_detail_itt">
+          <div class="class_sales_id">
+            <p class="id_box">
+              <span class="tit">주문번호</span>
+              <span class="num">123456789</span>
+            </p>
+            <p class="badge_list">
+              <span class="item green">결제 완료</span>
+              <span class="item orange">정산 예정</span>
+            </p>
+          </div>
+          <div class="class_sales_info">
+            <div class="global_inner">
+              <div class="title_box">
+                <h4>수업 정보</h4>
+              </div>
+              <div class="text_list t_15 row">
+                <p class="item">
+                  <span class="tit">수업명</span>
+                  <span class="txt b_500"
+                    >[중/고등학생] 고등학교 입시를 위한 족집게 수업</span
+                  >
+                </p>
+                <p class="item">
+                  <span class="tit">수업 형태</span>
+                  <span class="txt b_500">오프라인</span>
+                </p>
+                <div class="item">
+                  <span class="tit">수강 기간</span>
+                  <p class="txt line_list b_500">
+                    <span>일주일</span>
+                    <span>2025-01-06 ~ 2025-01-15</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="class_sales_detail_sec">
+            <div class="global_inner">
+              <div class="title_box">
+                <h4>주문 정보</h4>
+              </div>
+              <div class="text_list t_15">
+                <p class="item">
+                  <span class="tit">주문자</span>
+                  <span class="txt">학부모 계정 닉네임</span>
+                </p>
+                <p class="item">
+                  <span class="tit">주문자 선호 지역</span>
+                  <span class="txt">서울 강남구</span>
+                </p>
+                <p class="item">
+                  <span class="tit">주문 일자</span>
+                  <span class="txt">2025-01-06</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="class_sales_detail_sec">
+            <div class="global_inner">
+              <div class="title_box">
+                <h4>결제 정보</h4>
+              </div>
+              <div class="text_list t_15">
+                <p class="item">
+                  <span class="tit">판매 금액</span>
+                  <span class="txt">150,000원</span>
+                </p>
+                <p class="item">
+                  <span class="tit">결제 수단</span>
+                  <span class="txt">신용카드 (우리카드)</span>
+                </p>
+                <div class="item">
+                  <span class="tit">결제 일시</span>
+                  <p class="txt line_list">
+                    <span>2025-01-03</span>
+                    <span>21:45:08</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="class_sales_detail_sec last">
+            <div class="global_inner">
+              <div class="title_box">
+                <h4>정산 정보</h4>
+              </div>
+              <div class="text_list t_15">
+                <div class="item">
+                  <span class="tit">옵션 금액</span>
+                  <p class="txt line_list">
+                    <span class="bold gray">수량 : 1</span>
+                    <span>150,000원</span>
+                  </p>
+                </div>
+                <p class="item">
+                  <span class="tit">할인 금액</span>
+                  <span class="txt">0원</span>
+                </p>
+                <p class="item line"></p>
+                <p class="item">
+                  <span class="tit">판매 금액</span>
+                  <span class="txt red">150,000원</span>
+                </p>
+                <p class="item line"></p>
+                <p class="item">
+                  <span class="tit">수수료 (20%)</span>
+                  <span class="txt">-30,000원</span>
+                </p>
+                <p class="item line"></p>
+                <p class="item">
+                  <span class="txt b_700">정산 예정 금액</span>
+                  <span class="txt b_700">120,000원</span>
+                </p>
+                <p class="item">
+                  <span class="txt b_700">정산 예정일</span>
+                  <span class="txt b_700">2025-02-10</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bottom_btn">
+            <!-- 약관 동의 시 버튼 스타일 -->
+            <button
+              onclick="open_modal('#del_alert')"
+              type="button"
+              class="red_line"
+            >
+              취소 처리하기
+            </button>
+          </div>
+        </div>
+        <!-- 모달 -->
+        <article id="del_alert" class="modal_wrap">
+          <div class="modal">
+            <p class="text">취소 처리를 완료할까요?</p>
+            <p class="desc">
+              취소 처리가 완료되면<br />
+              해당 주문 건은 환불 처리가 진행돼요.
+            </p>
+            <div class="btn_area">
+              <button class="gray" onclick="close_modal()">취소</button>
+              <button class="black" onclick="close_modal()">확인</button>
+            </div>
+          </div>
+        </article>
+        <!-- 모달 -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

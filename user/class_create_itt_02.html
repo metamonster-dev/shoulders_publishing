@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>검수 요청 완료</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header">
+          <div class="inner">
+            <button class="back_btn"></button>
+            <h1>검수 요청 완료</h1>
+          </div>
+        </header>
+        <!-- header -->
+        <div class="container_wrap h_01 create_itt wait">
+          <div class="global_inner">
+            <div class="page_title_box">
+              <p class="state">검수중</p>
+              <p class="gradient_txt">검수 요청이 완료되었어요.</p>
+            </div>
+            <div class="sect">
+              <div class="box">
+                <div class="class_name">
+                  <figure class="thumbnail">
+                    <img src="./assets/image/thumbnail/math_74x74.png" alt="" />
+                  </figure>
+                  <div class="txt_box">
+                    <p class="title">
+                      [수학] 입시 장인에게 배우는 비법 노트! 초등학교 입학 수학
+                    </p>
+                    <p class="desc">옵션 - [얼리버드] 1인 수강권</p>
+                  </div>
+                </div>
+                <div class="text_list">
+                  <p class="item">
+                    <span class="tit">수업 방식</span>
+                    <span class="desc">오프라인</span>
+                  </p>
+                  <p class="item">
+                    <span class="tit">수업 횟수</span>
+                    <span class="desc">일주일 (주3회)</span>
+                  </p>
+                  <p class="item">
+                    <span class="tit">수업 일정</span>
+                    <span class="desc">2024-12-23 ~ 2024-12-27</span>
+                  </p>
+                  <p class="item">
+                    <span class="tit">대상</span>
+                    <span class="desc">미취학아동</span>
+                  </p>
+                  <p class="item">
+                    <span class="tit">수업 유형</span>
+                    <span class="desc">특강</span>
+                  </p>
+                  <p class="item">
+                    <span class="tit">지역</span>
+                    <span class="desc">서울 노원구</span>
+                  </p>
+                </div>
+              </div>
+              <div class="box">
+                <p class="box_tit">수업 소개</p>
+                <div class="image_sec">
+                  <ul class="thumb_list">
+                    <li class="detail_img">
+                      <img
+                        src="./assets/image/dummy/class_detail_01.png"
+                        alt=""
+                      />
+                    </li>
+                    <li class="detail_img">
+                      <img
+                        src="./assets/image/dummy/class_detail_02.png"
+                        alt=""
+                      />
+                    </li>
+                    <li class="detail_img">
+                      <img
+                        src="./assets/image/dummy/class_detail_03.png"
+                        alt=""
+                      />
+                    </li>
+                  </ul>
+                  <p class="desc">
+                    - 수업 소개는 수업 상세 페이지의 핵심 내용으로 자세한 과목
+                    정보와 커리큘럼, 수업 일정 내용, 자세한 선생님 소개가
+                    포함되는 영역입니다.
+                  </p>
+                </div>
+                <div class="total_price_box">
+                  <p class="tit">1인 수강권</p>
+                  <p class="txt">
+                    <span class="count">수량 : 1</span>
+                    <span class="price">150,000원</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <p class="bottom_desc">
+              검수는 약 2-3 영업일이 소요되고,<br />
+              검수 완료 후 공개 가능해요.
+            </p>
+          </div>
+          <div class="bottom_btn two">
+            <button class="gray" onclick="open_modal('#cancelAlret')">
+              검수 취소하기
+            </button>
+            <button type="button">수업 상세 보기</button>
+          </div>
+        </div>
+        <!-- 모달 -->
+        <article id="cancelAlret" class="modal_wrap">
+          <div class="modal">
+            <p class="text">검수 요청을 취소할까요?</p>
+            <p class="desc">
+              지금 취소하시면 검수 요청이 취소되고<br />
+              생성한 수업이 삭제됩니다.
+            </p>
+            <div class="btn_area">
+              <button class="gray" onclick="close_modal()">취소</button>
+              <button class="black" onclick="close_modal()">확인</button>
+            </div>
+          </div>
+        </article>
+        <!-- 모달 -->
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>
