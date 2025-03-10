@@ -990,7 +990,9 @@ input[type="checkbox"] {
 }
 /* input date */
 input[type="date"],
-input[type="time"] {
+input.datepicker,
+input[type="time"],
+input.timepicker {
   position: relative;
   background-image: url("../assets/image/icon/i_calender.svg");
   background-repeat: no-repeat;
@@ -1002,7 +1004,8 @@ input[type="time"] {
   text-align: left !important;
   background-color: #fff;
 }
-input[type="time"] {
+input[type="time"],
+input.timepicker {
   background-image: url("../assets/image/icon/i_clock.svg");
 }
 
