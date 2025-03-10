@@ -1010,6 +1010,9 @@ input[type="date"]:disabled.click_event {
   background-color: #fff;
 }
 
+input[type="date"].click_event::-webkit-calendar-picker-indicator {
+  display: none;
+}
 input[type="date"]::-webkit-clear-button,
 input[type="date"]::-webkit-inner-spin-button,
 input[type="time"]::-webkit-clear-button,
