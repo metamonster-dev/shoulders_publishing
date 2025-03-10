@@ -2646,8 +2646,18 @@ button.red_txt {
   background-color: #434343;
   color: #fff;
 }
+.chat_wrap .chat_box.me.itt .desc {
+  border-radius: 8px 8px 0 8px;
+  background-color: #434343;
+  color: #fff;
+}
 .chat_wrap .chat_box.other .desc {
   border-radius: 8px 8px 8px 0;
+  background-color: #f5f9fd;
+  color: #111;
+}
+.chat_wrap .chat_box.other.itt .desc {
+  border-radius: 0 8px 8px 8px;
   background-color: #f5f9fd;
   color: #111;
 }
