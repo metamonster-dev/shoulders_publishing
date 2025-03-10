@@ -8165,3 +8165,32 @@ header.chat .profile .badge_list .item {
 .container_wrap.my_review_itt .bottom_btn {
   position: sticky;
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                   이용약관                                   */
+/* -------------------------------------------------------------------------- */
+.container_wrap.terms {
+  padding: 16px 20px 80px;
+}
+.container_wrap.terms .title {
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 16px;
+}
+.container_wrap.terms .text_box {
+  margin-bottom: 16px;
+}
+.container_wrap.terms .text_box:last-child {
+  margin-bottom: 0;
+}
+.container_wrap.terms .sub_tit {
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 16px;
+  margin-bottom: 8px;
+}
+.container_wrap.terms .desc {
+  color: #767676;
+  line-height: 20px;
+  font-size: 14px;
+}
