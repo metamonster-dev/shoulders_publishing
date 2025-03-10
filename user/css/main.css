@@ -1895,6 +1895,8 @@ button.red_txt {
   aspect-ratio: 80/102;
   max-width: 80px;
   width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .subject_list .subject_item .text_box {
@@ -5331,6 +5333,7 @@ header.chat .profile .badge_list .item {
   aspect-ratio: 1/1;
   width: 100%;
   background-size: 100%;
+  border-radius: 12px;
 }
 
 .container_wrap.home .subject_sec .menu_list .icon_math {
@@ -8193,4 +8196,118 @@ header.chat .profile .badge_list .item {
   color: #767676;
   line-height: 20px;
   font-size: 14px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   스켈레톤                                   */
+/* -------------------------------------------------------------------------- */
+/* 스켈레톤 */
+@-webkit-keyframes skeleton-gradient {
+  0% {
+    background-color: rgba(165, 165, 165, 0.1);
+  }
+
+  50% {
+    background-color: rgba(165, 165, 165, 0.3);
+  }
+
+  100% {
+    background-color: rgba(165, 165, 165, 0.1);
+  }
+}
+
+@keyframes skeleton-gradient {
+  0% {
+    background-color: rgba(165, 165, 165, 0.1);
+  }
+
+  50% {
+    background-color: rgba(165, 165, 165, 0.3);
+  }
+
+  100% {
+    background-color: rgba(165, 165, 165, 0.1);
+  }
+}
+.skeleton_scroll_none {
+  overflow: hidden;
+}
+.skeleton_ani {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: skeleton-gradient 1.8s infinite ease-in-out;
+  animation: skeleton-gradient 1.8s infinite ease-in-out;
+}
+
+.skeleton .main_banner_sk {
+  aspect-ratio: 375 / 227;
+  width: 100%;
+}
+.skeleton .sub_banner_sk {
+  aspect-ratio: 375 / 92;
+  width: 100%;
+}
+.skeleton .txt_33_18 {
+  aspect-ratio: 33 / 18;
+  max-width: 33px;
+  width: 100%;
+  border-radius: 2px;
+}
+.skeleton .txt_102_24 {
+  aspect-ratio: 102 / 24;
+  max-width: 102px;
+  width: 100%;
+  border-radius: 2px;
+  margin: 0 auto;
+}
+.skeleton .txt_169_28 {
+  aspect-ratio: 169 / 28;
+  width: 169px;
+  border-radius: 2px;
+}
+.skeleton .txt_44_20 {
+  aspect-ratio: 44 / 20;
+  width: 44px;
+  border-radius: 2px;
+}
+.skeleton .txt_80_102 {
+  aspect-ratio: 80 / 102;
+  width: 80px;
+  border-radius: 2px;
+}
+.skeleton .txt_343_172 {
+  aspect-ratio: 343 / 172;
+  width: 100%;
+  border-radius: 2px;
+}
+.skeleton .txt_h_24 {
+  height: 24px;
+  width: 80%;
+  border-radius: 2px;
+}
+.skeleton .txt_h_20 {
+  height: 20px;
+  width: 80%;
+  border-radius: 2px;
+}
+.skeleton .txt_h_18 {
+  height: 18px;
+  width: 50%;
+  border-radius: 2px;
+}
+.skeleton .bg_none {
+  background-image: none !important;
+}
+.skeleton .mb_4 {
+  margin-bottom: 4px;
+}
+.skeleton .mb_6 {
+  margin-bottom: 6px;
+}
+.skeleton .mb_8 {
+  margin-bottom: 8px;
+}
+.skeleton .tab_menu.underline > li.on {
+  border-bottom: 2px solid #e9e9e9;
 }
