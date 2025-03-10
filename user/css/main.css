@@ -4,6 +4,10 @@
 .active {
   display: block !important;
 }
+.ui-timepicker-standard {
+  /* position: relative; */
+  z-index: 10 !important;
+}
 
 *::-webkit-scrollbar {
   width: 4px;
