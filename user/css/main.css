@@ -8153,12 +8153,11 @@ header.chat .profile .badge_list .item {
   padding: 20px;
 }
 .container_wrap.my_review_itt .commu_list.chk_style .desc {
-  text-overflow: ellipsis;
-  overflow: hidden;
+  text-overflow: initial;
+  overflow: initial;
   word-break: break-word;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  display: block;
+  -webkit-box-orient: initial;
   line-height: 20px;
   margin-bottom: 20px;
 }
