@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>내 수업 광고하기</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- fullcalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!--main header -->
+        <header class="header">
+          <div class="inner">
+            <button class="back_btn" onclick="history.back();"></button>
+            <h1>내 수업 광고하기</h1>
+          </div>
+        </header>
+        <!--main header -->
+        <div class="container_wrap advertisement itt h_01">
+          <div class="select_ticket_sec">
+            <p class="tit">선택된 광고</p>
+            <p class="name">
+              <i class="icon_ticket"></i>
+              <span>5일 광고권</span>
+            </p>
+          </div>
+          <div class="commu_list_sec">
+            <div class="global_inner">
+              <div class="commu_list chk_style">
+                <label for="chk_01">
+                  <input id="chk_01" type="checkbox" />
+                  <div class="card">
+                    <figure class="class_thumb">
+                      <img
+                        src="./assets/image/thumbnail/math_74x74.png"
+                        alt=""
+                      />
+                    </figure>
+                    <div class="text_box_">
+                      <p class="title">
+                        [수학] 입시 장인에게 배우는 비법 노트! 초등학교 입학
+                        수학
+                      </p>
+                      <div class="state">
+                        <p class="price">130,000원</p>
+                        <p class="badge_list">
+                          <span class="item">모집중</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <label for="chk_02">
+                  <input id="chk_02" type="checkbox" />
+                  <div class="card">
+                    <figure class="class_thumb">
+                      <img
+                        src="./assets/image/thumbnail/math_74x74.png"
+                        alt=""
+                      />
+                    </figure>
+                    <div class="text_box_">
+                      <p class="title">
+                        [수학] 입시 장인에게 배우는 비법 노트! 초등학교 입학
+                        수학
+                      </p>
+                      <div class="state">
+                        <p class="price">130,000원</p>
+                        <p class="badge_list">
+                          <span class="item">모집중</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <label for="chk_03">
+                  <input id="chk_03" type="checkbox" />
+                  <div class="card">
+                    <figure class="class_thumb">
+                      <img
+                        src="./assets/image/thumbnail/math_74x74.png"
+                        alt=""
+                      />
+                    </figure>
+                    <div class="text_box_">
+                      <p class="title">
+                        [수학] 입시 장인에게 배우는 비법 노트! 초등학교 입학
+                        수학
+                      </p>
+                      <div class="state">
+                        <p class="price">130,000원</p>
+                        <p class="badge_list">
+                          <span class="item">모집중</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom_btn">
+          <button onclick="location.href='payments_itt.html'">다음</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>수업 요청 광고하기</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- fullcalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!--main header -->
+        <header class="header">
+          <div class="inner">
+            <button class="back_btn" onclick="history.back();"></button>
+            <h1>수업 요청 광고하기</h1>
+          </div>
+        </header>
+        <!--main header -->
+        <div class="container_wrap advertisement h_03">
+          <ul class="tab_menu underline">
+            <li onclick="location.href='advertisement_add_itt.html'">
+              광고 등록
+            </li>
+            <li
+              class="on"
+              onclick="location.href='advertisement_history_itt.html'"
+            >
+              최근 광고 결제 내역
+            </li>
+          </ul>
+          <div class="global_inner"></div>
+          <!-- 데이터 없을때 -->
+          <div class="no_history_data">
+            <span class="icon">
+              <img src="./assets/image/icon/i_round_alaram.svg" />
+            </span>
+            <p class="txt">결제 내역이 없습니다.</p>
+            <p class="sub_txt">첫번째 수업 요청 광고를 등록해 보세요.</p>
+            <p class="payments_btn">
+              <span>내 수업 요청 광고하기</span>
+              <i class="icon_right_arrow_color"></i>
+            </p>
+          </div>
+        </div>
+
+        <div class="bottom_sheet_overlay"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- swiper -->
+<script>
+  var swiper = new Swiper(".category_swiper", {
+    slidesPerView: "auto",
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+  });
+</script>
+<!-- swiper -->
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

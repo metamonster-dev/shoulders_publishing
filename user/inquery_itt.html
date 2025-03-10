@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>문의하기</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header border chat h_112">
+          <div class="inner">
+            <button onclick="history.back();" class="back_btn"></button>
+            <div class="profile">
+              <figure class="img"></figure>
+              <p class="name">하영맘</p>
+              <p class="place">선호 지역 : 서울 강남</p>
+            </div>
+          </div>
+        </header>
+        <!-- header -->
+        <!-- 편집화면 일 경우 edit 클래스 추가 -->
+        <div class="container_wrap h_09 inquery">
+          <div class="global_inner">
+            <div class="chat_wrap">
+              <p class="date"><span>2024년 5월 20일</span></p>
+              <div class="chat_list">
+                <div class="chat_box other">
+                  <p class="profile"></p>
+                  <div class="inner">
+                    <p class="name">하영맘</p>
+                    <p class="desc">
+                      안녕하세요, 다름이 아니라 초등 저학년 영어 수업 의뢰 좀
+                      드릴 수 있을까 해서요... 아이 수준은 초급 회화는 가능한
+                      수준입니다. 스피킹 수업 문의 드립니다.
+                    </p>
+                    <span class="update_date">오후 07:18</span>
+                  </div>
+                </div>
+                <div class="chat_box me">
+                  <p class="desc">
+                    네 안녕하세요, 학부모님. 저는 영어과외/기본회화과외를
+                    전문적으로 하고있습니다. 미국에서 5년 유학 하고 Teacher's
+                    association에서 인터십 후 6년 넘게 영어과외를 진행하고
+                    있으며 다양한 학생들을 가르쳐왔습니다.
+                  </p>
+                  <span class="update_date">오후 07:18</span>
+                </div>
+              </div>
+              <p class="date"><span>2024년 5월 20일</span></p>
+              <div class="chat_list">
+                <div class="chat_box other">
+                  <p class="profile"></p>
+                  <div class="inner">
+                    <p class="name">하영맘</p>
+                    <p class="desc">
+                      안녕하세요, 다름이 아니라 초등 저학년 영어 수업 의뢰 좀
+                      드릴 수 있을까 해서요... 아이 수준은 초급 회화는 가능한
+                      수준입니다. 스피킹 수업 문의 드립니다.
+                    </p>
+                    <span class="update_date">오후 07:18</span>
+                  </div>
+                </div>
+                <div class="chat_box me">
+                  <p class="desc">
+                    네 안녕하세요, 학부모님. 저는 영어과외/기본회화과외를
+                    전문적으로 하고있습니다. 미국에서 5년 유학 하고 Teacher's
+                    association에서 인터십 후 6년 넘게 영어과외를 진행하고
+                    있으며 다양한 학생들을 가르쳐왔습니다.
+                  </p>
+                  <span class="update_date">오후 07:18</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer_input_box">
+            <div class="comment_input_box">
+              <figure class="profile">
+                <img src="./assets/image/dummy/dummy_profile_01.png" alt="" />
+              </figure>
+              <p class="inner">
+                <input type="text" placeholder="내용을 입력하세요.(0/150자)" />
+                <i class="icon_enter_d icon"></i>
+                <!-- 인풋 입력시 버튼 스타일 -->
+                <!-- <i class="icon_enter_on icon"></i> -->
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom_sheet_overlay"></div>
+        <div id="sort_bottom_sheet" class="bottom_sheet sort">
+          <div class="bottom_sheet_header">
+            <h3>정렬 순서</h3>
+            <p class="close_btn close_bottom_sheet"></p>
+          </div>
+          <div class="bottom_sheet_content">
+            <ul class="option_list">
+              <li>최신순</li>
+              <li>가나다순</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>

@@ -39,7 +39,7 @@
           </div>
         </header>
         <!-- header -->
-        <div class="container_wrap h_01 adjustment_set">
+        <div class="container_wrap h_01 adjustment_set detail">
           <div class="this_month_sec">
             <div class="global_inner">
               <div class="title_box">
@@ -69,71 +69,23 @@
                   <span class="txt bold t_16">3,000,000원</span>
                 </p>
               </div>
-              <p class="dot_notice_list">
-                <span class="item">
-                  입금 예정일이 공휴일인 경우, 입금일 전일자에 입금 처리됩니다.
-                </span>
-              </p>
-            </div>
-          </div>
-          <div class="account_sec">
-            <div class="global_inner">
-              <div class="title_box">
-                <h4>정산 계좌 정보</h4>
-              </div>
-              <div class="add_account">
-                <p class="image">
-                  <img src="./assets/image/account.png" alt="" />
-                </p>
-                <p class="desc">
-                  아직 등록된 정산 계좌가 없어요.<br />
-                  계좌 등록 후 정산금 입금이 가능해요.
-                </p>
-              </div>
-              <!-- <div class="text_list bg_">
-                <p class="item">
-                  <span class="tit t_14 c_76">은행명</span>
-                  <span class="txt t_14">ㅇㅇ은행</span>
-                </p>
-                <p class="item">
-                  <span class="tit t_14 c_76">예금주</span>
-                  <span class="txt t_14">홍길동</span>
-                </p>
-                <p class="item">
-                  <span class="tit t_14 c_76">계좌번호</span>
-                  <span class="txt t_14">123-123-123456</span>
-                </p>
-              </div> -->
-              <button
-                class="b_line w_209 open_bottom_sheet"
-                data-target="add_account_bottom_sheet"
-              >
-                정산 계좌 등록
-              </button>
             </div>
           </div>
           <div class="total_list">
             <div class="global_inner">
               <div class="title_box">
-                <h4>정산완료 내역</h4>
-                <p
-                  class="select_box_style open_bottom_sheet"
-                  data-target="sort_bottom_sheet"
-                >
-                  <span>기간 전체</span>
-                  <i class="icon_bottom_arrow_g"></i>
-                </p>
+                <h4>수업별 매출</h4>
               </div>
-              <ul class="adjustment_list">
+              <ul class="adjustment_list detail">
                 <li class="item">
-                  <p class="month_tit">2024년 12월 정산</p>
+                  <p class="month_tit">[대상] 수업명</p>
                   <div class="text_list">
                     <p class="item">
-                      <span class="tit t_14 c_76">정산일</span>
-                      <span class="txt t_14">2024-12-20</span>
+                      <span class="tit t_14 c_76">12월 수강생 수</span>
+                      <span class="txt t_14">50</span>
                     </p>
                     <p class="item">
-                      <span class="tit t_14 c_76">총 판매 금액</span>
+                      <span class="tit t_14 c_76">12월 판매 금액</span>
                       <span class="txt t_14">3,000,000원</span>
                     </p>
                     <p class="item">
@@ -142,20 +94,20 @@
                     </p>
                     <p class="item line"></p>
                     <p class="item">
-                      <span class="txt t_14 bold">총 정산 금액</span>
+                      <span class="txt t_14 bold">12월 정산 금액</span>
                       <span class="txt t_14 bold">2,500,000원</span>
                     </p>
                   </div>
                 </li>
                 <li class="item">
-                  <p class="month_tit">2024년 12월 정산</p>
+                  <p class="month_tit">[대상] 수업명</p>
                   <div class="text_list">
                     <p class="item">
-                      <span class="tit t_14 c_76">정산일</span>
-                      <span class="txt t_14">2024-12-20</span>
+                      <span class="tit t_14 c_76">12월 수강생 수</span>
+                      <span class="txt t_14">50</span>
                     </p>
                     <p class="item">
-                      <span class="tit t_14 c_76">총 판매 금액</span>
+                      <span class="tit t_14 c_76">12월 판매 금액</span>
                       <span class="txt t_14">3,000,000원</span>
                     </p>
                     <p class="item">
@@ -164,7 +116,7 @@
                     </p>
                     <p class="item line"></p>
                     <p class="item">
-                      <span class="txt t_14 bold">총 정산 금액</span>
+                      <span class="txt t_14 bold">12월 정산 금액</span>
                       <span class="txt t_14 bold">2,500,000원</span>
                     </p>
                   </div>
@@ -199,47 +151,8 @@
           </ul>
         </footer>
         <!-- footer -->
+        <!-- 수업 선택 bottom sheet-->
         <div class="bottom_sheet_overlay"></div>
-        <!-- 계좌정보 입력 bottom_sheet -->
-        <div id="add_account_bottom_sheet" class="bottom_sheet add_account">
-          <div class="bottom_sheet_header">
-            <h3>계좌 정보</h3>
-            <p class="close_btn close_bottom_sheet"></p>
-          </div>
-          <div class="bottom_sheet_content">
-            <div class="form_wrap">
-              <div class="input_box">
-                <label class="label required">은행</label>
-                <div class="search_box drop_down_">
-                  <input type="text" placeholder="은행을 선택하세요." />
-                </div>
-                <ul class="drop_down scroll_bar">
-                  <li>국민은행</li>
-                  <li>우리은행</li>
-                  <li>기업은행</li>
-                  <li>농협</li>
-                </ul>
-              </div>
-              <div class="input_box">
-                <label class="label required">예금주명</label>
-                <input type="text" placeholder="예금주명을 입력하세요." />
-              </div>
-              <div class="input_box">
-                <label class="label required">계좌번호</label>
-                <input
-                  type="text"
-                  placeholder="계좌 번호 12자리를 입력하세요."
-                />
-              </div>
-            </div>
-            <div class="bottom_btn two">
-              <!-- 날짜선택안했을때 버튼 스타일 -->
-              <button class="gray">취소</button>
-              <button onclick="open_modal('#account_fail')">저장</button>
-            </div>
-          </div>
-        </div>
-        <!-- 정상 기간설정 bottom_sheet -->
         <div id="sort_bottom_sheet" class="bottom_sheet sort">
           <div class="bottom_sheet_header">
             <h3>기간 설정</h3>
@@ -259,12 +172,16 @@
 
         <!-- 모달 -->
         <!-- 댓글 삭제 확인 alret -->
-        <article id="account_fail" class="modal_wrap">
+        <article id="postComplete" class="modal_wrap">
           <div class="modal">
-            <p class="text">계좌 인증에 실패했어요.</p>
+            <p class="image">
+              <img src="./assets/image/alret/class_req.png" alt="" />
+            </p>
+            <p class="text">수업 요청이 완료되었어요.</p>
             <p class="desc">
-              존재하지 않는 계좌입니다.<br />
-              계좌 정보를 올바르게 입력해 주세요.
+              수업 요청 글은 메인 화면에서 홍보할 수 있어요.<br />
+              하단 마이 메뉴 - 내 수업 요청 광고하기로<br />
+              이동해 보세요.
             </p>
             <div class="btn_area">
               <button class="black" onclick="close_modal()">확인</button>

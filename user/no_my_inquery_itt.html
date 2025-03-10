@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <title>내 문의 내역</title>
+    <!-- CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="background" class="background_pc_txt"></div>
+      <div class="global_wrap">
+        <!-- header -->
+        <header class="header border">
+          <div class="inner">
+            <button onclick="history.back();" class="back_btn"></button>
+            <h1>내 문의 답변 내역</h1>
+            <p class="edit_btn">편집</p>
+          </div>
+        </header>
+        <!-- header -->
+        <div class="container_wrap h_01 my_inquery">
+          <div class="global_inner">
+            <div class="no_data_content">
+              <p class="img">
+                <img src="./assets/image/icon/i_no_inquery.svg" />
+              </p>
+              <p class="txt">아직 문의에 답변한 내역이 없어요.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // 공통 영역
+  $(document).ready(function () {
+    $("#background").load("./include/background_pc.html");
+  });
+</script>
