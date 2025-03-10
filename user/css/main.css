@@ -1000,9 +1000,14 @@ input[type="time"] {
   appearance: none;
   -webkit-appearance: none;
   text-align: left !important;
+  background-color: #fff;
 }
 input[type="time"] {
   background-image: url("../assets/image/icon/i_clock.svg");
+}
+
+input[type="date"]:disabled.click_event {
+  background-color: #fff;
 }
 
 input[type="date"]::-webkit-clear-button,
