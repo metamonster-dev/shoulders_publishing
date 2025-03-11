@@ -7,6 +7,20 @@
 .ui-timepicker-standard {
   /* position: relative; */
   z-index: 10 !important;
+  border: 1px solid #e5e5ec;
+  border-radius: 6px;
+  font-family: "pretendard", sans-serif;
+  color: #111;
+  font-size: 16px;
+}
+.ui-timepicker-standard .ui-state-hover {
+  background-color: #e6fcfb;
+  color: #00c5c1;
+  border: 1px solid #00d9d5;
+  border-radius: 6px;
+}
+.ui-timepicker-standard a {
+  margin-right: 5px;
 }
 
 *::-webkit-scrollbar {
