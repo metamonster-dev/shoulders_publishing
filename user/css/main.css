@@ -3221,6 +3221,8 @@ button.red_txt {
 .container_wrap {
   overflow-y: auto;
   height: 100dvh;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: none;
 }
 
 /* 헤더, bottom_btn 있을 떄 container 높이값*/
