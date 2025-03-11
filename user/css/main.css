@@ -6730,6 +6730,11 @@ header.chat .profile .badge_list .item {
 /* -------------------------------------------------------------------------- */
 /*                             마이페이지 (mypage.html)                          */
 /* -------------------------------------------------------------------------- */
+.container_wrap.mypage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .container_wrap.mypage .unreading {
   position: relative;
 }
