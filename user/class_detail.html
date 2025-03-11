@@ -177,7 +177,7 @@
           </p>
           <div class="image_box">
             <p class="image">
-              <img src="./assets/image/dummy/class_detail_01.png" />
+              <img src="./assets/image/dummy/class_detail_02.png" />
             </p>
           </div>
         </article>
@@ -229,43 +229,6 @@
     </div>
   </body>
 </html>
-
-<script>
-  $(document).ready(function () {
-    let $container = $(".container_wrap");
-
-    // 탭 버튼 클릭 시 해당 섹션으로 스크롤 이동
-    $(".tab_bar li").on("click", function () {
-      let targetId = $(this).data("target");
-      let target = $(targetId);
-
-      if (target.length) {
-        $container.animate(
-          { scrollTop: target.position().top + $container.scrollTop() - 100 },
-          500
-        );
-      } else {
-        console.error("해당 섹션을 찾을 수 없습니다:", targetId);
-      }
-    });
-
-    // .container_wrap 내부에서 스크롤 감지하여 'on' 클래스 추가
-    $container.on("scroll", function () {
-      let scrollPos = $container.scrollTop();
-
-      $(".section").each(function () {
-        let top = $(this).position().top + $container.scrollTop() - 150;
-        let bottom = top + $(this).outerHeight();
-        let id = $(this).attr("id");
-
-        if (scrollPos >= top && scrollPos < bottom) {
-          $(".tab_bar li").removeClass("on");
-          $('.tab_bar li[data-target="#' + id + '"]').addClass("on");
-        }
-      });
-    });
-  });
-</script>
 
 <script>
   // 공통 영역

@@ -151,67 +151,10 @@
           </ul>
         </footer>
         <!-- footer -->
-        <!-- 수업 선택 bottom sheet-->
-        <div class="bottom_sheet_overlay"></div>
-        <div id="sort_bottom_sheet" class="bottom_sheet sort">
-          <div class="bottom_sheet_header">
-            <h3>기간 설정</h3>
-            <p class="close_btn close_bottom_sheet"></p>
-          </div>
-          <div class="bottom_sheet_content">
-            <ul class="option_list">
-              <li>최근 3개월</li>
-              <li>최근 6개월</li>
-              <li>최근 1년</li>
-              <li>최근 2년</li>
-              <li>최근 3년</li>
-            </ul>
-          </div>
-        </div>
-        <!-- 선생님 정렬 순서 bottom sheet-->
-
-        <!-- 모달 -->
-        <!-- 댓글 삭제 확인 alret -->
-        <article id="postComplete" class="modal_wrap">
-          <div class="modal">
-            <p class="image">
-              <img src="./assets/image/alret/class_req.png" alt="" />
-            </p>
-            <p class="text">수업 요청이 완료되었어요.</p>
-            <p class="desc">
-              수업 요청 글은 메인 화면에서 홍보할 수 있어요.<br />
-              하단 마이 메뉴 - 내 수업 요청 광고하기로<br />
-              이동해 보세요.
-            </p>
-            <div class="btn_area">
-              <button class="black" onclick="close_modal()">확인</button>
-            </div>
-          </div>
-        </article>
       </div>
     </div>
   </body>
 </html>
-
-<!-- swiper -->
-<script>
-  var swiper = new Swiper(".edit_type_sec", {
-    slidesPerView: "auto",
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
-    },
-  });
-
-  var swiper = new Swiper(".thumbnail_chk", {
-    slidesPerView: "auto",
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
-    },
-  });
-</script>
-<!-- swiper -->
 
 <script>
   // 공통 영역

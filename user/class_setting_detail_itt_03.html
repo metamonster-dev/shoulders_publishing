@@ -125,9 +125,9 @@
             </div>
           </div>
         </div>
+        <!--bottom sheet -->
+        <!-- 정렬 순서 -->
         <div class="bottom_sheet_overlay"></div>
-        <!--page bottom sheet -->
-        <!-- 정렬 순서 bottom sheet-->
         <div id="review_sort_bottom_sheet" class="bottom_sheet sort">
           <div class="bottom_sheet_header">
             <h3>정렬 순서</h3>
@@ -143,47 +143,11 @@
             </ul>
           </div>
         </div>
-        <!--page bottom sheet -->
-        <!-- 모달 -->
-        <article id="class_open_alert" class="modal_wrap">
-          <div class="modal">
-            <p class="text">판매를 재개할까요?</p>
-            <p class="desc">
-              판매 재개 시 학부모의 수업 조회 및<br />수강 신청이 가능해져요.
-            </p>
-            <div class="btn_area">
-              <button class="gray" onclick="close_modal()">취소</button>
-              <button class="black" onclick="openClass()">확인</button>
-            </div>
-          </div>
-        </article>
-        <!-- 모달 -->
+        <!--bottom sheet -->
       </div>
     </div>
   </body>
 </html>
-
-<script>
-  $(document).ready(function () {
-    $(".switch_btn").click(function () {
-      let isOn = $(this).hasClass("active");
-      if (isOn) {
-        $(this).removeClass("active");
-        $(".class_state_sec .badge_list .item").addClass("red");
-        $(".class_state_sec .badge_list .item").text("모집 종료");
-      } else {
-        open_modal("#class_open_alert");
-      }
-    });
-  });
-
-  const openClass = () => {
-    close_modal();
-    $(".class_state_sec .badge_list .item").removeClass("red");
-    $(".switch_btn").addClass("active");
-    $(".class_state_sec .badge_list .item").text("모집중");
-  };
-</script>
 
 <script>
   // 공통 영역
