@@ -3122,6 +3122,7 @@ button.red_txt {
 .modal_wrap.privew .image_box .image {
   width: 100%;
   background-color: #fff;
+  height: auto;
   /* top: 50%; */
   /* position: absolute; */
   /* transform: translateY(-50%); */
