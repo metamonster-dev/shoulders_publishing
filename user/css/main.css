@@ -7257,6 +7257,11 @@ header.chat .profile .badge_list .item {
   padding: 13px 10px;
   height: 50px;
 }
+.container_wrap.advertisement .tab_menu.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
 .container_wrap.advertisement .dese_area {
   text-align: center;
   padding-bottom: 48px;
